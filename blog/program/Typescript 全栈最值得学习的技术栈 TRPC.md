@@ -512,7 +512,7 @@ export const authOptions: NextAuthOptions = {
       },
       async authorize(credentials, req) {
         // Add logic here to look up the user from the credentials supplied
-        const user = { id: '1', name: 'kuizuo', email: 'hi@kuizuo.cn' }
+        const user = { id: '1', name: 'kuizuo', email: 'leylaqiao@gmail.com' }
 
         if (user) {
           return user

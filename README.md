@@ -1,9 +1,9 @@
 <h2 align="center">
-愧怍的个人博客
+Leyla的个人博客
 </h2>
 <p align="center">
-<a href="https://vercel.com/new/clone?repository-url=https://github.com/kuizuo/blog/tree/main&project-name=blog&repo-name=blog" rel="nofollow"><img src="https://vercel.com/button"></a>
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/kuizuo/blog" rel="nofollow"><img src="https://www.netlify.com/img/deploy/button.svg"></a>
+<a href="https://vercel.com/new/clone?repository-url=https://github.com/leylatop/blog/tree/main&project-name=blog&repo-name=blog" rel="nofollow"><img src="https://vercel.com/button"></a>
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/leylatop/blog" rel="nofollow"><img src="https://www.netlify.com/img/deploy/button.svg"></a>
 <a href="https://stackblitz.com/github/kuizuo/blog" rel="nofollow"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"></a>
 </p>
 
@@ -11,7 +11,7 @@
 
 在这里我会分享各类技术栈所遇到问题与解决方案，带你了解最新的技术栈以及实际开发中如何应用，并希望我的开发经历对你有所启发。
 
-如果你想要搭建一个类似的站点，可直接 [Fork](https://github.com/kuizuo/blog/fork) 本仓库使用，或者通过 [StackBlitz](https://stackblitz.com/github/kuizuo/blog) 在线运行本项目，通过 [Vercel](https://vercel.com/new/clone?repository-url=https://github.com/kuizuo/blog/tree/main&project-name=blog&repo-name=blog) 一键部署。
+如果你想要搭建一个类似的站点，可直接 [Fork](https://github.com/leylatop/blog/fork) 本仓库使用，或者通过 [StackBlitz](https://stackblitz.com/github/kuizuo/blog) 在线运行本项目，通过 [Vercel](https://vercel.com/new/clone?repository-url=https://github.com/leylatop/blog/tree/main&project-name=blog&repo-name=blog) 一键部署。
 
 ## ✨ 特性
 
@@ -29,7 +29,7 @@
 - 🌈 **资源导航** - 收集并分享有用、有意思的资源
 - 📦 **项目展示** - 展示你的项目，可用作于作品集
 
-我的主题魔改实现：[Docusaurus 主题魔改](https://kuizuo.cn/docs/docusaurus-guides)
+我的主题魔改实现：[Docusaurus 主题魔改](https://leyla.top/docs/docusaurus-guides)
 
 ## :wrench: 技术栈
 
@@ -70,7 +70,7 @@
 ## 📥 运行
 
 ```bash
-git clone https://github.com/kuizuo/blog.git
+git clone https://github.com/leylatop/blog.git
 cd blog
 pnpm install
 pnpm start
@@ -84,7 +84,7 @@ pnpm build
 
 ## 📷 截图
 
-<img width="1471" alt="Live Demo" src="https://github.com/kuizuo/blog/blob/main/static/img/og.png?raw=true">
+<img width="1471" alt="Live Demo" src="https://github.com/leylatop/blog/blob/main/static/img/og.png?raw=true">
 
 ## 📝 许可证
 

@@ -9,7 +9,7 @@ description: 使用 docusaurus 搭建个人博客，并对其主题进行魔改
 image: /img/project/blog.png
 ---
 
-博客地址: [愧怍的小站](https://kuizuo.cn/)
+博客地址: [愧怍的小站](https://leyla.top/)
 
 时隔近半年没好好整理文章，博客也写的不像个人样。:joy:
 
@@ -21,16 +21,16 @@ image: /img/project/blog.png
 
 ## 安装
 
-如果你想搭建一个类似的博客，可以 [fork 本项目](https://github.com/kuizuo/blog/fork)，修改个人信息，并将文章迁移过来。这里推荐使用 [Vercel 部署个人博客](https://kuizuo.cn/vercel-deploy-blog)，以下是本地安装示例。
+如果你想搭建一个类似的博客，可以 [fork 本项目](https://github.com/leylatop/blog/fork)，修改个人信息，并将文章迁移过来。这里推荐使用 [Vercel 部署个人博客](https://leyla.top/vercel-deploy-blog)，以下是本地安装示例。
 
 ```bash
-git clone https://github.com/kuizuo/blog
+git clone https://github.com/leylatop/blog
 cd blog
 yarn
 yarn start
 ```
 
-关于主题魔改可以看 [Docusaurus 主题魔改](https://kuizuo.cn/docs/docusaurus-guides)
+关于主题魔改可以看 [Docusaurus 主题魔改](https://leyla.top/docs/docusaurus-guides)
 
 ## 一些页面
 
@@ -66,7 +66,7 @@ yarn start
 
 ## 部署
 
-按传统的方式，你编写好一篇文章后，需要重新打包成静态文件（.html），然后将静态文件上传到服务器（需要自己准备）上，然后通过 nginx 配置域名访问。如今有了自动化部署，你只需要将代码 push 到 Github 上，然后通过 CI/CD 自动化部署到服务器上。可以参考 [ci.yml](https://github.com/kuizuo/blog/blob/main/.github/workflows/ci.yml) 配置文件。
+按传统的方式，你编写好一篇文章后，需要重新打包成静态文件（.html），然后将静态文件上传到服务器（需要自己准备）上，然后通过 nginx 配置域名访问。如今有了自动化部署，你只需要将代码 push 到 Github 上，然后通过 CI/CD 自动化部署到服务器上。可以参考 [ci.yml](https://github.com/leylatop/blog/blob/main/.github/workflows/ci.yml) 配置文件。
 
 这里推荐使用 [Vercel 部署个人博客](/blog/vercel-deploy-blog)，部署十分简单，你甚至不需要服务器，只需要有个 Github 账号，将你的博客项目添加为一个仓库中即可（也许需要科学上网）。
 

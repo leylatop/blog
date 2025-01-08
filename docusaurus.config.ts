@@ -8,8 +8,8 @@ const beian = '闽ICP备2020017848号-2'
 const beian1 = '闽公网安备35021102000847号'
 
 const config: Config = {
-  title: '愧怍',
-  url: 'https://kuizuo.cn',
+  title: 'LeylaTop',
+  url: 'https://leyla.top',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'kuizuo',
@@ -17,7 +17,7 @@ const config: Config = {
   customFields: {
     bio: '道阻且长，行则将至',
     description:
-      '是一个由愧怍创建的个人博客，主要分享编程开发知识和项目，该网站基于 React 驱动的静态网站生成器 Docusaurus 构建。',
+      '是一个由Leyla创建的个人博客，主要分享编程开发知识和项目，该网站基于 React 驱动的静态网站生成器 Docusaurus 构建。',
   },
   themeConfig: {
     // announcementBar: {
@@ -28,7 +28,7 @@ const config: Config = {
     metadata: [
       {
         name: 'author',
-        content: '愧怍',
+        content: 'Leyla',
       },
       {
         name: 'keywords',
@@ -46,14 +46,15 @@ const config: Config = {
     },
     navbar: {
       logo: {
-        alt: '愧怍',
-        src: 'img/logo.webp',
-        srcDark: 'img/logo.webp',
+        alt: 'Leyla',
+        src: 'https://leyla.top/img/logo.svg',
+        srcDark: 'https://leyla.top/img/logo.svg',
       },
       hideOnScroll: true,
       items: [
         { label: '博客', position: 'right', to: 'blog' },
-        { label: '项目', position: 'right', to: 'project' },
+        { label: '笔记', position: 'right', to: 'docs/skill' },
+        // { label: '项目', position: 'right', to: 'project' },
         { label: '友链', position: 'right', to: 'friends' },
         { label: '关于', position: 'right', to: 'about' },
         {
@@ -61,8 +62,8 @@ const config: Config = {
           position: 'right',
           items: [
             { label: '归档', to: 'blog/archive' },
-            { label: '笔记', to: 'docs/skill' },
-            { label: '工具推荐', to: 'docs/tools' },
+            // { label: '笔记', to: 'docs/skill' },
+            // { label: '工具推荐', to: 'docs/tools' },
           ],
         },
         // {
@@ -80,7 +81,7 @@ const config: Config = {
             { label: '博客', to: 'blog' },
             { label: '归档', to: 'blog/archive' },
             { label: '技术笔记', to: 'docs/skill' },
-            { label: '实战项目', to: 'project' },
+            // { label: '实战项目', to: 'project' },
             { label: '前端示例', to: 'https://example.kuizuo.cn' },
           ],
         },
@@ -94,16 +95,16 @@ const config: Config = {
             { label: 'Discord', href: social.discord.href },
           ],
         },
-        {
-          title: '网站',
-          items: [
-            { label: 'js反混淆', to: 'https://js-deobfuscator.kuizuo.cn' },
-            { label: 'cyberChef', to: 'https://gchq.github.io/CyberChef' },
-            { label: 'api服务', to: 'https://api.kuizuo.cn' },
-            { label: '便民服务', to: 'https://service.kuizuo.cn' },
-            { label: '站点监控', to: 'https://uptime.kuizuo.cn' },
-          ],
-        },
+        // {
+        //   title: '网站',
+        //   items: [
+        //     { label: 'js反混淆', to: 'https://js-deobfuscator.kuizuo.cn' },
+        //     { label: 'cyberChef', to: 'https://gchq.github.io/CyberChef' },
+        //     { label: 'api服务', to: 'https://api.kuizuo.cn' },
+        //     { label: '便民服务', to: 'https://service.kuizuo.cn' },
+        //     { label: '站点监控', to: 'https://uptime.kuizuo.cn' },
+        //   ],
+        // },
         {
           title: '更多',
           items: [
@@ -220,7 +221,7 @@ const config: Config = {
       {
         path: 'blog',
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
-          `https://github.com/kuizuo/blog/edit/main/${blogDirPath}/${blogPath}`,
+          `https://github.com/leylatop/blog/edit/main/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
         blogDescription: '代码人生：编织技术与生活的博客之旅',
         blogSidebarCount: 10,
@@ -259,7 +260,7 @@ const config: Config = {
                 innerHTML: `
     (${function () {
       console.log(
-        `%c Kz Blog %c https://github.com/kuizuo/blog`,
+        `%c Kz Blog %c https://github.com/leylatop/blog`,
         'color: #fff; margin: 1em 0; padding: 5px 0; background: #12affa;',
         'margin: 1em 0; padding: 5px 0; background: #efefef;',
       )

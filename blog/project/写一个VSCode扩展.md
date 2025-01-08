@@ -176,7 +176,7 @@ export function activate(context: vscode.ExtensionContext) {
     .showInformationMessage('是否要打开愧怍的小站？', '是', '否', '不再提示')
     .then(result => {
       if (result === '是') {
-        exec(`start 'https://kuizuo.cn'`)
+        exec(`start 'https://leyla.top'`)
       } else if (result === '不再提示') {
         // 其他操作 后文会说
       }
@@ -193,7 +193,7 @@ export function activate(context: vscode.ExtensionContext) {
 ```typescript
 import * as os from 'os'
 
-const commandLine = os.platform() === 'win32' ? `start https://kuizuo.cn` : `open https://kuizuo.cn`
+const commandLine = os.platform() === 'win32' ? `start https://leyla.top` : `open https://leyla.top`
 exec(commandLine)
 ```
 
@@ -233,7 +233,7 @@ export async function activate(context: vscode.ExtensionContext) {
     )
     if (result === '是') {
       const commandLine =
-        os.platform() === 'win32' ? `start https://kuizuo.cn` : `open https://kuizuo.cn`
+        os.platform() === 'win32' ? `start https://leyla.top` : `open https://leyla.top`
       exec(commandLine)
     } else if (result === '不再提示') {
       //最后一个参数，为true时表示写入全局配置，为false或不传时则只写入工作区配置

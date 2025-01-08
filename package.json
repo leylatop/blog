@@ -3,14 +3,14 @@
   "version": "3.0.0",
   "author": {
     "url": "https://github.com/kuizuo",
-    "email": "hi@kuizuo.cn",
-    "name": "愧怍"
+    "email": "leylaqiao@gmail.com",
+    "name": "Leyla"
   },
   "repository": {
-    "url": "https://github.com/kuizuo/blog",
+    "url": "https://github.com/leylatop/blog",
     "type": "git"
   },
-  "homepage": "https://kuizuo.cn",
+  "homepage": "https://leyla.top",
   "license": "MIT",
   "scripts": {
     "docusaurus": "docusaurus",
