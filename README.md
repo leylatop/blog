@@ -22,8 +22,6 @@ Leyla的个人博客
 - 🌈 **资源导航** - 收集并分享有用、有意思的资源
 - 📦 **项目展示** - 展示你的项目，可用作于作品集
 
-我的主题魔改实现：[Docusaurus 主题魔改](https://leyla.top/docs/docusaurus-guides)
-
 ## :wrench: 技术栈
 
 - Docusaurus
