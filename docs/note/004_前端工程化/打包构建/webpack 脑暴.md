@@ -74,7 +74,7 @@ webpack
 		- 在方法中调用logger实现自动埋点
 		- 删除代码中的console
 		- 检查代码中的typescript语法是否合格
-		- 按需加载三方依赖包 => import {xx} from 'lodash' => import xx from 'lodash/xx'(babel-plugin-import)
+		- 按需加载三方依赖包 => import \{xx\} from 'lodash' => import xx from 'lodash/xx'(babel-plugin-import)
 - css-loader
 	- postcss：解析css代码，处理css节点，并返回css代码，和babel类似，只不过babel是处理js的，postcss是处理css的
 	- postcss插件：和babel插件类似，可以自定义postcss的功能，传递给postcss

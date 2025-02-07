@@ -12,7 +12,7 @@ declare 可以重载
 
 联合类型： type 类型3 = 类型1 | 类型2
 字符串字面量类型: type EventNames = 'click' | 'scroll' | 'mousemove'
-枚举：enum Days {Sun, Mon, Tue, Wed, Thu, Fri, Sat} 枚举会员会被赋值从0开始递增的数字， 也可以手动赋值
+枚举：enum Days \{Sun, Mon, Tue, Wed, Thu, Fri, Sat\} 枚举会员会被赋值从0开始递增的数字， 也可以手动赋值
 
 - interface
 ```markdown
