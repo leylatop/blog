@@ -84,12 +84,12 @@ const socialSet: Record<keyof Social | 'rss', SocialValue> = {
   //   icon: 'ri:netease-cloud-music-line',
   //   color: '#C20C0C',
   // },
-  rss: {
-    href: '/blog/rss.xml',
-    title: 'RSS',
-    icon: 'ri:rss-line',
-    color: '#FFA501',
-  },
+  // rss: {
+  //   href: '/blog/rss.xml',
+  //   title: 'RSS',
+  //   icon: 'ri:rss-line',
+  //   color: '#FFA501',
+  // },
 }
 
 export default socialSet

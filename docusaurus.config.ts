@@ -2,10 +2,9 @@ import type * as Preset from '@docusaurus/preset-classic'
 import type { Config } from '@docusaurus/types'
 import { themes } from 'prism-react-renderer'
 import social from './data/social'
-import type { GiscusConfig } from './src/components/Comment'
 
-const beian = '闽ICP备2020017848号-2'
-const beian1 = '闽公网安备35021102000847号'
+const beian = '豫ICP备2024078050号-1'
+const beian1 = '豫公网安备41010502006082'
 
 const config: Config = {
   title: 'LeylaTop',
@@ -48,8 +47,8 @@ const config: Config = {
     navbar: {
       logo: {
         alt: 'Leyla',
-        src: 'https://leyla.top/img/logo.svg',
-        srcDark: 'https://leyla.top/img/logo.svg',
+        src: '/img/logo.svg',
+        srcDark: '/img/logo.svg',
       },
       hideOnScroll: true,
       items: [
@@ -57,7 +56,7 @@ const config: Config = {
         { label: '笔记', position: 'right', to: 'docs/note' },
         // { label: '项目', position: 'right', to: 'project' },
         // { label: '友链', position: 'right', to: 'friends' },
-        { label: '工具', position: 'right', to: 'docs/tools' },
+        { label: '工具', position: 'right', to: 'tool' },
         { label: '关于', position: 'right', to: 'about' },
         // {
         //   label: '更多',
@@ -126,14 +125,13 @@ const config: Config = {
         <p style="display: inline-flex; align-items: center;"><img style="height:20px;margin-right: 0.5rem;" src="/img/police.png" alt="police" height="20"/><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${
           beian1.match(/\d+/)?.[0]
         }" >${beian1}</a></p>
-        <p>Copyright © 2020 - ${new Date().getFullYear()} kuizuo. | Built with Docusaurus.</p>
         `,
     },
-    algolia: {
-      appId: 'GV6YN1ODMO',
-      apiKey: '50303937b0e4630bec4a20a14e3b7872',
-      indexName: 'kuizuo',
-    },
+    // algolia: {
+    //   appId: 'GV6YN1ODMO',
+    //   apiKey: '50303937b0e4630bec4a20a14e3b7872',
+    //   indexName: 'kuizuo',
+    // },
     prism: {
       theme: themes.oneLight,
       darkTheme: themes.oneDark,
@@ -151,14 +149,14 @@ const config: Config = {
         },
       ],
     },
-    giscus: {
-      repo: 'kuizuo/blog',
-      repoId: 'MDEwOlJlcG9zaXRvcnkzOTc2MjU2MTI=',
-      category: 'General',
-      categoryId: 'DIC_kwDOF7NJDM4CPK95',
-      theme: 'light',
-      darkTheme: 'dark_dimmed',
-    } satisfies Partial<GiscusConfig>,
+    // giscus: {
+    //   repo: 'kuizuo/blog',
+    //   repoId: 'MDEwOlJlcG9zaXRvcnkzOTc2MjU2MTI=',
+    //   category: 'General',
+    //   categoryId: 'DIC_kwDOF7NJDM4CPK95',
+    //   theme: 'light',
+    //   darkTheme: 'dark_dimmed',
+    // } satisfies Partial<GiscusConfig>,
     tableOfContents: {
       minHeadingLevel: 2,
       maxHeadingLevel: 4,
@@ -290,7 +288,7 @@ Love what you do and do what you love.
       tagName: 'meta',
       attributes: {
         name: 'description',
-        content: '愧怍的个人博客',
+        content: 'Leyla的个人博客',
       },
     },
   ],
