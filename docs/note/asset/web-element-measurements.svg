@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
+  <!-- Window -->
+  <rect x="10" y="10" width="480" height="380" fill="none" stroke="black" />
+  <text x="15" y="25" font-size="12">Window</text>
+  
+  <!-- Viewport -->
+  <rect x="20" y="30" width="460" height="330" fill="lightblue" fill-opacity="0.3" stroke="blue" />
+  <text x="25" y="45" font-size="12">Viewport (innerHeight)</text>
+  
+  <!-- Document -->
+  <rect x="30" y="50" width="440" height="340" fill="lightyellow" fill-opacity="0.3" stroke="orange" />
+  <text x="35" y="65" font-size="12">Document</text>
+  
+  <!-- Element -->
+  <rect x="100" y="100" width="300" height="200" fill="lightgreen" fill-opacity="0.5" stroke="green" />
+  <text x="105" y="115" font-size="12">Element</text>
+  
+  <!-- clientHeight -->
+  <line x1="410" y1="110" x2="410" y2="290" stroke="red" stroke-dasharray="5,5" />
+  <text x="415" y="200" font-size="12" fill="red">clientHeight</text>
+  
+  <!-- scrollHeight -->
+  <line x1="90" y1="110" x2="90" y2="390" stroke="purple" stroke-dasharray="5,5" />
+  <text x="50" y="250" font-size="12" fill="purple" transform="rotate(-90 50 250)">scrollHeight</text>
+  
+  <!-- offsetHeight -->
+  <line x1="420" y1="100" x2="420" y2="300" stroke="brown" stroke-dasharray="5,5" />
+  <text x="425" y="200" font-size="12" fill="brown">offsetHeight</text>
+  
+  <!-- scrollY/pageYOffset -->
+  <line x1="15" y1="30" x2="15" y2="100" stroke="blue" stroke-dasharray="5,5" />
+  <text x="17" y="65" font-size="12" fill="blue" transform="rotate(-90 17 65)">scrollY/pageYOffset</text>
+  
+  <!-- clientY (mouse position) -->
+  <circle cx="250" cy="150" r="5" fill="orange" />
+  <line x1="250" y1="30" x2="250" y2="150" stroke="orange" stroke-dasharray="5,5" />
+  <text x="255" y="90" font-size="12" fill="orange">clientY</text>
+  
+  <!-- Legend -->
+  <text x="100" y="340" font-size="10">Note: clientY shows mouse position relative to viewport top</text>
+</svg>

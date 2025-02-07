@@ -1,0 +1,11 @@
+{
+  "insertTemplateSettings": [
+    {
+      "settingId": "Insert Templates Daily Simple",
+      "settingName": "Insert Templates Daily Simple",
+      "settDescription": "Use Ctrl + i to insert daily template",
+      "settingKeyShortcuts": "Ctrl + i",
+      "settingIsEnable": true
+    }
+  ]
+}

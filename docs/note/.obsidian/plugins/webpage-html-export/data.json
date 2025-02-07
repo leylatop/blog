@@ -1,0 +1,68 @@
+{
+  "settingsVersion": "1.8.1-2b",
+  "makeOfflineCompatible": true,
+  "inlineAssets": false,
+  "includePluginCSS": [
+    ""
+  ],
+  "includeSvelteCSS": true,
+  "titleProperty": "title",
+  "customHeadContentPath": "",
+  "faviconPath": "/Users/modao/Desktop/GitHub/note/🤺个人资料/favicon.ico",
+  "documentWidth": "40em",
+  "sidebarWidth": "20em",
+  "minOutlineCollapse": 100,
+  "startOutlineCollapsed": false,
+  "relativeOutlineLinks": false,
+  "allowFoldingHeadings": false,
+  "allowFoldingLists": false,
+  "allowResizingSidebars": true,
+  "logLevel": "warning",
+  "minifyHTML": true,
+  "makeNamesWebStyle": true,
+  "onlyExportModified": true,
+  "deleteOldFiles": true,
+  "addThemeToggle": true,
+  "addOutline": true,
+  "addFileNav": true,
+  "addSearchBar": true,
+  "addGraphView": true,
+  "addTitle": true,
+  "addRSSFeed": true,
+  "siteURL": "https://leyla.top/",
+  "authorName": "Leyla",
+  "vaultTitle": "note",
+  "exportPreset": "website",
+  "openAfterExport": true,
+  "graphAttractionForce": 1,
+  "graphLinkLength": 10,
+  "graphRepulsionForce": 150,
+  "graphCentralForce": 3,
+  "graphEdgePruning": 100,
+  "graphMinNodeSize": 3,
+  "graphMaxNodeSize": 7,
+  "showDefaultTreeIcons": true,
+  "emojiStyle": "Native",
+  "defaultFileIcon": "lucide//file",
+  "defaultFolderIcon": "lucide//folder",
+  "defaultMediaIcon": "lucide//file-image",
+  "exportPath": "/Users/modao/Desktop/GitHub/note/publish-note",
+  "filesToExport": [
+    [
+      "📓 学习笔记/⌨️ 开发知识",
+      "📓 学习笔记/⏩ 快捷键",
+      "📓 学习笔记/🤖 chatgtp",
+      "🎱 待学目录.md",
+      "🤦 Remind me.md"
+    ]
+  ],
+  "filePickerBlacklist": [
+    "(^|\\/)node_modules\\/",
+    "(^|\\/)dist\\/",
+    "(^|\\/)dist-ssr\\/",
+    "(^|\\/)\\.vscode\\/"
+  ],
+  "filePickerWhitelist": [
+    "\\.\\w+$"
+  ]
+}

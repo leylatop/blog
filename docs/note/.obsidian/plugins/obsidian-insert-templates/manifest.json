@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-insert-templates",
+	"name": "Insert Templates Freely",
+	"version": "0.0.1",
+	"minAppVersion": "0.15.0",
+	"description": "This is a plugin that allows you to customize shortcuts for inserting templates.",
+	"author": "LeylaTop",
+	"authorUrl": "https://leylatop.github.io/",
+	"isDesktopOnly": false
+}

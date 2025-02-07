@@ -1,0 +1,1 @@
+[插件开发文档](https://luhaifeng666.github.io/obsidian-plugin-docs-zh/zh2.0/)
