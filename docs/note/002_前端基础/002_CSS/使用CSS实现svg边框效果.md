@@ -7,7 +7,7 @@
 1. 使用 zoom 将非整数 dpr 调整至最近的整数倍数，避免渲染的问题。zoom 属性可以用于 html 级别，  或者 element 级别，涉及 dpr 的计算需要额外处理 zoom 的影响，zoom: 1/window.devicePixelRatio
 2. 参照解决方式1，将调整zoom，改为调整transform:scale值，并根据实际情况调整transform-origin位置，好处是不占空间
 3. 将svg渲染改为使用css绘制：css使用border直接写会与UI样式有出入，所以使用background-image手动实现
-<!-- ![图片](../../../asset/Pastedimage20240308120112.png) -->
+![图片](http://images.leyla.top/note/Pastedimage20240308120112.png)
 
 
 将svg渲染改为使用css绘制方法如下：

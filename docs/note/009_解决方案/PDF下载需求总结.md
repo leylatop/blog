@@ -34,4 +34,4 @@ function download2(url, name) {
 
 3. 上述文件为前端设置下载pdf文件；
 4. 若想要访问pdf文件时，就实现自动下载文件的效果，需要在nginx服务端做一些配置，[参考资料](https://developer.aliyun.com/article/481462)
-<!-- 5. ![图片](../../asset/Pastedimage20231109150906.png) -->
+5. ![图片](http://images.leyla.top/note/Pastedimage20231109150906.png)

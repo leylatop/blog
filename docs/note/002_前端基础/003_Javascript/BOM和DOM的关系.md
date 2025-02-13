@@ -3,7 +3,7 @@
 - BOM（brower object model）：浏览器对象模型
 - DOM（document object model）：文档对象模型
 
-<!-- ![图片](../../../asset/Pastedimage20240621093711.png) -->
+![图片](http://images.leyla.top/note/Pastedimage20240621093711.png)
 
 BOM 包括以下内容：
 

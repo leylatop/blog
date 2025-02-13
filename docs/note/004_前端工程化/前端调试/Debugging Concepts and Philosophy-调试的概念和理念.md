@@ -140,9 +140,9 @@ Most GUI debuggers share common concepts and controls: - 大多数GUI调试器�
     - **Pause**: interrupt running code
 
 # Debugger Controls - Chrome DevTools
-<!-- ![图片](../../../asset/Pastedimage20230613114941.png) -->
+![图片](http://images.leyla.top/note/Pastedimage20230613114941.png)
 # Debugger Controls - VS Code
-<!-- ![图片](../../../asset/Pastedimage20230613115021.png) -->
+![图片](http://images.leyla.top/note/Pastedimage20230613115021.png)
 # Debugging React
 - Key: **Understand React's component model and data flow!** - 理解react的组件模型和数据流
     - Mark Erikson: [A (Mostly) Complete Guide to React Rendering Behavior](https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/)
@@ -161,7 +161,7 @@ Most GUI debuggers share common concepts and controls: - 大多数GUI调试器�
     - Use component name search and component type filters to narrow down what components are shown - 使用组件名称搜索和组件类型过滤器来缩小所显示的组件范围
 	    - Use "Rendered By" panel to trace parent components and data - 使用 "Rendered By "面板来追踪父级组件和数据
 # React DevTools
-<!-- ![图片](../../../asset/Pastedimage20230613115521.png) -->
+![图片](http://images.leyla.top/note/Pastedimage20230613115521.png)
 # Debugging Redux
 - Key: **Understand Redux's requirements and data flow!** - 理解redux的要求和数据流很关键
     - Redux docs: [Redux Fundamentals, Part 2: Redux Concepts and Data Flow](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
@@ -183,7 +183,7 @@ Most GUI debuggers share common concepts and controls: - 大多数GUI调试器�
     - Drastically simplifies Redux logic - 大大简化了Redux的逻辑
 
 # Redux DevTools
-<!-- ![图片](../../../asset/Pastedimage20230613115922.png) -->
+![图片](http://images.leyla.top/note/Pastedimage20230613115922.png)
 
 原文档：
 https://blog.isquaredsoftware.com/presentations/2023-06-debugging-js/?slideIndex=0&stepIndex=0

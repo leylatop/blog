@@ -31,4 +31,4 @@ $ sudo systemctl restart docker
 docker info
 ```
 
-<!-- ![图片](../../asset/Pastedimage20240830182306.png) -->
+![图片](http://images.leyla.top/note/Pastedimage20240830182306.png)

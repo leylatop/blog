@@ -17,7 +17,7 @@
 	2. 展示过新手引导后，前端会向后端PUT一个已经请求过的标识
 	3. 刷新页面时，前端重新从后端获取，用于判断是否展示
 2. 通过测试提供的截图发现，从原型文件回退到工作台时，请求后端返回的标识为空
-<!-- ![](../../asset/Pasted%20image%2020250118153226.png) -->
+![](http://images.leyla.top/note/Pasted%20image%2020250118153226.png)
 
 ### docker日志打印
 我凭借着自己的发现和测试提供的截图找到后端，我理直气壮的说，你们后端返回的接口字段为空。
@@ -33,7 +33,7 @@
 - 在后退页面时，前端请求后端接口，实际上没有发送到 `nginx`，因为前端走了浏览器缓存
 - 新接口比老接口的response头里少了`Cache-Control:"no-cache, no-store"`导致回退页面时，接口请求走了cache。
 
-<!-- ![](../../asset/Pasted%20image%2020250118144013.png) -->
+![](http://images.leyla.top/note/Pasted%20image%2020250118144013.png)
 
 
 
@@ -49,5 +49,5 @@
 
 ### response header Cache-Control
 
-<!-- ![](Pasted%20image%2020250118144232.png) -->
+![](http://images.leyla.top/note/Pasted%20image%2020250118144232.png)
 

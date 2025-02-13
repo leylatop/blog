@@ -3,9 +3,9 @@
 2. `prototype` 是函数独有的属性
 3. 函数作为对象的子类型，同时拥有 `prototype` 、`__proto__ ` 和 `constuctor` 属性；使用字面量创建的函数，没有 `prototype` 属性，使用 function 关键字创建的函数，有 `prototype` 属性。
 
-<!-- ![图片](../../../asset/Pastedimage20240730114314.png)
+![图片](http://images.leyla.top/note/Pastedimage20240730114314.png)
 
-![图片](../../../asset/Pastedimage20240730114630.png) -->
+![图片](http://images.leyla.top/note/Pastedimage20240730114630.png)
 
 
 `Person.prototype` 和 `Person.__proto__` 是 JavaScript 中两个不同的属性，它们在对象和函数的原型链中扮演不同的角色。以下是它们的区别：

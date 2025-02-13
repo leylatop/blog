@@ -94,8 +94,8 @@ section {
 </section>
 ```
 
-<!-- - chrome
-![图片](../../../asset/Pastedimage20240731094756.png)
+- chrome
+![图片](http://images.leyla.top/note/Pastedimage20240731094756.png)
 
 - firefox
-![图片](../../../asset/Pastedimage20240731095716.png) -->
+![图片](http://images.leyla.top/note/Pastedimage20240731095716.png)

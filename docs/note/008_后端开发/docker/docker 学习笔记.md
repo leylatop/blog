@@ -15,12 +15,12 @@ container 有自己的隔离的硬件资源、内存空间、网络技术、硬�
 
 在命令行输入 docker run xxxx的时候，意味着，要基于xxxx这个image创建一个container
 在执行 docker run xxxx时，docker client 会先去docker server 中寻找xxxx image，若 docker xxxx 中没有，会去docker hub下载xxxx，若有，直接基于xxxx创建container
-<!-- ![图片](../../../asset/Pastedimage20230615100357.png) -->
+![图片](http://images.leyla.top/note/Pastedimage20230615100357.png)
 
 - 内核是一个中间层，它连接并控制着应用程序和底层硬件
-<!-- ![图片](../../../asset/Pastedimage20230615103257.png) -->
+![图片](http://images.leyla.top/note/Pastedimage20230615103257.png)
 - 重点：划分命名空间、分段，允许隔离资源
-<!-- ![图片](../../../asset/Pastedimage20230615115226.png) -->
+![图片](http://images.leyla.top/note/Pastedimage20230615115226.png)
 - name spacing 为进程隔离资源：进程
 - control groups可以限制进程使用的内存量、cpu量、硬盘驱动器、I/O、网络带宽
 - image是文件系统快照
@@ -55,8 +55,8 @@ container 有自己的隔离的硬件资源、内存空间、网络技术、硬�
 	- docker exec 可以再运行中的容器中执行命令
 	- docker system df 查看docker 占用系统情况
 	- docker system prune 清理掉不活跃的占用（container、image），image总数不会变
-<!-- - ![图片](../../../asset/Pastedimage20230615162358.png) -->
-<!-- - ![图片](../../../asset/Pastedimage20230615162414.png) -->
+- ![图片](http://images.leyla.top/note/Pastedimage20230615162358.png)
+- ![图片](http://images.leyla.top/note/Pastedimage20230615162414.png)
 - docker logs +containerId 插卡容器日志
 - docker stop 停止容器，发送 SIGTERM 信号给容器，容器接收到信号后，执行相关逻辑并停止（软着陆）（推荐这个）（如果10s内没有关完，docker会自动触发docker kill）
 - docker kill 杀掉容器，发送SIGKILL 给容器，容器什么也不需要做，立即停止（强行关闭，硬着陆）
@@ -84,7 +84,7 @@ CMD ["redis-server"] 作者：无限咪咪 https://www.bilibili.com/read/cv21266
 - docker image build 等同于 docker build .
 - docker commit -c 'CMD \["redis-server"\]' container-id 将某个container构建成一个image，并在container创建成功之后，执行-c里面的命令
 - 创建node-app image的步骤
-<!-- ![图片](../../../asset/Pastedimage20230619111155.png) -->
+![图片](http://images.leyla.top/note/Pastedimage20230619111155.png)
 
 
 ```
