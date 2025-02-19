@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <main class="container mx-auto my-4">
+        <h1 class="text-3xl font-bold mb-10 text-center text-gray-900">
+            已购商品性价比计算器
+        </h1>
+        <p class="text-gray-600 mb-4">
+            已购商品性价比计算器：<br>
+            输入已购商品的名称、价格、购买时间、使用时间、使用频率、使用效果等信息，计算出性价比。
+        </p>
+        <form class="border-2 border-gray-900/10 p-4 rounded-md">
+            <div class="space-y-12">
+                <div class="border-b border-gray-900/10 pb-12">
+                    <h2 class="text-base/7 font-semibold text-gray-900">请输入商品信息</h2>
+                </div>
+            </div>
+            <div>
+                <label for="name" class="block text-sm/6 font-medium text-gray-900">商品名称</label>
+                <div class="mt-2">
+                    <input type="text" name="name" id="name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+            </div>
+            <div>
+                <label for="price" class="block text-sm/6 font-medium text-gray-900">商品价格</label>
+                <div class="mt-2">
+                    <input type="text" name="price" id="price" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+            </div>
+            <div>
+                <label for="purchase_time" class="block text-sm/6 font-medium text-gray-900">购买时间</label>
+                <div class="mt-2">
+
+                    <!-- <input type="text" name="purchase_time" id="purchase_time" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"> -->
+                    <input type="date" name="purchase_time" id="purchase_time" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+            </div>
+            <div>
+                <label for="usage_count" class="block text-sm/6 font-medium text-gray-900">使用次数</label>
+                <div class="mt-2">
+                    <input type="text" name="usage_count" id="usage_count" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+            </div>
+            <div>
+                <label for="usage_category" class="block text-sm/6 font-medium text-gray-900">商品分类</label>
+                <div class="mt-2">
+                    <!-- <input type="text" name="usage_category" id="usage_category" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"> -->
+                    <select name="usage_category" id="usage_category" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                        <option value="1">日用品</option>
+                        <option value="2">食品</option>
+                        <option value="3">数码产品</option>
+                        <option value="4">服饰</option>
+                        <option value="5">其他</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label for="usage_effect" class="block text-sm/6 font-medium text-gray-900">商品使用评价</label>
+                <div class="mt-2">
+                    <!-- <input type="text" name="usage_effect" id="usage_effect" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"> -->
+                    <textarea name="usage_effect" id="usage_effect" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
+                </div>
+            </div>
+            <!-- 按钮 -->
+            <div class="mt-6 flex items-center justify-end gap-x-6">
+                <button type="button" class="text-sm/6 font-semibold text-gray-900">取消</button>
+                <button class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">保存</button>
+            </div>
+        </form>
+        <table id="items" class="mt-10 w-full border-gray-900/10 p-4 rounded">
+            <thead class="text-left">
+                <tr>
+                    <th>商品名称</th>
+                    <th>商品价格</th>
+                    <th>购买时间</th>
+                    <th>使用次数</th>
+                    <th>商品分类</th>
+                    <th>商品使用效果</th>
+                    <th>价格/使用次数</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+    <script>
+        function getLocalStorage() {
+            const storage = localStorage.getItem('items');
+            if (storage) {
+                return JSON.parse(storage);
+            }
+            return [];
+        }
+
+        function setLocalStorage(item) {
+            const items = getLocalStorage();
+            items.push(item);
+            localStorage.setItem('items', JSON.stringify(items));
+        }
+
+        function updateList() {
+            const items = getLocalStorage();
+            items.forEach(item => {
+                updateListItem(item);
+            });
+        }
+        updateList();
+        function updateListItem(data) {
+            const items = document.getElementById('items');
+            const item = document.createElement('tr');
+            const itemHTML = `
+            <td>${data.name}</td>
+            <td>${data.price}</td>
+            <td>${data.purchase_time}</td>
+            <td>${data.usage_count}</td>
+            <td>${data.usage_category}</td>
+            <td>${data.usage_effect}</td>
+            <td>${data.price / data.usage_count}</td>
+            <td>
+                <button class="edit-button text-sm/6 font-semibold text-gray-900 border-2 border-gray-900/10 rounded-md px-2 py-1 cursor-pointer" data-id="${data.id}">编辑</button>
+                <button class="delete-button text-sm/6 font-semibold text-gray-900 border-2 border-gray-900/10 rounded-md px-2 py-1 cursor-pointer" data-id="${data.id}">删除</button>
+            </td>
+            `
+            item.innerHTML = itemHTML;
+            items.appendChild(item);
+        }
+
+        function handleSaveItemListener(e) {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                if (!name) {
+                    alert('请输入商品名称');
+                    return;
+                }
+                const price = document.getElementById('price').value;
+                if (!price) {
+                    alert('请输入商品价格');
+                    return;
+                }
+                const purchase_time = document.getElementById('purchase_time').value;
+                if (!purchase_time) {
+                    alert('请输入购买时间');
+                    return;
+                }
+                const usage_count = document.getElementById('usage_count').value;
+                if (!usage_count) {
+                    alert('请输入使用次数');
+                    return;
+                }
+                const usage_category = document.getElementById('usage_category').value;
+                if (!usage_category) {
+                    alert('请输入商品分类');
+                    return;
+                }
+                const usage_effect = document.getElementById('usage_effect').value;
+                if (!usage_effect) {
+                    alert('请输入商品使用效果');
+                    return;
+                }
+                const item = {
+                    id: Date.now(),
+                    name,
+                    price,
+                    purchase_time,
+                    usage_count,
+                    usage_category,
+                    usage_effect,
+                }
+                setLocalStorage(item);
+                updateListItem(item);
+            });
+        }
+        function handleEditItemListener() {
+            // 将事件委托给 items 表格
+            document.getElementById('items').addEventListener('click', (e) => {
+                if(e.target.classList.contains('edit-button')) {
+                    
+                    // 判断form中是否有尚未保存的内容，如果有，则提示用户保存
+                    const form = document.querySelector('form');
+                    const inputs = form.querySelectorAll('input');
+                    const textareas = form.querySelectorAll('textarea');
+                    let hasValue = false;
+                    inputs.forEach(input => {
+                        if(input.value) {
+                            hasValue = true;
+                        }
+                    });
+                    textareas.forEach(textarea => {
+                        if(textarea.value) {
+                            hasValue = true;
+                        }
+                    });
+                    if(hasValue) {
+                        alert('请先保存尚未保存的内容');
+                        return;
+                    }
+
+                    const id = e.target.getAttribute('data-id');
+                    const data = getLocalStorage().find(item => Number(item.id) === Number(id));
+                    form.querySelector('input[name="name"]').value = data.name;
+                    form.querySelector('input[name="price"]').value = data.price;
+                    form.querySelector('input[name="purchase_time"]').value = data.purchase_time;
+                    form.querySelector('input[name="usage_count"]').value = data.usage_count;
+                    form.querySelector('select[name="usage_category"]').value = data.usage_category;
+                    form.querySelector('textarea[name="usage_effect"]').value = data.usage_effect;
+                    console.log(data);
+                }
+            })
+        }
+        function handleDeleteItemListener(data) {
+            document.getElementById('items').addEventListener('click', (e) => {
+                if(e.target.classList.contains('delete-button')) {
+                    // 弹出二次确认 
+                    if(confirm('确定要删除该商品记录吗？')) {
+                        const id = e.target.getAttribute('data-id');
+                        const data = getLocalStorage().find(item => Number(item.id) === Number(id));
+                        const items = getLocalStorage();
+                        items.splice(items.indexOf(data), 1);
+                        localStorage.setItem('items', JSON.stringify(items));
+
+                        const itemsContainer = document.getElementById('items');
+                        itemsContainer.removeChild(itemsContainer.querySelector(`tr[data-id="${id}"]`));
+                    }
+                }
+            })
+        }
+        window.addEventListener('load', () => {
+            handleSaveItemListener();
+            handleEditItemListener();
+            handleDeleteItemListener();
+        });
+        // function getUsageEffectScore(usage_effect) {
+        //     const usage_effect_score = usage_effect.split(',').map(Number);
+        //     return usage_effect_score.reduce((acc, curr) => acc + curr, 0) / usage_effect_score.length;
+        // }
+    </script>
+</body>
+</html>
