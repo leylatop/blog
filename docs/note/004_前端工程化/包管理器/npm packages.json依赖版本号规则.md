@@ -74,4 +74,7 @@ npm的版本号，使用语义化版本
 - 使用 `npm update` 更新到新版本
 
 
-参考地址：[# npm依赖包的版本锁定原理](https://juejin.cn/post/7163150684747989005)
+参考地址：
+[# npm依赖包的版本锁定原理](https://juejin.cn/post/7163150684747989005)
+[# pacakge.json 中依赖版本的记忆技巧](https://taxodium.ink/package-json-version-remember-trick.html)
+
