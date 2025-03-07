@@ -6,7 +6,10 @@
 
 `.js` 就是普通的js文件，它可以是普通的脚本，也可以是模块文件
 在`.js` 作为模块文件时，它处于何种模块系统，取决于配置：
-1. 在`Node.js`中，取决于`package.json` 中的`type` 字段；如果`type`字段为`module`，js文件会被当做ES模块（ESM）；如果`type`字段未指定，则被当做CommonJS模块（CJS）
+1. 在`Node.js`中，取决于`package.json` 中的`type` 字段；如果`type`字段为`module`，js文件会被当做ES模块（ESM）；如果`type`字段未指定，则被当做CommonJS模块（CJS），如果想在项目中使用 ESM 而不是 CommonJS，请使用以下命令。
+```bash
+npm pkg set type="module"
+```
 2. 在浏览器中，.js 可以通过`<script>` 或 `<script type="module" >`执行
 
 ## `.mjs`(ES 模块)
