@@ -4,9 +4,26 @@
 
 ## 配置流程
 ### 1. 关闭防火墙
-```sh
+检查防火墙的状态时：
+- 如果回显中出现`Active: inactive (dead)`信息，说明防火墙处于关闭状态，无需再进行任何操作。
+    
+- 如果回显中出现`Active: active (running)`信息，说明防火墙已开启，请继续执行步骤[3](https://help.aliyun.com/zh/ecs/user-guide/check-whether-tcp-port-80-is-available#8611ce6002zy8)。
+```shell
+# 检查防火墙的状态
+systemctl status firewalld
+
 systemctl stop firewalld.service
+
+
+# 或查看防火墙中已开放的端口
+firewall-cmd --list-all
+FirewallD is not running
 ```
+
+-
+```
+
+
 
 ### 2. 确认停用 selinux
 ```sh

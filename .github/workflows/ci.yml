@@ -7,22 +7,17 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        os: [ubuntu-latest] # macos-latest, windows-latest
-        node-version: [20.x]
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4.0.0
-
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 'latest'
           cache: 'pnpm'
 
       - name: Install dependencies
@@ -31,12 +26,42 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: SSH Deploy
-        uses: easingthemes/ssh-deploy@v4.1.10
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: '-avzr --delete'
-          SOURCE: 'build/'
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: 'root'
-          TARGET: '/www/leyla.top/'
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          
+      - name: Add host key
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.REMOTE_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy with rollback
+        run: |
+          # 创建时间戳目录
+          TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+          DEPLOY_DIR="${{ secrets.DEPLOY_PATH }}/releases/${TIMESTAMP}"
+          CURRENT_LINK="${{ secrets.DEPLOY_PATH }}/current"
+          
+          # 创建发布目录
+          ssh ${{ secrets.SERVER_USERNAME }}@${{ secrets.REMOTE_HOST }} "mkdir -p ${DEPLOY_DIR}"
+          
+          # 复制构建文件到服务器
+          scp -r _site/* ${{ secrets.SERVER_USERNAME }}@${{ secrets.REMOTE_HOST }}:${DEPLOY_DIR}
+          
+          # 部署新版本（使用原子操作）
+          ssh ${{ secrets.SERVER_USERNAME }}@${{ secrets.REMOTE_HOST }} "
+            ln -sfn ${DEPLOY_DIR} ${CURRENT_LINK}.tmp && \
+            mv -Tf ${CURRENT_LINK}.tmp ${CURRENT_LINK} && \
+            echo 'Deployment successful!' || \
+            (echo 'Deployment failed, rolling back...' && \
+            rm -rf ${DEPLOY_DIR} && \
+            exit 1)
+          "
+          
+          # 保留最近的5个部署版本，删除旧版本
+          ssh ${{ secrets.SERVER_USERNAME }}@${{ secrets.REMOTE_HOST }} "
+            cd ${{ secrets.DEPLOY_PATH }}/releases && \
+            ls -t | tail -n +6 | xargs -r rm -rf
+          "
