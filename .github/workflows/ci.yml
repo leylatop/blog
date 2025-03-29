@@ -7,17 +7,22 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
 
+    strategy:
+      matrix:
+        os: [ubuntu-latest] # macos-latest, windows-latest
+        node-version: [20.x]
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - uses: pnpm/action-setup@v4.0.0
+
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
-          node-version: 'latest'
+          node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
 
       - name: Install dependencies
@@ -25,7 +30,6 @@ jobs:
 
       - name: Build
         run: pnpm build
-
 
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.8.0
@@ -48,7 +52,7 @@ jobs:
           ssh ${{ secrets.SERVER_USERNAME }}@${{ secrets.REMOTE_HOST }} "mkdir -p ${DEPLOY_DIR}"
           
           # 复制构建文件到服务器
-          scp -r _site/* ${{ secrets.SERVER_USERNAME }}@${{ secrets.REMOTE_HOST }}:${DEPLOY_DIR}
+          scp -r build/* ${{ secrets.SERVER_USERNAME }}@${{ secrets.REMOTE_HOST }}:${DEPLOY_DIR}
           
           # 部署新版本（使用原子操作）
           ssh ${{ secrets.SERVER_USERNAME }}@${{ secrets.REMOTE_HOST }} "
