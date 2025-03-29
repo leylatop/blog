@@ -39,7 +39,7 @@ jobs:
       - name: Add host key
         run: |
           mkdir -p ~/.ssh
-          ssh-keyscan -H ${{ secrets.REMOTE_HOST }} >> ~/.ssh/known_hosts
+          ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
       - name: Deploy with rollback
         run: |
@@ -49,13 +49,13 @@ jobs:
           CURRENT_LINK="${{ secrets.DEPLOY_PATH }}/current"
           
           # 创建发布目录
-          ssh ${{ secrets.SERVER_USERNAME }}@${{ secrets.REMOTE_HOST }} "mkdir -p ${DEPLOY_DIR}"
+          ssh ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "mkdir -p ${DEPLOY_DIR}"
           
           # 复制构建文件到服务器
-          scp -r build/* ${{ secrets.SERVER_USERNAME }}@${{ secrets.REMOTE_HOST }}:${DEPLOY_DIR}
+          scp -r _site/* ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${DEPLOY_DIR}
           
           # 部署新版本（使用原子操作）
-          ssh ${{ secrets.SERVER_USERNAME }}@${{ secrets.REMOTE_HOST }} "
+          ssh ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "
             ln -sfn ${DEPLOY_DIR} ${CURRENT_LINK}.tmp && \
             mv -Tf ${CURRENT_LINK}.tmp ${CURRENT_LINK} && \
             echo 'Deployment successful!' || \
@@ -65,7 +65,7 @@ jobs:
           "
           
           # 保留最近的5个部署版本，删除旧版本
-          ssh ${{ secrets.SERVER_USERNAME }}@${{ secrets.REMOTE_HOST }} "
+          ssh ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "
             cd ${{ secrets.DEPLOY_PATH }}/releases && \
             ls -t | tail -n +6 | xargs -r rm -rf
           "
