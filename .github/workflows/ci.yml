@@ -52,7 +52,7 @@ jobs:
           ssh ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "mkdir -p ${DEPLOY_DIR}"
           
           # 复制构建文件到服务器
-          scp -r _site/* ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${DEPLOY_DIR}
+          scp -r build/* ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${DEPLOY_DIR}
           
           # 部署新版本（使用原子操作）
           ssh ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "
