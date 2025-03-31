@@ -20,11 +20,6 @@ firewall-cmd --list-all
 FirewallD is not running
 ```
 
--
-```
-
-
-
 ### 2. 确认停用 selinux
 ```sh
 getenforce
@@ -97,4 +92,8 @@ systemctl reload nginx.service
 ![image.png](http://images.leyla.top/blog/20250324231046942.png)
 
 
-至此，可以通过云服务器的公网ip
+至此，可以在浏览器通过云服务器的公网ip打开nginx的默认页面
+**注意：打开的公网ip必须是http协议，小心不要打开了https协议, 我重装系统的时候，一直以为是防火墙或者安全组没有配置好,结果发现是自己的浏览器有缓存，输入ip后，使用了https协议**
+
+
+下一篇：[阿里云域名解析到服务器及SSL证书配置](阿里云域名解析到服务器及SSL证书配置.md)
