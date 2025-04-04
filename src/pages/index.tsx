@@ -1,5 +1,5 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
-import Layout from '@theme/Layout'
+import Layout from '@site/src/theme/MyLayout'
 import Hero from '../components/landing/Hero'
 
 export default function Home() {
