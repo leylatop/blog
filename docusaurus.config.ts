@@ -36,7 +36,7 @@ const config: Config = {
       },
       {
         name: 'keywords',
-        content: '编程爱好者, Web开发者, 写过爬虫, 学过逆向, 主攻ts全栈',
+        content: '编程爱好者, Web开发者, 主攻React',
       },
     ],
     docs: {
@@ -52,7 +52,7 @@ const config: Config = {
       },
       hideOnScroll: true,
       items: [
-        // { label: '博客', position: 'right', to: 'blog' },
+        { label: '博客', position: 'right', to: 'blog' },
         { label: '笔记', position: 'right', to: 'docs/note' },
         // { label: '项目', position: 'right', to: 'project' },
         // { label: '友链', position: 'right', to: 'friends' },
@@ -79,11 +79,10 @@ const config: Config = {
         {
           title: '学习',
           items: [
-            // { label: '博客', to: 'blog' },
+            { label: '博客', to: 'blog' },
             // { label: '归档', to: 'blog/archive' },
             { label: '技术笔记', to: 'docs/note' },
             // { label: '实战项目', to: 'project' },
-            // { label: '前端示例', to: 'https://example.kuizuo.cn' },
           ],
         },
         {
@@ -99,11 +98,11 @@ const config: Config = {
         // {
         //   title: '网站',
         //   items: [
-        //     { label: 'js反混淆', to: 'https://js-deobfuscator.kuizuo.cn' },
+        //     { label: 'js反混淆', to: 'https://js-deobfuscator.leyla.cn' },
         //     { label: 'cyberChef', to: 'https://gchq.github.io/CyberChef' },
-        //     { label: 'api服务', to: 'https://api.kuizuo.cn' },
-        //     { label: '便民服务', to: 'https://service.kuizuo.cn' },
-        //     { label: '站点监控', to: 'https://uptime.kuizuo.cn' },
+        //     { label: 'api服务', to: 'https://api.leyla.cn' },
+        //     { label: '便民服务', to: 'https://service.leyla.cn' },
+        //     { label: '站点监控', to: 'https://uptime.leyla.cn' },
         //   ],
         // },
         {
@@ -182,40 +181,40 @@ const config: Config = {
         theme: {
           customCss: ['./src/css/custom.css', './src/css/tweet-theme.css'],
         },
-        sitemap: {
-          priority: 0.5,
-        },
-        gtag: {
-          trackingID: 'G-S4SD5NXWXF',
-          anonymizeIP: true,
-        },
+        // sitemap: {
+        //   priority: 0.5,
+        // },
+        // gtag: {
+        //   trackingID: 'G-S4SD5NXWXF',
+        //   anonymizeIP: true,
+        // },
         debug: process.env.NODE_ENV === 'development',
       } satisfies Preset.Options,
     ],
   ],
   plugins: [
-    'docusaurus-plugin-image-zoom',
-    '@docusaurus/plugin-ideal-image',
+    // 'docusaurus-plugin-image-zoom',
+    // '@docusaurus/plugin-ideal-image',
     // ['docusaurus-plugin-baidu-tongji', { token: 'c9a3849aa75f9c4a4e65f846cd1a5155' }],
-    [
-      '@docusaurus/plugin-pwa',
-      {
-        debug: process.env.NODE_ENV === 'development',
-        offlineModeActivationStrategies: ['appInstalled', 'standalone', 'queryString'],
-        pwaHead: [
-          { tagName: 'link', rel: 'icon', href: '/img/logo.png' },
-          { tagName: 'link', rel: 'manifest', href: '/manifest.json' },
-          { tagName: 'meta', name: 'theme-color', content: '#12affa' },
-        ],
-      },
-    ],
-    [
-      'vercel-analytics',
-      {
-        debug: process.env.NODE_ENV === 'development',
-        mode: 'auto',
-      },
-    ],
+    // [
+    //   '@docusaurus/plugin-pwa',
+    //   {
+    //     debug: process.env.NODE_ENV === 'development',
+    //     offlineModeActivationStrategies: ['appInstalled', 'standalone', 'queryString'],
+    //     pwaHead: [
+    //       { tagName: 'link', rel: 'icon', href: '/img/logo.png' },
+    //       { tagName: 'link', rel: 'manifest', href: '/manifest.json' },
+    //       { tagName: 'meta', name: 'theme-color', content: '#12affa' },
+    //     ],
+    //   },
+    // ],
+    // [
+    //   'vercel-analytics',
+    //   {
+    //     debug: process.env.NODE_ENV === 'development',
+    //     mode: 'auto',
+    //   },
+    // ],
     [
       './src/plugin/plugin-content-blog', // 为了实现全局 blog 数据，必须改写 plugin-content-blog 插件
       {
@@ -230,12 +229,12 @@ const config: Config = {
         showReadingTime: true,
         readingTime: ({ content, frontMatter, defaultReadingTime }) =>
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
-        feedOptions: {
-          type: 'all',
-          title: '愧怍',
-          description: 'feedId:41215011978385457+userId:41840354283324416',
-          copyright: `Copyright © ${new Date().getFullYear()} 愧怍 Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
-        },
+        // feedOptions: {
+        //   type: 'all',
+        //   title: '愧怍',
+        //   description: 'feedId:41215011978385457+userId:41840354283324416',
+        //   copyright: `Copyright © ${new Date().getFullYear()} 愧怍 Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
+        // },
       },
     ],
     async function tailwindcssPlugin() {

@@ -1,14 +1,13 @@
-import { type Variants, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 import Translate from '@docusaurus/Translate'
 
-import HeroSvg from './img/hero.svg'
 
 import SocialLinks from '@site/src/components/SocialLinks'
 import { MovingButton } from '../../magicui/moving-border'
 import styles from './styles.module.css'
 
-const variants: Variants = {
+const variants = {
   visible: i => ({
     opacity: 1,
     y: 0,
@@ -21,10 +20,6 @@ const variants: Variants = {
     },
   }),
   hidden: { opacity: 0, y: 30 },
-}
-
-function Circle() {
-  return <div className={styles.circle} />
 }
 
 function Name() {
@@ -58,7 +53,7 @@ function Name() {
 
 export default function Hero() {
   return (
-    <motion.div className={styles.hero}>
+    <motion.div className='flex lg:flex-row flex-col justify-center items-center'>
       <div className={styles.intro}>
         <Name />
         <motion.p custom={2} initial="hidden" animate="visible" variants={variants} className="max-lg:px-4">
@@ -81,10 +76,9 @@ export default function Hero() {
           </MovingButton>
         </motion.div>
       </div>
-      <motion.div className={styles.background}>
-        <HeroSvg />
-        {/* <Circle /> */}
-      </motion.div>
+      <div className='p-10 order-1'>
+        <img src={'/img/logo.svg'} alt="hero" />
+      </div>
     </motion.div>
   )
 }
