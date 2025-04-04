@@ -260,13 +260,13 @@ const config: Config = {
                 innerHTML: `
     (${function () {
       console.log(
-        `%c Kz Blog %c https://github.com/leylatop/blog`,
+        `%c LeylaTop %c https://github.com/leylatop/blog`,
         'color: #fff; margin: 1em 0; padding: 5px 0; background: #12affa;',
         'margin: 1em 0; padding: 5px 0; background: #efefef;',
       )
 
       const motto = `
-This Webisite Powered By Kz Blog.
+This Webisite Powered By LeylaTop.
 Written by Docusaurus, Coding with Love.
 --------
 Love what you do and do what you love.
