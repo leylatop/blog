@@ -7,7 +7,7 @@ server {
     listen 80;
     server_name localhost;
 
-    location / {
+    location /api {
         # 允许跨域的源，可以是具体的域名或 *
         add_header 'Access-Control-Allow-Origin' 'http://example.com';
         
@@ -27,11 +27,19 @@ server {
         if ($request_method = 'OPTIONS') {
             return 204;
         }
-        
-        proxy_pass http://localhost:8080;
     }
 }
 ```
+
+## 配置代理跨域
+在浏览器请求第三方接口时，浏览器会进行跨域请求，此时需要通过服务器的接口进行配置代理跨域。在nginx中配置代理跨域，需要使用`proxy_pass`指令。
+
+```bash
+location /api {
+    proxy_pass http://xxx.xxx.xxx.xxx:8080;
+}
+```
+
 
 ## 建议：
 - 配置 Access-Control-Allow-Origin 时，不要随意使用 *，应该明确指定允许的源
