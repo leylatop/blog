@@ -4,7 +4,6 @@ import { useThemeConfig } from '@docusaurus/theme-common'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import { usePluginData } from '@docusaurus/useGlobalData'
-import { Icon } from '@iconify/react'
 import SocialLinks from '@site/src/components/SocialLinks'
 import { cn } from '@site/src/lib/utils'
 
@@ -60,7 +59,7 @@ export default function UserCard({ isNavbar = false }: { isNavbar?: boolean }) {
         </Link>
       </div>
       <div className={styles.bio}>{bio}</div>
-      <div className={styles.num}>
+      {/* <div className={styles.num}>
         <Link className={styles.numItem} href="/blog/archive">
           <Icon icon="carbon:blog" width="20" height="20" />
           {count.blog}
@@ -77,7 +76,7 @@ export default function UserCard({ isNavbar = false }: { isNavbar?: boolean }) {
           <Icon icon="ph:projector-screen" width="20" height="20" />
           {count.project}
         </Link>
-      </div>
+      </div> */}
       <SocialLinks
         style={{
           maxWidth: '100%',

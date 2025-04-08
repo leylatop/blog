@@ -6,7 +6,7 @@ import { MagicCard } from '@site/src/components/magicui/magic-card'
 import FavoriteIcon from '@site/src/components/svgIcons/FavoriteIcon'
 import { cn } from '@site/src/lib/utils'
 import { sortBy } from '@site/src/utils/jsUtils'
-import Image from '@theme/IdealImage'
+// import Image from '@theme/IdealImage'
 import React, { memo } from 'react'
 import styles from './styles.module.css'
 
@@ -43,7 +43,7 @@ const ShowcaseCard = memo(({ project }: { project: Project }) => {
     <MagicCard key={project.title} className={cn('card', styles.showcaseCard)}>
       {project.preview && (
         <div className={cn('card__image', styles.showcaseCardImage)}>
-          <Image src={project.preview} alt={project.title} img={project.preview} />
+          {/* <Image src={project.preview} alt={project.title} img={project.preview} /> */}
         </div>
       )}
       <div className="card__body">
