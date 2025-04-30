@@ -10,7 +10,7 @@ export default function MyLayout({ children, maxWidth, ...layoutProps }: Props &
 
       <div className="bg-background">
         <div
-          className={cn('mx-auto my-10 lg:my-20 px-4')}
+          className={cn('mx-auto max-w-6xl px-4 margin-vert--lg')}
           style={maxWidth ? { maxWidth: `${maxWidth}px` } : {}}
         >
           <main>{children}</main>
