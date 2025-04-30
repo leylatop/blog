@@ -148,14 +148,14 @@ const config: Config = {
         },
       ],
     },
-    // giscus: {
-    //   repo: 'kuizuo/blog',
-    //   repoId: 'MDEwOlJlcG9zaXRvcnkzOTc2MjU2MTI=',
-    //   category: 'General',
-    //   categoryId: 'DIC_kwDOF7NJDM4CPK95',
-    //   theme: 'light',
-    //   darkTheme: 'dark_dimmed',
-    // } satisfies Partial<GiscusConfig>,
+    giscus: {
+      repo: 'leylatop/blog',
+      repoId: 'R_kgDON1ou_A',
+      category: 'General',
+      categoryId: 'DIC_kwDON1ou_M4Cpo-y',
+      theme: 'light',
+      darkTheme: 'dark_dimmed',
+    },
     tableOfContents: {
       minHeadingLevel: 2,
       maxHeadingLevel: 4,
