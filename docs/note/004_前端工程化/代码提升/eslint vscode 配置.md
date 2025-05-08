@@ -20,7 +20,7 @@
     "editor.formatOnSave": true,
     "editor.pasteAs.preferences": [],
     "editor.fontSize": 14,
-    "eslint.useFlatConfig": false,
+    "eslint.useFlatConfig": false, // 关键配置
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.minimap.enabled": false
 }
