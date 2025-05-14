@@ -126,11 +126,13 @@ const config: Config = {
         }" >${beian1}</a></p>
         `,
     },
-    // algolia: {
-    //   appId: 'GV6YN1ODMO',
-    //   apiKey: '50303937b0e4630bec4a20a14e3b7872',
-    //   indexName: 'kuizuo',
-    // },
+    algolia: {
+      appId: '6KIX5EFJP3',
+      apiKey: 'cd149a11a95e0e50ab3cbac68bfd86f4',
+      indexName: 'leyla',
+      contextualSearch: true,
+      insights: true,
+    },
     prism: {
       theme: themes.oneLight,
       darkTheme: themes.oneDark,

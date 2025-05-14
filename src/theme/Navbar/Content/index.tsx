@@ -3,8 +3,9 @@ import { splitNavbarItems, useNavbarMobileSidebar } from '@docusaurus/theme-comm
 import NavbarColorModeToggle from '@theme/Navbar/ColorModeToggle'
 import NavbarLogo from '@theme/Navbar/Logo'
 import NavbarMobileSidebarToggle from '@theme/Navbar/MobileSidebar/Toggle'
+import NavbarSearch from '@theme/Navbar/Search'
 import NavbarItem, { type Props as NavbarItemConfig } from '@theme/NavbarItem'
-// import SearchBar from '@theme/SearchBar'
+import SearchBar from '@theme/SearchBar'
 import { type ReactNode } from 'react'
 
 import styles from './styles.module.css'
@@ -57,7 +58,7 @@ export default function NavbarContent(): JSX.Element {
   const items = useNavbarItems()
   const [leftItems, rightItems] = splitNavbarItems(items)
 
-  // const searchBarItem = items.find(item => item.type === 'search')
+  const searchBarItem = items.find(item => item.type === 'search')
 
   return (
     <NavbarContentLayout
@@ -75,11 +76,11 @@ export default function NavbarContent(): JSX.Element {
         <>
           <NavbarItems items={rightItems} />
           <NavbarColorModeToggle className={styles.colorModeToggle} />
-          {/* {!searchBarItem && (
+          {!searchBarItem && (
             <NavbarSearch>
               <SearchBar />
             </NavbarSearch>
-          )} */}
+          )}
         </>
       }
     />
