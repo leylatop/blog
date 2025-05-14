@@ -1,3 +1,7 @@
+---
+slug: /note/when-the-network-is-disconnected-store-data-in-cache-storage-logic
+title: 断网时，将数据存储至Cache Storage 逻辑
+---
 - mb-flat-json：
 ```
 source/browser/proto2sdk/setup.ts:71

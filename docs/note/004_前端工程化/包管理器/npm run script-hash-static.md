@@ -1,3 +1,7 @@
+---
+slug: /note/npm-run-script-hash-static
+title: npm run script-hash-static
+---
 1. 删除 public/mb-dashboard/package.json 文件
 2. 根据 public/mb-dashboard/ 下的文件内容，生成新的hash
 	1. 拿到 public/mb-dashboard/ 下每一个文件，对文件依次进行遍历 & 递归

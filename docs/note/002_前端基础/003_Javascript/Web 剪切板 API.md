@@ -1,3 +1,7 @@
+---
+slug: /note/web-clipboard-api
+title: Web 剪切板 API
+---
 ## Clipboard API 异步剪切板 API
 
 剪贴板允许以与 MIME 类型相关联的多种表示形式存储信息，从而为这两种用例提供服务。W3C 剪贴板规范规定，在写入和读取剪贴板时，必须支持这三种数据类型：

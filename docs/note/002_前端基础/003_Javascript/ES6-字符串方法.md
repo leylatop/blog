@@ -1,3 +1,7 @@
+---
+slug: /note/es6-string-methods
+title: ES6-字符串方法
+---
 #### 对象方法
 
 ##### fromCodePoint

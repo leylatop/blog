@@ -1,3 +1,7 @@
+---
+slug: /note/npm-installation-is-stuck-at-ideal-tree-build-deps-no-response
+title: npm 安装是一直卡在idealTree buildDeps无反应
+---
 
 如果npm install，一直卡在idealTree buildDeps，最后出现报错：
 ```shell

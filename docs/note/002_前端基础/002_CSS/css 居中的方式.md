@@ -1,3 +1,7 @@
+---
+slug: /note/css-centering-methods
+title: css 居中的方式
+---
 ## 垂直居中
 ### 1. flex布局
 ```css

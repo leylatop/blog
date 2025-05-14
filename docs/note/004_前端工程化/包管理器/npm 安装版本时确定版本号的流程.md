@@ -1,3 +1,7 @@
+---
+slug: /note/npm-installation-version-determination-process
+title: npm 安装版本时确定版本号的流程
+---
 # npm 安装版本时候根据依赖包的版本确定准备版本号的流程
 
 ## 流程

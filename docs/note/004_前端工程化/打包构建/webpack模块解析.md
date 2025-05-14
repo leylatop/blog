@@ -1,3 +1,7 @@
+---
+slug: /note/webpack-module-parsing
+title: webpack模块解析
+---
 
 ```js
 import { createBrowserHistory } from 'history'

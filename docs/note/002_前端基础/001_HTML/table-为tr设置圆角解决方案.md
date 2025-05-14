@@ -1,3 +1,7 @@
+---
+slug: /note/table-tr-rounded-corner-solution
+title: table-为tr设置圆角解决方案
+---
 背景：使用table实现了列表，希望能在选中行时，为行设置背景颜色和圆角。
 阻碍：table不允许为tr设置圆角
 

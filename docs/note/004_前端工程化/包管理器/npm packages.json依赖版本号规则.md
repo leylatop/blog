@@ -1,3 +1,7 @@
+---
+slug: /note/npm-packages.json-dependency-version-number-rules
+title: npm packages.json依赖版本号规则
+---
 ## npm 版本控制机制
 npm的版本号，使用语义化版本
 

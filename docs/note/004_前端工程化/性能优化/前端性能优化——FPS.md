@@ -1,3 +1,7 @@
+---
+slug: /note/frontend-performance-optimization-fps
+title: 前端性能优化——FPS
+---
 - FPS（Frames Per Second）：每秒帧数，指浏览器每秒渲染的帧数，通常情况下，60FPS是流畅的标准，低于60FPS会感觉到卡顿
 
 - FPS 是衡量网页性能优化成效的重要指标之一，FPS 越高，页面渲染越流畅，用户体验越好，可以通过优化代码、减少重绘和回流、合理使用Web动画等方式提高FPS

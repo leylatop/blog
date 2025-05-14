@@ -1,3 +1,7 @@
+---
+slug: /note/use-typescript-to-represent-the-return-value-of-a-function
+title: 将xx函数的返回值作为一种类型，用typescript表示
+---
 
 ```typescript
 

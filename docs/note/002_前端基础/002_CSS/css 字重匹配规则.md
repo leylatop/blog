@@ -1,3 +1,7 @@
+---
+slug: /note/css-font-weight-matching-rules
+title: css 字重匹配规则
+---
 在引入字体包时，如果我们只引入了部分字重，比如下面例子，只引入了字体的 400、500、700、900 字重。
 ```html
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">

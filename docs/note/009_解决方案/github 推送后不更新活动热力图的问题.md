@@ -1,3 +1,7 @@
+---
+slug: /note/github-push-after-not-updating-activity-heat-map-problem
+title: github 推送后不更新活动热力图的问题
+---
 问题：
 我在本地更改了代码仓库，并且git add、git commit、git push推送到github仓库后，github仓库的贡献值未刷新，也就是绿方块没有点亮。但是点到具体的项目内部，是可以看到commit的记录的，这是怎么回事？
 

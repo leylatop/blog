@@ -1,3 +1,7 @@
+---
+slug: /note/react-high-order-components
+title: React的高阶组件
+---
 高阶组件一般有2个应用：
 ## 属性代理
 为原有的组件增加额外的属性

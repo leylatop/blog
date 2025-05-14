@@ -1,3 +1,7 @@
+---
+slug: /note/html-table-related-attributes
+title: HTML-Table相关属性
+---
 - colgroup和col都是HTML表格中用来定义列的元素
 - colgroup：用于定义表格中一组或多组列的属性，可以包含一个或多个col元素
 	- span：指定colgroup元素所包含的列数。

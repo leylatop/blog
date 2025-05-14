@@ -1,3 +1,7 @@
+---
+slug: /note/how-to-switch-mac-mission-control-display-app-window-to-folded-or-tiled-mode
+title: 如何切换Mac 调度中心显示APP窗口为折叠或平铺模式
+---
 ## 缘由
 最近发现在打开调度中心时，如果同一个软件开启多个窗口（如程序员日常使用的的 IDE），那这个软件的多个窗口会重叠在一起，而不是平铺开来。我明确记得之前是平铺开来的，这让我在使用上很不习惯。
 

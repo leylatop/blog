@@ -1,3 +1,7 @@
+---
+slug: /note/parcel-application-packaging-tool
+title: Parcel 应用打包工具
+---
 Parcel 是一个零配置的 Web 应用打包工具，它在构建过程中使用了 Web Worker 来提高构建速度。
 
 **Parcel** 和 **Webpack** 都是现代前端开发中常用的模块打包器，它们有一些共同点，但也有一些关键的区别。

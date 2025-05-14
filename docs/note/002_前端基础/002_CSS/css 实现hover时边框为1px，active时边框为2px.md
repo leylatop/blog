@@ -1,3 +1,7 @@
+---
+slug: /note/css-hover-and-active-border-size-change
+title: css 实现hover时边框为1px，active时边框为2px
+---
 - 使用outline+outline-offset改变“border”的大小，但不改变原来的宽度
 ```html
 <!DOCTYPE html>

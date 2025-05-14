@@ -1,3 +1,7 @@
+---
+slug: /note/link-tag-load-font-principle
+title: link 标签加载字体原理
+---
 ```html
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
 

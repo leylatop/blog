@@ -1,3 +1,7 @@
+---
+slug: /note/docker-compose
+title: docker-compose
+---
 ## docker-compose 是什么？
 
 docker-compose 是一个容器编排器，可以通过编写docker-compose.yml，设置想要启动的很多服务即容器，指定服务镜像、端口号、数据卷、自定义网络等；创建数据卷

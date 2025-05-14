@@ -1,3 +1,7 @@
+---
+slug: /note/use-css-to-implement-svg-border-effect
+title: 使用CSS实现svg边框效果
+---
 
 思路：
 - 原代码：使用svg渲染的实现、虚线

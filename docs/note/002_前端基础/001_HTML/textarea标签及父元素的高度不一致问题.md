@@ -1,3 +1,7 @@
+---
+slug: /note/textarea-tag-and-parent-element-height-inconsistency-problem
+title: textarea标签及父元素的高度不一致问题
+---
 遇到的问题: 给textarea 设置的高度为60，渲染后其真实高度也是60，且60包含其内容和边框，但是其父元素的高度为64
 ```html
 <!DOCTYPE html>

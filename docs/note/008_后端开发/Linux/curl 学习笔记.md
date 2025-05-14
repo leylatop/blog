@@ -1,3 +1,7 @@
+---
+slug: /note/curl-learning-notes
+title: curl 学习笔记
+---
 - curl是什么？
 - curl可以用来干什么？
 - curl的使用场景是什么？

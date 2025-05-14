@@ -1,3 +1,7 @@
+---
+slug: /note/solve-setinterval-will-call-the-first-time-after-x-seconds
+title: 解决setInterval一般会在x之后才会调用第一遍
+---
 ```html
 <script>
   function getCurrentTime() {

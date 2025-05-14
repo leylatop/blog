@@ -1,3 +1,7 @@
+---
+slug: /note/css-implement-fold-and-unfold-effect
+title: CSS 实现折叠&展开的效果
+---
 - 源码实现
 ```jsx
 import React from 'react';

@@ -1,3 +1,7 @@
+---
+slug: /note/react-virtual-dom-and-dom-diff
+title: React 虚拟dom和domdiff
+---
 在react中，引入了虚拟dom的概念，相比于传统的jquery，或js直接操作dom的方式，react通过虚拟dom diff，减少了完整的dom操作，只更新需要更新的真实dom，加快了页面的渲染。
 react的虚拟dom本质上就是对象，记录了元素或组件的信息，包括type、props、ref等。
 

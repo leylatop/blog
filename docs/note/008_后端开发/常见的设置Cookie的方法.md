@@ -1,3 +1,7 @@
+---
+slug: /note/common-methods-for-setting-cookies
+title: 常见的设置Cookie的方法
+---
 1. 前端JavaScript设置：
 ```js
 document.cookie = "username=John Doe; expires=Thu, 18 Dec 2025 12:00:00 UTC; path=/";

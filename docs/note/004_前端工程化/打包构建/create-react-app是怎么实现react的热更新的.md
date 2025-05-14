@@ -1,3 +1,7 @@
+---
+slug: /note/create-react-app-how-to-implement-react-hot-reloading
+title: create-react-app是怎么实现react的热更新的
+---
 create-react-app是react维护的官方教授级（现在已经停止维护），使用create-react-app创建出来的react项目，在开发环境下，支持热更新。
 
 create-react-app 使用的webpack进行打包构建，使用了webpack自带的热更新的支持。但是webpack不支持react框架的热更新，那就需要再额外配置。额外的配置分两步骤：

@@ -1,3 +1,7 @@
+---
+slug: /note/redux-middleware-standard-format
+title: redux中间件标准格式
+---
 所有的中间件，都会作为applyMiddleware函数的参数使用。
 
 redux中间件是一个函数，由三层函数组成，每一层都返回一个新的函数

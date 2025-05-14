@@ -1,3 +1,7 @@
+---
+slug: /note/configure-nginx-on-aliyun-centos
+title: 基于阿里云Centos配置nginx
+---
 ## 环境
 阿里云购买的CentOS 7.9 64位 
 

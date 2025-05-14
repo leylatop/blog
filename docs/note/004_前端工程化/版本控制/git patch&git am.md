@@ -1,3 +1,7 @@
+---
+slug: /note/git-patch-git-am
+title: git patch&git am
+---
 # git patch & git am
 
 #### 使用场景

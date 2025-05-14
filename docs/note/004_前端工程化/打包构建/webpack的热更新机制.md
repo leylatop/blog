@@ -1,3 +1,7 @@
+---
+slug: /note/webpack-hot-reloading-mechanism
+title: webpack的热更新机制
+---
 Webpack 自带了对热模块替换（HMR）的支持。
 当代码发生更改时，不刷新整个页面，而是只替换发生变化的模块，并将更新后的模块注入到运行时的应用中。
 

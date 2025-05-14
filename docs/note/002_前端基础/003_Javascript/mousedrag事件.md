@@ -1,3 +1,7 @@
+---
+slug: /note/mouse-drag-event
+title: mousedrag 事件
+---
 # Mouse Drag
 
 ### 事件监听的类型：

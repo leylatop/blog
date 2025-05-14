@@ -1,3 +1,7 @@
+---
+slug: /note/base-64-bianmahejiema
+title: base 64 编码和解码
+---
 ```js
 function base64ToBytes(base64) {
   const binString = atob(base64);

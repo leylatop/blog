@@ -1,5 +1,6 @@
 ---
-创建于: 2024-09-25 16:55:10
+slug: /note/js-native-constructor-prototype-proto-constructor
+title: js-原生构造函数的prototype、__proto__、constructor
 ---
 
 

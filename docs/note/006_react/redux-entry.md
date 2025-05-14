@@ -1,3 +1,7 @@
+---
+slug: /note/redux-entry
+title: redux-entry
+---
 1. redux-entry 是 redux的中间件
 
 2. redux-entry 提供了一个 createReduxEntry方法，返回\{  middleware, setEntry, setEntryMap \}，其中 middleware 是供redux作为中间件使用

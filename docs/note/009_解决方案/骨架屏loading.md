@@ -1,3 +1,7 @@
+---
+slug: /note/skeleton-loading
+title: 骨架屏loading
+---
 
 ```css
 @keyframes skeleton-loading {

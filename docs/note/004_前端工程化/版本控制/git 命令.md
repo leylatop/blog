@@ -1,3 +1,7 @@
+---
+slug: /note/git-commands
+title: git 命令
+---
 - 将本地仓库链到远程仓库上
 ```bash
 git remote add origin + sshurl

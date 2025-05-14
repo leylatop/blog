@@ -1,3 +1,7 @@
+---
+slug: /note/research-apple-login
+title: 调研接入apple登录
+---
 ```
 请解释一下这个url: @https://appleid.apple.com/auth/authorize?client_id=com.wondershare.accounts&redirect_uri=https%3A%2F%2Faccounts.wondershare.com%2Fapi%2Fv3%2Fsocial%2Fcallback%2Fapple&response_type=code&scope=name%20email&response_mode=form_post&state=eac702264b94422489aa4a9f68022273 。再提供一个应用接入apple登录方式的步骤。
 ```

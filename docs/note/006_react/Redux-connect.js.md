@@ -1,3 +1,7 @@
+---
+slug: /note/redux-connect
+title: Redux-connect.js
+---
 ```js
 /**
  * 1. 状态映射属性

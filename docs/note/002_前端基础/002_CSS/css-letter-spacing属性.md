@@ -1,3 +1,7 @@
+---
+slug: /note/css-letter-spacing-property
+title: css-letter-spacing属性
+---
 letter-spacing 属性用于设置字符之间的间距，标准值为normal，正值表示拉大字符之间的间距，负值表示缩短字符之间的间距，单位可以是 px、em
 
 

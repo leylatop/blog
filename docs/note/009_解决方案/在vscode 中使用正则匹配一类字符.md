@@ -1,3 +1,7 @@
+---
+slug: /note/use-regex-to-match-a-class-of-characters-in-vscode
+title: 在vscode 中使用正则匹配一类字符
+---
 需求：写一个正则匹配 ga360location="xxxxxxxxxxxxxx"，其中ga360location=""是固定的，中间的字符可以是任意个数字、字母、下划线，正则用于在vscode中全局筛选到这些字符 `ga360location="xxxxxxxxxxxx"`，并且删掉。
 
 

@@ -1,3 +1,7 @@
+---
+slug: /note/ai-generate-code-and-preview-in-real-time
+title: AI 生成代码，实时预览的几种方案
+---
 ## 一、 html + srcdoc + iframe  
 1. AI 生成可以通过浏览器直接打开的 html 文件（单文件，html/css/js 写到一起）  
 2. 通过 iframe 的 srcdoc 传入 html 源码预览  

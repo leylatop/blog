@@ -1,3 +1,7 @@
+---
+slug: /note/how-v8-executes-a-javascript-code-segment
+title: V8 是如何执行一段 JavaScript 代码的？
+---
 
 v8：将代码“翻译”成机器能读懂的机器语言
 

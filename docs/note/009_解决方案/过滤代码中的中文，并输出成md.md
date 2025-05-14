@@ -1,3 +1,7 @@
+---
+slug: /note/filter-chinese-in-code-and-output-as-md
+title: 过滤代码中的中文，并输出成md
+---
 ```js
 const fs = require('fs')
 

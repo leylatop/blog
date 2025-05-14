@@ -1,3 +1,7 @@
+---
+slug: /note/debugging-concepts-and-philosophy-debugging-concepts-and-philosophy
+title: Debugging Concepts and Philosophy-调试的概念和理念
+---
 # What Is Debugging?
 - Wikipedia: "debugging is the process of finding and resolving _bugs_ (defects or problems that prevent correct operation) within computer programs, software, or systems.
 ###### Why is it broken, and how do we fix it?

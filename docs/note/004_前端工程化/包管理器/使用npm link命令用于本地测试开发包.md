@@ -1,3 +1,7 @@
+---
+slug: /note/use-npm-link-command-to-test-local-development-package
+title: 使用npm link命令用于本地测试开发包
+---
 在当前目录中执行 `npm link` 命令时，会发生以下步骤：
 
 ## 创建符号链接：

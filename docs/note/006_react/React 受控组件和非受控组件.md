@@ -1,3 +1,7 @@
+---
+slug: /note/react-controlled-and-uncontrolled-components
+title: React 受控组件和非受控组件
+---
 问题：react组件的input元素，不设置value也会正常显示，这是为什么？
 
 React 组件中的 `input` 元素即使不显式设置 `value` 属性，也能正常显示用户输入的内容，这是因为 `input`元素默认行为的特性。在 React 中，`input`元素有两种工作模式：受控组件和非受控组件。

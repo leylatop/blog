@@ -1,3 +1,7 @@
+---
+slug: /note/setinterval-immediately-execute
+title: setInterval 立即执行
+---
 背景：每隔 5s 打印一下当前时间，页面加载完成后，需立即执行一次；`setInterval` 只会在5s后才会打印第一次；
 ```javascript
 function getCurrentTime() {

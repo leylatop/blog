@@ -1,3 +1,7 @@
+---
+slug: /note/es6-set-and-map
+title: ES6-Set 和 Map
+---
 #### Set()
 
 ```

@@ -1,3 +1,7 @@
+---
+slug: /note/pdf-download-requirements-summary
+title: PDF下载需求总结
+---
 1. 最初想法,在当前页面预览pdf文件,但是因为pdf预览功能有难度,所以放弃了预览，改为下载;
 2. 下载pdf文件的方式为：
 ```javascript

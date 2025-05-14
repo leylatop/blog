@@ -1,3 +1,7 @@
+---
+slug: /note/switch-if-else-map-performance-test
+title: switch、if-else、map性能测试
+---
 ```html
 <!DOCTYPE html>
 <html lang="en">

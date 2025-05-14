@@ -1,3 +1,7 @@
+---
+slug: /note/webpack-using-javascriptparser-parse-file-basic-process
+title: webpack-使用 JavascriptParser.parse 解析文件基本流程
+---
 
 1. this.hooks.program.call(ast)
 	1. 先遍历program根，如果代码里有import或export语句，就会向index.js 添加一个抽象的依赖，`HarmonyCompatobilityDependency`，用于在生成模块代码的时候添加一行代码标识该模块为原生的esmodule模块

@@ -1,3 +1,7 @@
+---
+slug: /note/script-tag-async-and-defer-differences
+title: script 标签 async 与 defer 的不同
+---
 `script`标签
 浏览器在解析 HTML 的时候，遇到`script`标签，会根据标签的属性值不一样，而做出不一样的反应。
 

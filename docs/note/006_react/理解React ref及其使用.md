@@ -1,3 +1,7 @@
+---
+slug: /note/understand-react-ref-and-its-usage
+title: 理解React ref及其使用
+---
 
 ref的作用，创建一个变量，变量中有一个current属性，将dom或者类组件的实例保存在ref的current属性上。虽然ref看起来是在类组件的props，或dom的属性上，但是实际上在React.createElement阶段，将ref从props中删除了，赋到了虚拟dom上。
 1. 将ref赋给dom的ref属性后，在虚拟dom创建完真实dom后，会将**真实dom**保存到ref.current，可以通过ref.current 直接操作dom上的方法或获取dom属性

@@ -1,3 +1,7 @@
+---
+slug: /note/vscode-plugin-development
+title: vscode 插件开发
+---
 - vscode 的插件在mac电脑的存储位置在哪里？
 
 在macOS系统上，VS Code插件的存储位置在以下路径中：

@@ -1,3 +1,7 @@
+---
+slug: /note/use-div-and-css-to-achieve-background-image-and-gradient-effect
+title: 用1个div 和 css 实现背景图与渐变效果叠加的效果
+---
 思路： div + 伪元素实现
 
 1. div设置width + height，position: relative 及渐变效果
@@ -10,7 +14,7 @@ div {
 }
 ```
 
-2. :before 设置width/height 与 div等宽等高，设置背景图，及绝对定位
+1. :before 设置width/height 与 div等宽等高，设置背景图，及绝对定位
 ```css
 :before {
 	content: '';
@@ -25,4 +29,4 @@ div {
 }
 ```  
 
-3. 将div 其他子元素设置成 相对定位
+1. 将div 其他子元素设置成 相对定位

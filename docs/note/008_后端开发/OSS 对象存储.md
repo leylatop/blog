@@ -1,3 +1,7 @@
+---
+slug: /note/oss-object-storage
+title: OSS 对象存储
+---
 OSS （Object Storage Service），对象存储服务。
 ## 解释
 1. 一个提供存储的服务，一个云盘。

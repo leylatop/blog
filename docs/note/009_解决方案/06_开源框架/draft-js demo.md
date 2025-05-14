@@ -1,3 +1,7 @@
+---
+slug: /note/draft-js-demo
+title: draft-js demo
+---
 ```jsx
 import { Editor, EditorState, RichUtils } from "draft-js";
 import React, { Component } from "react";

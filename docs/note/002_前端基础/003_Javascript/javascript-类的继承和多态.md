@@ -1,3 +1,7 @@
+---
+slug: /note/javascript-class-inheritance-and-polymorphism
+title: javascript-类的继承和多态
+---
 ```js
 const output = console.log
 class Vehicle {

@@ -1,6 +1,8 @@
 ---
-date created: 2023-05-24
-date modified: 2023-05-25
+date created: 2023-05-24T00:00:00.000Z
+date modified: 2023-05-25T00:00:00.000Z
+slug: /note/look-at-chatgpt-and-other-ai-tools-again
+title: 303 - 《再看 ChatGPT 等 AI 工具》
 ---
 
 303 - 《再看 ChatGPT 等 AI 工具》

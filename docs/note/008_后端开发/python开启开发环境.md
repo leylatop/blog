@@ -1,3 +1,7 @@
+---
+slug: /note/python-development-environment
+title: python开启开发环境
+---
 在任何包含html的目录下执行 `python -m http.server 8000` 都可以跑起来一个基于当前目录的开发环境。http.server是Python 内置的 HTTP 服务器。
 工作流程：
 浏览器 request --> Python HTTP Server --> 返回项目目录下的静态文件 --> 浏览器渲染页面

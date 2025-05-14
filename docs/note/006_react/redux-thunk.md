@@ -1,3 +1,7 @@
+---
+slug: /note/redux-thunk
+title: redux-thunk
+---
 1. redux-thunk 是redux的中间件
 
 2. redux-thunk 中间件允许 action creator返回对象或者返回一个函数

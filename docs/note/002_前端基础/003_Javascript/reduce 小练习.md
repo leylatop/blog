@@ -1,3 +1,7 @@
+---
+slug: /note/reduce-small-exercise
+title: reduce 小练习
+---
 1. 数组求和
 给定一个数字数组，使用 reduce 方法计算并返回所有数字的总和。
 

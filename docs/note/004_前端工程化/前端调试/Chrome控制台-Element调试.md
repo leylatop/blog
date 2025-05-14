@@ -1,3 +1,7 @@
+---
+slug: /note/chrome-console-element-debugging
+title: Chrome控制台-Element调试
+---
 console中：
 $0为Element面板中当前选中的元素
 $1 为上次选中的元素

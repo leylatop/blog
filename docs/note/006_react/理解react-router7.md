@@ -1,3 +1,7 @@
+---
+slug: /note/understand-react-router7
+title: 理解react-router7
+---
 ## 常用的配置方法
 使用官方脚手架生成的项目中，可以在`app/routes.ts`配置路由，整体是一个数组，支持嵌套。可以使用的方法有： index、route、layout、prefix：
 ```ts

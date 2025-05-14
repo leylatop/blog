@@ -1,3 +1,7 @@
+---
+slug: /note/html-input-box-prohibit-copy-function
+title: HTML-输入框禁止使用复制功能
+---
 使用 oncopy 事件禁止复制粘贴功能
 
 ```html

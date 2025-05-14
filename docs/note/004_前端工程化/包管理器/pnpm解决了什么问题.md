@@ -1,3 +1,7 @@
+---
+slug: /note/pnpm-solves-what-problems
+title: pnpm解决了什么问题
+---
 在使用npm 和yarn安装依赖包时，所有的依赖都会被安装到根目录下的 node_module 中。
 在多个仓库中安装同样的依赖时，也会安装在各个仓库中。
 这种行为造成了硬盘空间的浪费。

@@ -1,3 +1,7 @@
+---
+slug: /note/line-height-learning-notes
+title: line-height 学习笔记
+---
 <!-- ![下载此文档](http://images.leyla.top/note/IMG_7629.png) -->
 ## 基础
 1. 字体由 **顶线、中线、基线、底线**组成；

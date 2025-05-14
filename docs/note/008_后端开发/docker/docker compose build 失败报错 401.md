@@ -1,3 +1,7 @@
+---
+slug: /note/docker-compose-build-failed-with-401-error
+title: docker compose build 失败报错 401
+---
 错误代码
 ```bash
 docker-compose up -d --build

@@ -1,3 +1,7 @@
+---
+slug: /note/markdown-to-confluence-table-syntax
+title: markdown转confluence 表格语法
+---
 分享一下markdown =>confluence 创建表格的思路；
 
 这是markdown表格的写法：

@@ -1,3 +1,7 @@
+---
+slug: /note/javascript-advanced-questions-list
+title: JavaScript 进阶问题列表
+---
 # JavaScript 进阶问题列表
 
 我在我的 [Instagram](https://www.instagram.com/theavocoder) 上每天都会发布 JavaScript 的多选问题，并且同时也会在这个仓库中发布。

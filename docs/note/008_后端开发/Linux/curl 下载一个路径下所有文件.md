@@ -1,3 +1,7 @@
+---
+slug: /note/curl-download-all-files-in-a-path
+title: curl 下载一个路径下所有文件
+---
 要使用curl下载一个路径下的所有文件，可以使用以下命令：
 
 ```

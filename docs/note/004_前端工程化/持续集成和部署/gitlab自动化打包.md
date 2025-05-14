@@ -1,3 +1,7 @@
+---
+slug: /note/gitlab-automated-packaging
+title: gitlab自动化打包
+---
 # gitlab自动化打包
 ## gitlab 怎么实现自动打包
 想要实现敏捷开发，提升开发效率，我们可以通过配置gitlab的CI CD，在将代码推送到gitlab时，触发自动化打包流程。在 GitLab CI/CD 中：

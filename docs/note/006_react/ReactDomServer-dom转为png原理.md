@@ -1,3 +1,7 @@
+---
+slug: /note/reactdomserver-dom-to-png-principle
+title: ReactDomServer-dom转为png原理
+---
 - ReactDOMServer.renderToString() 方法已经将 React 组件渲染成了 HTML 字符串；
 ```js
 const str = ReactDOMServer.renderToString(<ItemPngExportable item={item} isWithDeviceFrame={isWithDeviceFrame} scale={scale} hasWatermark={hasWatermark} isExportSticky={isExportSticky} isIncludeCanvasName={isIncludeCanvasName} sdk={sdk} />)

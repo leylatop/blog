@@ -1,3 +1,7 @@
+---
+slug: /note/jenkins-learning-notes
+title: jenkins 学习笔记
+---
 ## Jenkins是什么？
 
 Jenkins是一个持续集成工具，用户持续的构建和部署。

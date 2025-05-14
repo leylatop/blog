@@ -1,3 +1,7 @@
+---
+slug: /note/component-development-tooltips
+title: 组件开发-Tooltips
+---
 - 支持定义箭头是否显示
 - 支持定义箭头在提示框中的位置-12个
 - 支持定义箭头在opener中的位置

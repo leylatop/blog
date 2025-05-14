@@ -1,3 +1,7 @@
+---
+slug: /note/get-url-parameters
+title: 获取 URL中参数
+---
 以[url](http://example.com/?name=John%20Doe&age=12)为例子，以下是几种常见的 JavaScript 获取 URL中参数`name`的方式：
 
 1. 使用 `URLSearchParams` 对象：

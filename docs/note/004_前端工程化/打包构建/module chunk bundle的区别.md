@@ -1,3 +1,7 @@
+---
+slug: /note/module-chunk-bundle-differences
+title: module chunk bundle的区别
+---
 # module chunk bundle的区别
 
 ## module（模块）

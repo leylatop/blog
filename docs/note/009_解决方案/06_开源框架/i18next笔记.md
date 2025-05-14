@@ -1,3 +1,7 @@
+---
+slug: /note/i18next-notes
+title: i18next笔记
+---
 1. i18next仓库提供了I18N类，默认导出的是I18n类的实例：i18n
 2. i18n类常用的方法：init方法、use方法、t方法
 3. i18n.init()，参数为配置文件和资源文件；在调用init方法时，资源文件会被存到resourceStore中，store本质是一个对象，当我们调用i18n.t() 方法时，底层代码会去resourceStore中使用getResource方法进行获取；

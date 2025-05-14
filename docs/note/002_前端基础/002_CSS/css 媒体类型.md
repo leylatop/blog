@@ -1,3 +1,7 @@
+---
+slug: /note/css-media-type
+title: css 媒体类型
+---
 ## 常见类型
 css 中常见的媒体类型有以下几种：
 

@@ -1,3 +1,7 @@
+---
+slug: /note/es6-string
+title: ES6-字符串
+---
 #### 字符的Unicode标识，可以将码点放入大括号
 
 ```javascript

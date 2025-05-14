@@ -1,3 +1,7 @@
+---
+slug: /note/npm-global-installation-command
+title: npm 全局安装命令
+---
 
 
 ```shell

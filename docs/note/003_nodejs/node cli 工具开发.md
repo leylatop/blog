@@ -1,3 +1,7 @@
+---
+slug: /note/node-cli-tool-development
+title: node cli 工具开发
+---
 - cli 调试步骤
 1. 创建软链接：在根目录下执行 sudo npm link，可以将当前项目链接到全局，这样就可以在任何地方使用
 2. 调试 CLI：早终端运行命令 test-cli，即可看到输出 Hello Node CLI

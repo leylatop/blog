@@ -1,3 +1,7 @@
+---
+slug: /note/eval-method-call
+title: eval方法调用
+---
 1. eval 分为直接调用和间接调用两种
 2. 直接调用时，eval 运行于其调用函数的作用域下
 3. 间接调用时，eval 运行于全局作用域

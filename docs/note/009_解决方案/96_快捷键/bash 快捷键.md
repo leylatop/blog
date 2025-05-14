@@ -1,3 +1,7 @@
+---
+slug: /note/bash-shortcut-keys
+title: bash 快捷键
+---
 - 移动
 	- Ctrl/control + a ：移到行首
 	- Ctrl/control + e ：移到行尾

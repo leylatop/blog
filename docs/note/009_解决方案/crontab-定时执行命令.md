@@ -1,3 +1,7 @@
+---
+slug: /note/crontab-execute-command-at-a-certain-time
+title: crontab-定时执行命令
+---
 基于mac系统，每分钟执行一次同步笔记的命令
 关键字：`crontab`、`cron`
 

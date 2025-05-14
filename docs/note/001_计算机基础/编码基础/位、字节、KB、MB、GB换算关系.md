@@ -1,3 +1,7 @@
+---
+slug: /note/bit-byte-kb-mb-gb
+title: 位、字节、KB、MB、GB换算关系
+---
 - 1 位（bit）：最小的数据单位。每个bit代表一个0或1的二进制值。没有比bit更小的数据单位。
 - 1 字节（Byte）：基本的计量单位，1字节等于8位（bit）。
 - 1 KB（Kilobyte）：等于1024字节（Byte）。

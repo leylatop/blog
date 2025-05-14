@@ -1,3 +1,7 @@
+---
+slug: /note/http-cache
+title: HTTP 缓存
+---
 - http缓存是在1.1版本加入进来的
 - 和缓存有关的请求头：
 	- Expries：基本不使用，可以忽略

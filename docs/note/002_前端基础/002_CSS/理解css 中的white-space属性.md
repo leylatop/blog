@@ -1,3 +1,7 @@
+---
+slug: /note/understand-css-white-space-property
+title: 理解css 中的white-space属性
+---
 
 white-space：怎么控制和处理元素中的空白符号。
 whitespace characters：空白字符，通常指在文本中不显示的字符，如空格、制表符、换行符

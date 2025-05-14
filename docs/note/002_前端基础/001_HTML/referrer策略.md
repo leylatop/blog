@@ -1,3 +1,7 @@
+---
+slug: /note/referrer-policy
+title: referrer策略
+---
 - document.referrer：获取当前页面的上一个页面的url，但这个值不是一定能拿到，这取决于上一个页面中对 HTTP header 中 Referrer-Policy的设置；
 - 作为上一个页面，可以设置  HTTP header 中 Referrer-Policy 的值，控制下一个页面的referrer的值是否能获取到；
 ```HTTP

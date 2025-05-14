@@ -1,3 +1,7 @@
+---
+slug: /note/js-character-encoding
+title: js字符编码
+---
 Unicode字符集：
 - Unicode 是一种旨在统一过去和现在的所有人类语言，使其能够在计算机上使用的标准。
 - 在实践中，Unicode 标准落实的方式为，将不同字符分配给唯一编号。

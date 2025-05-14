@@ -1,3 +1,7 @@
+---
+slug: /note/vscode-use-regex-to-filter-chinese-characters-in-code
+title: vscode 用正则筛选代码中的中文
+---
 在VSCode中使用正则表达式来筛选文件中的中文字符，你可以使用以下的正则表达式：
 
 ```

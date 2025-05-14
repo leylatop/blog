@@ -1,3 +1,7 @@
+---
+slug: /note/table-allow-to-set-background-color-of-table-cells
+title: table-允许为table的单元格设置背景颜色
+---
 ```css
 border-collapse: separate;
 border-spacing: 0;

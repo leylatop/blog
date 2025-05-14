@@ -1,3 +1,7 @@
+---
+slug: /note/taro-development-mini-program-to-react-native-development-native-application-thinking
+title: Taro开发小程序到ReactNative开发原生应用的思考
+---
 前期使用taro进行小程序端的开发，随着业务的越来越繁重，可能会做移动端应用。为了方便前端技术的复用，在前期使用tora进行小程序开发的时候，需要将哪些模块提纯或者创建单独的模块或仓库？
 
 这是一个非常有前瞻性的问题。在使用Taro进行小程序开发的同时，为未来可能的移动端应用开发做准备，确实需要仔细考虑代码的组织和模块化。让我们探讨一下您可以如何组织您的代码，以便将来更容易迁移到移动端应用。

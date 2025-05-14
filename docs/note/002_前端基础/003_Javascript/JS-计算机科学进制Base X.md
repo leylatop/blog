@@ -1,3 +1,7 @@
+---
+slug: /note/js-computer-science-base-x
+title: JS-计算机科学进制Base X
+---
 计算机科学中常用的进制：
 - base2：2进制
 	- `0、1`

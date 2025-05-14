@@ -1,3 +1,7 @@
+---
+slug: /note/encodeuri-and-encodeuricomponent
+title: encodeURI 和 encodeURIComponent
+---
 网页的 URL 只能包含合法的字符。合法字符分成两类，除了这两类，其他字符出现在 URL 之中都必须转义：
 ```markdown
 - URL 元字符：分号（;），逗号（,），斜杠（/），问号（?），冒号（:），at（@），&，等号（=），加号（+），美元符号（$），井号（#）

@@ -1,3 +1,7 @@
+---
+slug: /note/range
+title: Range
+---
 文档片段(用于操作选中的文本)
 
 - document.getSelection(): 返回选中的文档片段，即 Selection 对象

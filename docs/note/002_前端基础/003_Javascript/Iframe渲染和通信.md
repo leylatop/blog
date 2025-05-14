@@ -1,3 +1,7 @@
+---
+slug: /note/iframe-rendering-and-communication
+title: Iframe渲染和通信
+---
 - 背景
   - 将gpt返回的html内容，通过iframe嵌入到页面中，实现渲染
   - 希望能在页面中hover、点击iframe内部元素时，能够高亮显示、选中元素

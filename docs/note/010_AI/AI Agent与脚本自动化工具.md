@@ -1,3 +1,7 @@
+---
+slug: /note/ai-agent-and-script-automation-tools
+title: AI Agent与脚本自动化工具
+---
 AI Agent与自脚本动化工具，都可以根据一个指令执行一系列的操作，最终达到用户预期。
 
 区别在于：

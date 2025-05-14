@@ -1,3 +1,7 @@
+---
+slug: /note/ant-design-table-component-header-fixed-principle
+title: Ant-Design Table 组件头部固定原理
+---
 - 在线demo地址： https://ant.design/components/table-cn#components-table-demo-fixed-header
 - 表现形式：表头固定，滚动条从表体开始，但表头每列宽度和表体一致，在有滚动条的前提下也一致；
 - 原理是：

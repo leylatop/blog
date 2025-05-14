@@ -1,3 +1,7 @@
+---
+slug: /note/object-entries-and-object-fromentries
+title: Object.entries 和 Object.fromEntries
+---
 `Object.entries`: 将对象或基于对象的可迭代对象转换为键值对数组
 - 参数: 一个对象或基于对象的可迭代对象（或数组），可以是：
   - 普通对象，例如 `{ a: 1, b: 2 }`。

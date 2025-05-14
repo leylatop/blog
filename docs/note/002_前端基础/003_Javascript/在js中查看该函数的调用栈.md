@@ -1,3 +1,7 @@
+---
+slug: /note/view-the-call-stack-of-the-function-in-js
+title: 在js中查看该函数的调用栈
+---
 在函数中输入这个，就可以查看调用该函数的方法
 ```javascript
 

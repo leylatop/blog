@@ -1,3 +1,7 @@
+---
+slug: /note/vs-code-shortcut-keys
+title: vs code 快捷键
+---
 - option + ↑/↓：把鼠标所在的这一行代码向上/向下移动
 - option + shift + ↑/↓：把鼠标所在的这一行代码复制到下一行
 - option + ←/→：把鼠标向前/向后移动一个单词

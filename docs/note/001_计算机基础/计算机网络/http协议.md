@@ -1,3 +1,7 @@
+---
+slug: /note/http-protocol
+title: http协议
+---
 http（Hyper Text Transfer Protocol）：超文本传输协议
 
 - 基于 TCP/IP 协议

@@ -1,3 +1,7 @@
+---
+slug: /note/stylis-learning-notes
+title: stylis学习笔记
+---
 - stylis 是一个 css语法处理器
 - 官方文档: [stylis](https://github.com/thysultan/stylis)
 

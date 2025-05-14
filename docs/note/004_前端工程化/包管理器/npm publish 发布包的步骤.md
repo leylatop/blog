@@ -1,3 +1,7 @@
+---
+slug: /note/npm-publish-package-steps
+title: npm publish 发布包的步骤
+---
 
 ## 前置
 - 这里的发布指的是发布到公开的[npm网站](https://www.npmjs.com)

@@ -1,3 +1,7 @@
+---
+slug: /note/js-strict-mode
+title: js严格模式
+---
 js 严格模式会在文件的开头标明
 ```js
 'use strict'

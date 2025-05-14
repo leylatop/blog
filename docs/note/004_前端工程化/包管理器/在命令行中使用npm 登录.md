@@ -1,3 +1,7 @@
+---
+slug: /note/use-npm-login-in-command-line
+title: 在命令行中使用npm 登录
+---
 # 在命令行中使用npm 登录
 背景：
 在本地命令行登录的目的，是为了在本地对`注册表`进行读写。

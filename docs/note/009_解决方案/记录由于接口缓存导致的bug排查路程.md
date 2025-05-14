@@ -1,3 +1,7 @@
+---
+slug: /note/record-the-process-of-troubleshooting-the-bug-caused-by-interface-cache
+title: 记录由于接口缓存导致的bug排查路程
+---
 ## 背景
 墨刀是一款基于Web的在线协同工具，是基于Saas服务实现的。
 在实现墨刀白板商业化需求时，由于要在墨刀的文件体系中增加白板的文件、权益和权限，在功能层面属于非常大的变动，所以在代码层面，前端和后端都变更了许多逻辑，也伴随着一些列的代码优化和接口优化。

@@ -1,3 +1,7 @@
+---
+slug: /note/eslint-vscode-configuration
+title: eslint vscode 配置
+---
 ![image.png](http://images.leyla.top/note/20250328170430991.png)
 
 ```

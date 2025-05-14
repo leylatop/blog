@@ -1,3 +1,7 @@
+---
+slug: /note/use-cp-command-to-copy-the-content-of-a-folder
+title: 使用 cp 命令复制文件夹的内容
+---
 在使用cp命令进行复制文件夹的时候，会根据目标文件夹是否存在，有不同的复制结果
 
 ```sh

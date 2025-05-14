@@ -1,3 +1,7 @@
+---
+slug: /note/xss-cross-site-scripting-attack
+title: xss 跨站脚本攻击
+---
 通过网站的漏洞，将带有攻击性的脚本，注入到网站中。使用户加载并执行脚本，从而达到攻击的目的。
 
 例子：

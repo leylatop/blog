@@ -1,3 +1,7 @@
+---
+slug: /note/globalthis-self-window-global-differences
+title: globalThis、self、window、global 的区别
+---
 346 - 《globalThis、self、window、global 的区别》
 
 1. 这几个都代表全局对象，但是很容易搞混，下午在 Review PR 时也发现有用地不合适的场景。

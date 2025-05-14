@@ -1,3 +1,7 @@
+---
+slug: /note/es-date-object
+title: ES - Date 对象
+---
 - 获取年/月/日/时/分/秒/毫秒
 ```javascript
 // 获取年/月/日/时/分/秒/毫秒

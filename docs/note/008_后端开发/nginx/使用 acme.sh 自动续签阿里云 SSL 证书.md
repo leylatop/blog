@@ -1,3 +1,7 @@
+---
+slug: /note/use-acme.sh-to-automatically-renew-aliyun-ssl-certificate
+title: 使用 acme.sh 自动续签阿里云 SSL 证书
+---
 个人免费证书只能用90天，所以每90天需要更换一次，要么手动，要么自动：
 
 ## 1. 在服务器上安装 `acme.sh`：

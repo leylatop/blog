@@ -1,3 +1,7 @@
+---
+slug: /note/chrome-performance-panel-analysis
+title: chrome performance 面板分析
+---
 1. 分析前提，需要在无痕浏览器进行分析；
 2. google 测试页面：[https://googlechrome.github.io/devtools-samples/jank/](https://googlechrome.github.io/devtools-samples/jank/ "https://googlechrome.github.io/devtools-samples/jank/")
 3. 重点关注：cpu使用情况、main高危task（执行时间较长，超过50ms）、layout（重排）

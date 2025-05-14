@@ -1,3 +1,7 @@
+---
+slug: /note/how-to-solve-the-problem-of-cross-domain-failure-in-chrome-78-and-above-on-windows
+title: 解决windows下Chrome78以上跨域失效问题
+---
 #### 1. 为什么需要解决chrome浏览器跨域的问题？
 
 基于Hybird App的H5部分，可以直接打包进apk或者ipa包中，在开发过程中也不需要放置到临时搭建的服务器上，直接在本地打开html静态页面，打开后会页面的域名是file

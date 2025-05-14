@@ -1,3 +1,8 @@
+---
+slug: >-
+  /note/youtube-subscription-solve-the-problem-of-incomplete-height-display-in-the-popup-window
+title: Youtube订阅——解决在弹窗内使用Youtube订阅按钮高度显示不全的问题
+---
 背景：公司网站业务在做海外营销网站，为了配合营销工作，前端总要在各种地方添加各种社媒订阅；最近遇到的是在弹窗内展示公司的Youtube账号的订阅按钮。
 
 理想：我想使用的例子是这样的：

@@ -1,3 +1,7 @@
+---
+slug: /note/use-du-command-to-view-the-size-of-a-folder
+title: 使用 du 命令查看文件夹大小
+---
 
 
 命令格式：

@@ -1,3 +1,7 @@
+---
+slug: /note/webpack-entry-parameter-supported-data-types
+title: webpack entry参数支持的数据类型
+---
 # webpack entry参数支持的类型
 
 ## 默认值

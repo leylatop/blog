@@ -1,3 +1,7 @@
+---
+slug: /note/css-implement-horizontal-and-vertical-centering-methods
+title: CSS 实现水平&垂直居中的几种方式
+---
 实现水平居中和垂直居中在CSS中是一个常见的任务，有多种方法可以实现。以下是一些常用的方法：
 
 ### 1. Flexbox方法

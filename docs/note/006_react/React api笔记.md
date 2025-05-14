@@ -1,3 +1,7 @@
+---
+slug: /note/react-api-notes
+title: React api笔记
+---
 - React.Children：
 	- React.Children.only(children) ：验证 children 是否只包含单个 React 元素，并返回该元素。如果 children 不是单个 React 元素，则会抛出错误。
 	- React.Children.map(children, function(child, index) {}):对 children 中的每个直接子元素进行映射处理，并返回一个新的数组。

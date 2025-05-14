@@ -1,3 +1,8 @@
+---
+slug: /note/frontend-performance-optimization-using-loading-lazy-loading
+title: 前端性能优化——使用 loading 懒加载
+tag: 性能优化
+---
 - 图片懒加载
 - 懒加载是一种只加载用户可视区域图片的技术，非可视区域的图片则在需要时才加载。这可以显著减少初始页面加载时间。
 - 使用方式

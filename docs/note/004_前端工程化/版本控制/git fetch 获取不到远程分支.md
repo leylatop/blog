@@ -1,3 +1,7 @@
+---
+slug: /note/git-fetch-cannot-pull-remote-branches
+title: git fetch 获取不到远程分支
+---
 问题：
 git fetch的时候不能拉取到远程其他分支 & tag的变化情况
 

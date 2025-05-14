@@ -1,4 +1,5 @@
 ---
+slug: configure-macbook-from-0
 title: 从 0 开始配置 macbook
 date: 2025-04-27
 authors: leyla

@@ -1,3 +1,7 @@
+---
+slug: /note/use-vim-to-batch-replace-git-rebase
+title: 使用vim批量替换 git rebase
+---
 需求：
 将除第一个commit之外的commit，全部都squash/fixup 到第一个commit之上
 

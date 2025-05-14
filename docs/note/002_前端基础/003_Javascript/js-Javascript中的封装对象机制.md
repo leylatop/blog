@@ -1,3 +1,7 @@
+---
+slug: /note/js-in-the-packaging-object-mechanism
+title: js-Javascript中的封装对象机制
+---
 ## 包装
 1. 在使用基本类型的值访问的.length、.toString()方法时，由于基本类型值没有这些属性，此时JavaScript会自动为基本类型的值包装一个封装对象
 

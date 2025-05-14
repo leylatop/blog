@@ -1,3 +1,7 @@
+---
+slug: /note/es6-regular-expression
+title: ES6-正则表达式
+---
 #### 创建正则表达式规则的四种方法
 
 ```

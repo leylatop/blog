@@ -1,3 +1,7 @@
+---
+slug: /note/tree-shaking-in-webpack
+title: tree shaking 在 Webpack 中的实现
+---
 ## tree-shaking
 tree-shaking，摇掉没有被挂的文件。在打包后的文件中，移除没有被「引用」的模块代码，以此减少打包后的包的体积。
 

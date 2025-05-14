@@ -1,3 +1,7 @@
+---
+slug: /note/chrome-console-debug-panel
+title: Chrome控制台-调试面板
+---
 ### Watch Panel：新增观察表达式
 代码执行到断点处时，要执行的代码
 ![图片](http://images.leyla.top/note/Pastedimage20240605094436.png)

@@ -1,3 +1,7 @@
+---
+slug: /note/path-require-diff
+title: path-require-diff
+---
 
 # path.resolve 与require.resolve的共同点与区别
 ## 共同点

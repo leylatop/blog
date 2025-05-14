@@ -1,3 +1,7 @@
+---
+slug: /note/lhs-and-rhs
+title: LHS 和 RHS
+---
 **LHS 和 RHS 简单来说是一个赋值操作的左侧和右侧**，L 就代表 Left 左侧，R 就是代表 Right 右侧。当变量出现在赋值操作的左侧时进行 LHS 查询，出现在右侧时进行 RHS 查询。
 
 LHS 查询通常就是赋值操作，找到要被赋值的变量（`a = 2`）

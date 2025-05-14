@@ -1,3 +1,7 @@
+---
+slug: /note/react-context-usage
+title: React的context的使用
+---
 如果一个变量是全局性的，如i18n或theme，那通过props自上而下的传递就非常笨重了。react 提供了一个  context api，可以通过创建一个上下文，在 `Provider` 中提供值以及修改值的方式，在 `Consumer`中消耗值即修改值的方式。通过context的方式减少，值通过props层层传递的情况。
 
 ## 创建Context

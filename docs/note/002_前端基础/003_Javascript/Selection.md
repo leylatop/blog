@@ -1,3 +1,7 @@
+---
+slug: /note/selection
+title: Selection
+---
 获取用户选择的文本范围，或者插入符号的位置
 ```javascript
 window.getSelection() 

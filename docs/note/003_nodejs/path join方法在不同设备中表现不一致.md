@@ -1,3 +1,7 @@
+---
+slug: /note/path-join-method-in-different-devices-displays-inconsistently
+title: path join方法在不同设备中表现不一致
+---
 # 解决path join方法在不同设备中表现不一致问题
 
 ## 问题描述

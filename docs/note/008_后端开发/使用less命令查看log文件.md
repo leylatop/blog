@@ -1,3 +1,7 @@
+---
+slug: /note/use-less-command-to-view-log-file
+title: 使用less命令查看log文件
+---
 ```sh
 grep '/api/' nginx.log | grep 'Firefox/128.0' | less -S +G
 ```

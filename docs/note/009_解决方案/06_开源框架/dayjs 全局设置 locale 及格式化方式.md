@@ -1,3 +1,7 @@
+---
+slug: /note/dayjs-global-setting-locale-and-formatting-method
+title: dayjs 全局设置 locale 及格式化方式
+---
 1. 按需引入 localizedFormat 插件
 ```javascript
 import dayjs from 'dayjs'

@@ -1,3 +1,7 @@
+---
+slug: /note/web-worker-learning-notes
+title: Web Worker 学习笔记
+---
 JavaScript (JS) 是单线程的，但是单线程对于多核的 CPU 来说，比较浪费资源。使用 `Web Worker` 可以在主线程外，生成其他 `Worker` 线程，处理主线程之外的任务。主线程与 `Worker` 线程同时运行，互不打扰。`Worker` 线程处理完后，再将处理结果发送给主线程。Web Worker 的主要目的是为了在浏览器中进行后台处理，避免长时间运行的复杂操作阻塞 UI 线程，从而影响用户体验。通过将这些操作放在 Web Worker 中，主线程（UI 线程）可以专注于处理用户交互和渲染，而不会被阻塞。
 
 在使用 `Web Worker` 时，需要注意的是：

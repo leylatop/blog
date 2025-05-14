@@ -1,3 +1,7 @@
+---
+slug: /note/webpack-building-complication-modulegraph-process
+title: webpack-构建Complication 的 ModuleGraph流程
+---
 1. 定义 moduleGraph,一个Complication保存一个，即每编译一次，创建一个。
 ```js
 const moduleGraph = new ModuleGraph()

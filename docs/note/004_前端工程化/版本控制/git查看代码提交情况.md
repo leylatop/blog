@@ -1,3 +1,7 @@
+---
+slug: /note/git-view-code-commit-situation
+title: git查看代码提交情况
+---
 - `git log --pretty='%aN' --since=3.month.ago | sort | uniq -c | sort -k1 -n -r | head -n 10` --- 查看最近3个月仓库提交排名前10名
 
 * `git log --author="qiaoxx" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -`   ---- 某人的添加/删除行数

@@ -1,3 +1,7 @@
+---
+slug: /note/npm-npm-gulp-publish-to-private-server-error-e503-solution
+title: npm npm+gulp发布至私服，报错E503解决方案
+---
 由于项目共享组件库的需要，我们搭建了npm私有服务器，供本公司几个项目可以访问。组件库使用gulp+webpack+npm进行打包构建，私服使用的是 **Verdaccio**直接搭建的，一键式傻瓜搭建，贼好使，使用方法指路 [http://auan.cn/internet/2010.html](http://auan.cn/internet/2010.html "大佬")。
 
 原由：

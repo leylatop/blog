@@ -1,3 +1,7 @@
+---
+slug: /note/es6-number
+title: ES6-数值
+---
 #### 二进制和八进制表示法
 
 二进制： 0b 或 0B

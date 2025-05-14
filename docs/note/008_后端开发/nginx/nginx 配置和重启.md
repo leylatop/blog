@@ -1,3 +1,7 @@
+---
+slug: /note/nginx-configuration-and-restart
+title: nginx 配置和重启
+---
 
 - 修改nginx 配置文件后，需重启nginx
 ```bash

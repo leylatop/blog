@@ -1,3 +1,7 @@
+---
+slug: /note/react-useeffect-execution-timing
+title: React useEffect执行时机
+---
 ## useEffect 使用
 useEffect 接收2个参数，一个是callback，一个是依赖项 dep。
 callback内部方法会在dom渲染完成之后执行，如果callback有返回值，返回值只能是个函数，我们叫它销毁函数。

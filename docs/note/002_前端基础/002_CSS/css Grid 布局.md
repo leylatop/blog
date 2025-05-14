@@ -1,3 +1,7 @@
+---
+slug: /note/css-grid-layout
+title: css Grid 布局
+---
 - 容器属性：
 	- grid-template-columns：定义列的宽度
 	- grid-template-rows：定义行的高度

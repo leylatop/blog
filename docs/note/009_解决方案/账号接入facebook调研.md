@@ -1,3 +1,7 @@
+---
+slug: /note/account-integration-facebook-research
+title: 账号接入facebook调研
+---
 ```
 https://www.facebook.com/v7.0/dialog/oauth?client_id=278549109282866&redirect_uri=https%3A%2F%2Faccounts.wondershare.com%2Fapi%2Fv3%2Fsocial%2Fcallback%2Ffacebook&state=d4e01380aa824c5e937d3df3090018e8&auth_type=rerequest&scope=email
 ```

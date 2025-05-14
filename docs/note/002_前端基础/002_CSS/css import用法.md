@@ -1,3 +1,7 @@
+---
+slug: /note/css-import-usage
+title: css import用法
+---
 ## 基本用法
 在css 中，可以使用 `@import` 关键字引入其他`css`模块，方便复用其他文件的样式，其基本语法有2种方式：
 ```css

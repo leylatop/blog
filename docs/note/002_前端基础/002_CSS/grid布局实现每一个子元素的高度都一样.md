@@ -1,3 +1,7 @@
+---
+slug: /note/css-grid-layout-implement-equal-height-for-each-child-element
+title: grid布局实现每一个子元素的高度都一样
+---
 ```
 .grid-container {
     display: grid;

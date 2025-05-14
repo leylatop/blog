@@ -1,3 +1,7 @@
+---
+slug: /note/webpack-brain-storm
+title: webpack 脑暴
+---
 webpack
 - entry
   - entry 的格式支持字符串、数组、对象

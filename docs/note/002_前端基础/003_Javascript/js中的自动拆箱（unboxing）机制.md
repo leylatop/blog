@@ -1,3 +1,7 @@
+---
+slug: /note/js-automatic-unboxing-mechanism
+title: js中的自动拆箱（unboxing）机制
+---
 ```js
 function foo(x) {
   x = x + 1;

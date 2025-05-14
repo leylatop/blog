@@ -1,3 +1,7 @@
+---
+slug: /note/vim-shortcut-keys
+title: vim 快捷键
+---
 ←： h
 ↓：  j
 ↑： k

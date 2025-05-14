@@ -1,3 +1,7 @@
+---
+slug: /note/javascript-function-and-object-relationship
+title: javascript-Function 和 Object 的关系
+---
 ### 1. `Function` 和 `Object` 的关系
 
 - **`Function` 是一个构造函数**：`Function` 是 JavaScript 中的一个内置构造函数，用于创建函数对象。所有的函数，包括内置函数和用户定义的函数，都是由 `Function` 构造函数创建的。

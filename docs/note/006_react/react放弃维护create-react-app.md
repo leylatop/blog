@@ -1,3 +1,7 @@
+---
+slug: /note/react-abandon-maintenance-create-react-app
+title: react放弃维护create-react-app
+---
 2025年2月14号，react官方blog发出一篇最新的推送，react 将停止 create react app的维护，也就是说，在未来将不再能使用`create-react-app`命令创建新的react项目，react官方解释说，creact react app 虽然可以创建开箱即用的 react 项目，但是创建出来的项目并不适用于真正的生产环境。并且从以下几个方面进行了举证：
 
 ## 路由

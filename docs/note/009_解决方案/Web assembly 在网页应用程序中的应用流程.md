@@ -1,3 +1,7 @@
+---
+slug: /note/web-assembly-application-process-in-web-page-application
+title: Web assembly 在网页应用程序中的应用流程
+---
 - 基础流程
 	1. 编写 底层语言代码（c/c++/rust）
 	2. 编译底层代码为 wasm 文件（[编译网站](https://mbebenita.github.io/WasmExplorer/)）

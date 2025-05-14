@@ -1,3 +1,7 @@
+---
+slug: /note/js-execution-creation-and-execution-phases
+title: js执行的创建阶段和执行阶段
+---
 
 **创建阶段（Creation Phase）**
 这个阶段对应js引擎中的的"预编译"步骤，具体做了以下工作：

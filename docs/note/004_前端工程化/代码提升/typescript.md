@@ -1,3 +1,7 @@
+---
+slug: /note/typescript
+title: typescript
+---
 ts 会解析项目中所有的 *.ts 文件，当然也包含以 .d.ts 结尾的文件；若ts文件有export 则会当做普通ts文件
 
 在namespace内部可以直接用const 定义，而非 declare

@@ -1,3 +1,7 @@
+---
+slug: /note/embed-chatgpt-html-elements-in-the-current-page
+title: 将chatgpt返回的HTML元素嵌入到当前页面中
+---
 为了将chatgpt返回的HTML元素嵌入到当前页面中，并确保其内部CSS样式不会影响页面其他元素的样式，同时能够添加鼠标事件，我会提供以下几个方案：
 
 ### 方案一：使用iframe

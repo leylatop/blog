@@ -1,3 +1,7 @@
+---
+slug: /note/html-meter-element
+title: HTML——meter 元素
+---
 meter元素可以用于表示已知范围或分数值的标量测量。也就是说，它用于表示一种特定范围内的数值。这可以是诸如磁盘使用、查询结果的相关性、分数等。
 ```html
 <label for="fuel">Fuel level:</label>

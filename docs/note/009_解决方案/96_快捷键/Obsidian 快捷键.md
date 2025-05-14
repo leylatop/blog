@@ -1,3 +1,7 @@
+---
+slug: /note/obsidian-shortcut-keys
+title: Obsidian 快捷键
+---
 - command + l：插入一个待办事项
 - control + l：在侧边栏定位到文件所在的位置
 - control + i：插入模板

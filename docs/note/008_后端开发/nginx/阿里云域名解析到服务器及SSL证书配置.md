@@ -1,3 +1,7 @@
+---
+slug: /note/aliyun-domain-name-resolution-to-server-and-ssl-certificate-configuration
+title: 阿里云域名解析到服务器及SSL证书配置
+---
 
 ## 域名解析
 在配置好nginx后，我们可以通过公网的ip地址打开网站，但此时还不能通过域名解析到服务器，还需要将域名解析到服务器

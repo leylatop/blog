@@ -1,3 +1,7 @@
+---
+slug: /note/javascript-prototype-and-proto-differences
+title: javascript-prototype 和 __proto__ 的区别
+---
 ### 开篇
 1. `__proto__ ` 和 `constuctor` 是对象独有的属性
 2. `prototype` 是函数独有的属性

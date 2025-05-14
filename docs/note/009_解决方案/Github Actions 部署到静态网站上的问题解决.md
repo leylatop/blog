@@ -1,3 +1,7 @@
+---
+slug: /note/github-actions-deploy-to-static-website-problem-solving
+title: Github Actions 部署到静态网站上的问题解决
+---
 - [npm ERR! Cannot read properties of null (reading 'pickAlgorithm')](https://stackoverflow.com/questions/70019872/npm-err-cannot-read-properties-of-null-reading-pickalgorithm)
 	- 这个问题的原因是node版本不匹配，找不到对应的包
 	- 解决思路：更改 yaml 脚本中的node 版本，使之与本地node版本匹配

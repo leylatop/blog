@@ -1,3 +1,7 @@
+---
+slug: /note/npm-command
+title: npm 命令
+---
 - npm list 查看该路径已经安装的npm包
 
 - npm list -g 查看全局安装的软件包

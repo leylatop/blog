@@ -1,3 +1,7 @@
+---
+slug: /note/tldraw-copy-as-png-core-code
+title: tldraw 复制为png核心代码
+---
 1. copyAs: https://github.com/tldraw/tldraw/blob/7afc42a8b1efd8bdeb7f3fda92413f68ff0e0353/packages/tldraw/src/lib/utils/export/copyAs.ts#L30
 2. exportToBlob: https://github.com/tldraw/tldraw/blob/7afc42a8b1efd8bdeb7f3fda92413f68ff0e0353/packages/tldraw/src/lib/utils/export/export.ts#L168
 3. getSvg: https://github.com/tldraw/tldraw/blob/7afc42a8b1efd8bdeb7f3fda92413f68ff0e0353/packages/editor/src/lib/editor/Editor.ts#L8092

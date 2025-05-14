@@ -1,3 +1,7 @@
+---
+slug: /note/git-gitnore-invalid-problem
+title: git-gitnore 无效问题
+---
 疑问：在.gitignore 中忽略了 `.obsidian/workspace.json` 路径，在 `.obsidian/workspace.json` 路径发生改变时，还是会有变动提醒。
 
 解决方式：

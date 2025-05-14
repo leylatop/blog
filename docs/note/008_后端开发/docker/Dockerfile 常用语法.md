@@ -1,3 +1,7 @@
+---
+slug: /note/dockerfile-common-syntax
+title: Dockerfile 常用语法
+---
 ## Dockerfile
 
 dockerfile 是用来构建 docker 镜像的文件，dockerfile 文件中包含了一系列的指令，每个指令都用于构建镜像。

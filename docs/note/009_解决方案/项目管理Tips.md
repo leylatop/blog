@@ -1,3 +1,7 @@
+---
+slug: /note/project-management-tips
+title: 项目管理Tips
+---
 项目管理排期：
 - 每天按照正常上班时间去估计排期，不要把加班的时间算进去；
 

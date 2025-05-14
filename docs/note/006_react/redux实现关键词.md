@@ -1,3 +1,7 @@
+---
+slug: /note/redux-implement-keyword
+title: redux实现关键词
+---
 store
 getState
 dispatch

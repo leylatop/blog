@@ -1,3 +1,7 @@
+---
+slug: /note/local-command-line-batch-modify-git-remote-address
+title: 本地命令行批量修改git远程地址
+---
 ## 1. 在要批量修改的文件夹的上一级目录下新建 `change_git.sh` 脚本：
 
 ```sh

@@ -1,3 +1,7 @@
+---
+slug: /note/mathematical-symbols-and-their-javascript-corresponding-symbol-list
+title: 数学符号及其 JavaScript 对应符号列表
+---
 ```markdown
 
 | Symbol  | Name                                                             | Since   | Example     | JavaScript                                                                                                                                                                          |     |

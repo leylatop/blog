@@ -1,3 +1,7 @@
+---
+slug: /note/react-router-dom
+title: react-router-dom
+---
 react-router-dom由2部分组成，分别是history和react-router。react-router是react-router-dom的核心，history是react-router-dom的依赖。
 
 - history

@@ -1,3 +1,7 @@
+---
+slug: /note/webpack-core-process-plugin-loader
+title: Webpack-核心流程、Plugin、Loader
+---
 - webpack构建的核心流程的四个阶段：
 	- 初始化阶段：设置参数，加载插件，执行配置的环境和参数，准备好编译器；
 	- 构建阶段-make：从入口开始递归地构建依赖图，完成后得到每个模块的源代码；

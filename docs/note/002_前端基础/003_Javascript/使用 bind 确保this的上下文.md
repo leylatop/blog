@@ -1,3 +1,7 @@
+---
+slug: /note/use-bind-to-ensure-the-context-of-this
+title: 使用 bind 确保this的上下文
+---
 ```js
 const localCacheGetItem = cacheStore.get
 const localCacheSetItem = cacheStore.set

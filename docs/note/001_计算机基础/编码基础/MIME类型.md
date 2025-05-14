@@ -1,3 +1,7 @@
+---
+slug: /note/mime-type
+title: MIME类型
+---
 MIME类型：是一种标准，用来表示文档、文件、或一组数据的性质和格式，也叫媒体类型/多用途互联网邮件扩展
 
 表示：类型/子类型（type/subtype）

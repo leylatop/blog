@@ -1,3 +1,7 @@
+---
+slug: /note/chrome-plugin-script-communication
+title: Chrome 插件脚本通信
+---
 在 chrome 插件的开发中，常见的脚本有3大类，分别是：
 - background script
 - content script

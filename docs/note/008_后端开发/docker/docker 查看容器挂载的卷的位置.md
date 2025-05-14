@@ -1,3 +1,7 @@
+---
+slug: /note/docker-check-the-location-of-the-volume-mounted-on-the-container
+title: docker 查看容器挂载的卷的位置
+---
 要查看 Docker 容器中的文件对应的卷（Volume）的位置，你可以按照以下步骤操作：
 
 1. **查看容器详情**：首先，你需要查看容器的详细信息，包括其挂载的卷。这可以通过 `docker inspect` 命令实现。你需要替换 `<container_id_or_name>` 为你的容器ID或名称。

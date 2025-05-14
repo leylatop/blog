@@ -1,3 +1,7 @@
+---
+slug: /note/web-server
+title: web服务器
+---
 
 # Web服务器
 

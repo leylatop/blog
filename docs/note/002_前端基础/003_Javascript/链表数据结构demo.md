@@ -1,3 +1,7 @@
+---
+slug: /note/linked-list-data-structure-demo
+title: 链表数据结构demo
+---
 ```typescript
 class LinkedNode<T> {
     value: T;

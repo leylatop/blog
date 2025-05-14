@@ -1,3 +1,7 @@
+---
+slug: /note/nginx-configuration-cors
+title: nginx 配置跨域
+---
 # nginx 配置跨域
 
 ## 当前服务器配置跨域

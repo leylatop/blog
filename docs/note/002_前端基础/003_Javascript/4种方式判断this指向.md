@@ -1,3 +1,7 @@
+---
+slug: /note/4-ways-to-determine-the-this-pointer
+title: 4种方式判断this指向
+---
 如果要判断一个函数内的this指向，只有在运行这个函数的时候，才能知道。通过查看调用函数的方式，按照以下顺序来判断this的指向：
 1. new绑定：函数是否使用`new` 关键字调用？如果是，则绑定到实例上（即new出来的对象）；
 ```js

@@ -1,3 +1,7 @@
+---
+slug: /note/ddd-domain-driven-design
+title: DDD领域驱动设计
+---
 【领域知识】驱动【代码设计】
 由知识到代码
 再从代码到知识

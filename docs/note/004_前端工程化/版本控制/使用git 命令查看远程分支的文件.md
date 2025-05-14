@@ -1,3 +1,7 @@
+---
+slug: /note/use-git-command-to-view-remote-branch-files
+title: 使用git 命令查看远程分支的文件
+---
 ```bash
 git show origin/master:package.json | cat
 ```

@@ -1,3 +1,7 @@
+---
+slug: /note/scp-command
+title: scp命令
+---
 - 场景：将本地打包好的文件复制到服务器中的对应位置。所需要使用到的 `linux` 命令为 `scp`
 命令及接收：
 

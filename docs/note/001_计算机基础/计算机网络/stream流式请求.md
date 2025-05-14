@@ -1,3 +1,7 @@
+---
+slug: /note/stream-streaming-request
+title: stream流式请求
+---
 - 流式传输
 	- 借鉴`流媒体技术`，在数据传输中实现持续可用，不间断的传输效果
 	- 流式传输可以依赖：http、rtmp、rtcp、udp...等网络协议

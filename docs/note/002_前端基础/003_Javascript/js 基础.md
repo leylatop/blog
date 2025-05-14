@@ -1,3 +1,7 @@
+---
+slug: /note/js-basic
+title: js 基础
+---
 - 字符串转数组
 ```js
 const str = 'abc'

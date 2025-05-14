@@ -1,3 +1,7 @@
+---
+slug: /note/use-js-to-implement-a-new-operator
+title: 使用js实现一个new操作符
+---
 ```javascript
 // 实现一个new操作符
 function customNew(constructor, ...args) {

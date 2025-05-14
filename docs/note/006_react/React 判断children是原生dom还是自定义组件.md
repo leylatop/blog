@@ -1,3 +1,7 @@
+---
+slug: /note/react-determine-if-children-is-a-native-dom-or-a-custom-component
+title: React 判断children是原生dom还是自定义组件
+---
 ```jsx
 import React from 'react';
 

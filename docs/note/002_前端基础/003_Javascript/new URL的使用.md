@@ -1,3 +1,7 @@
+---
+slug: /note/new-url-usage
+title: new URL 的使用
+---
 ## 基本使用及问题
 new URL() 前面的 "new "表示它是一个构造函数：调用它可以为你创建一个新的 URL 实例；但是如果传入的参数是非法的url，她就会抛出错误。
 

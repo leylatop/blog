@@ -1,3 +1,7 @@
+---
+slug: /note/javascript-engine-execution-steps
+title: JavaScript 引擎执行代码的主要步骤
+---
 
 1. 词法分析（Lexical Analysis）
 - 将源代码文本分解成一个个的 token（记号）

@@ -1,3 +1,7 @@
+---
+slug: /note/docker-image
+title: docker 镜像
+---
 ```
 # 查看镜像
 docker image ls

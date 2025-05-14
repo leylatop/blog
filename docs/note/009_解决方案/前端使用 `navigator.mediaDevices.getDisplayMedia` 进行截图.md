@@ -1,3 +1,7 @@
+---
+slug: /note/use-navigator.mediaDevices.getDisplayMedia-to-screenshot
+title: 前端使用 `navigator.mediaDevices.getDisplayMedia` 进行截图
+---
 重点 api: 
 - navigator.mediaDevices.getDisplayMedia()
 

@@ -1,3 +1,7 @@
+---
+slug: /note/docker-check-the-environment-variables-of-the-docker-container
+title: docker 查看docker容器的环境变量
+---
 - 方式一
 ```bash
 # imock-jc_js-ai_1 为容器名

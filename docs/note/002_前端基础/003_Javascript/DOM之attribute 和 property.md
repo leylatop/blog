@@ -1,3 +1,7 @@
+---
+slug: /note/dom-attribute-and-property
+title: DOM之attribute 和 property
+---
 ## attribute
 
 attribute 是 HTML 元素上的属性，它们是 HTML 元素的一部分，可以通过 `getAttribute` 和 `setAttribute` 方法来操作。

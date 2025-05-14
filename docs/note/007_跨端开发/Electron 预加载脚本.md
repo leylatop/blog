@@ -1,3 +1,7 @@
+---
+slug: /note/electron-preload-script
+title: Electron 预加载脚本
+---
 - 预加载脚本：网页加载到浏览器窗口之前运行的代码；
 - 预加载脚本功能
 	- 通过 `contextBridge` API 向渲染器公开特权API

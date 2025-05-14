@@ -1,3 +1,7 @@
+---
+slug: /note/cookie-cross-domain
+title: Cookie能否跨域名共享？
+---
 今天在掘金前端推送的内容中看到了这一条：cookie能否跨域名共享呢？带着这个疑问，我们来往下分析一下。
 
 ## 首先回答：什么是跨域名？

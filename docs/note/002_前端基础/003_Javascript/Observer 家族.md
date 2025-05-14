@@ -1,3 +1,7 @@
+---
+slug: /note/observer-family
+title: Observer 家族
+---
 - MutationObserver：监听dom属性或节点发生变化，[参考资料](https://www.zhangxinxu.com/wordpress/2019/08/js-dom-mutation-observer/)
 - ResizeObserver：用于监听dom尺寸发生变化，[参考资料](https://www.zhangxinxu.com/wordpress/2020/03/dom-resize-api-resizeobserver/)
 	- ResizeObserver需要有兼容性，需要处理

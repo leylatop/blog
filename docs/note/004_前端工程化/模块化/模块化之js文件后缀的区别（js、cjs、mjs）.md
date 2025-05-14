@@ -1,3 +1,7 @@
+---
+slug: /note/module-js-file-suffix-differences-js-cjs-mjs
+title: 模块化之js文件后缀的区别（js、cjs、mjs）
+---
 在开发中，经常能看到有些文件的后缀是.cjs，或.mjs，以.cjs 或 .mjs 为后缀的文件与普通的js文件的区别是什么呢？
 
 在现代开发工具和环境中，在我们创建一个js文件时，js文件同时也是一个模块，可以在js文件中，将当前文件的局部变量导出，其他js（模块）再进行引用，以达到解耦和提升代码复用性的目的。

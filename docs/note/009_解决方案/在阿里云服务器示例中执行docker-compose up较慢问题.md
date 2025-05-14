@@ -1,3 +1,7 @@
+---
+slug: /note/in-aliyun-server-example-docker-compose-up-is-slow
+title: 在阿里云服务器示例中执行docker-compose up较慢问题
+---
 解决方法，配置docker国内镜像
 1. 创建或修改 /etc/ docker/daemon.json 文件，修改为如下形式
 ```json

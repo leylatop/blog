@@ -1,3 +1,7 @@
+---
+slug: /note/ssh-server-and-execute-command
+title: ssh server并执行命令
+---
 - 场景：在本地连接远程服务器，执行远程服务器的命令
 - 命令
 ```bash

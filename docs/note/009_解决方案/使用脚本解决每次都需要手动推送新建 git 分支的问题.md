@@ -1,6 +1,8 @@
 ---
 tags:
   - git
+slug: /note/use-script-to-solve-manually-pushing-newly-created-git-branch
+title: 使用脚本解决每次都需要手动推送新建 git 分支的问题
 ---
 每次基于主分支新建开发分支后，想要将开发分支推送到远端，都会提示以下内容：
 

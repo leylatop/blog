@@ -1,3 +1,7 @@
+---
+slug: /note/markdown-list-syntax
+title: markdown-list 语法
+---
 ```markdown
 [//]: # (哈哈我是最强注释，不会在浏览器中显示。)
 [^_^]: # (哈哈我是最萌注释，不会在浏览器中显示。)

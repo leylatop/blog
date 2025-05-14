@@ -1,3 +1,7 @@
+---
+slug: /note/ssl-certificate-certification-authority-and-certificate-type
+title: ssl证书认证机构及证书类型
+---
 
 ### 证书认证机构CA
 CA(Certificate Authority)

@@ -1,3 +1,7 @@
+---
+slug: /note/js-precision-problem
+title: js精度问题
+---
 ```js
 0.1 + 0.2 === 0.3; // false
 ```

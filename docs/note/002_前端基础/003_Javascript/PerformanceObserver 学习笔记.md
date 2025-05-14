@@ -1,3 +1,7 @@
+---
+slug: /note/performance-observer-learning-notes
+title: PerformanceObserver 学习笔记
+---
 基本使用
 ```javascript
 const observer = new PerformanceObserver(entryList => {

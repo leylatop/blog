@@ -1,3 +1,7 @@
+---
+slug: /note/outer-marker
+title: outer 标记
+---
 ```javascript
 outer: for(let i = 0; i < 10; i++) {
 	console.log(i)

@@ -1,3 +1,7 @@
+---
+slug: /note/server-writes-cookie-to-browser-full-process
+title: 服务器将Cookie写入浏览器全流程
+---
 疑问：
 前端访问modao.cc，在服务端设置modao.cc的cookie，将modao.cc的cookie写入浏览器的Application中。这整个流程是怎么发生的？
 

@@ -1,3 +1,7 @@
+---
+slug: /note/react-router-upgrade-troubleshooting-record
+title: react-router升级踩坑记录
+---
 ## 背景
 由于最近我们项目在做功能上的大版本升级，在后续测试时，势必会对所有功能的回归测试。而且本次修改，改动了项目的路由，所以内部沟通决定趁机升级一下react-router的版本，从官网查询后react router最新的版本是 v7，所以就开始了升级v7的踩坑之路。
 

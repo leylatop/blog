@@ -1,3 +1,7 @@
+---
+slug: /note/node-upgrade
+title: node 升级
+---
 - mac电脑node版本升级
 
 ```bash

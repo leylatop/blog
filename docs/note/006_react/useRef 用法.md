@@ -1,3 +1,7 @@
+---
+slug: /note/useref-usage
+title: useRef 用法
+---
 1. useRef方法接收一个空值或一个对象，返回一个对象，返回的对象中包含 current 属性
 2. 修改属性 current 的值，不会引起组件重新渲染
 

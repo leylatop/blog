@@ -1,3 +1,7 @@
+---
+slug: /note/vscode-html-code-snippet-basic-version-react-vue-jquery
+title: VSCode HTML代码片段（基础版，react、vue、jquery）
+---
 起因是最近在学习前端，看的网上的demo也是在react、vue、jquery之间穿插，为了方便一键生成html模板（懒）写demo，有了以下折腾。
 
 本人使用的前端编辑工具是vscode（方便、懒），可配置成中文界面，很友好，丰富的第三方插件，真香。以下是基于vscode设置的html代码片段：

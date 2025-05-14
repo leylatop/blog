@@ -1,3 +1,7 @@
+---
+slug: /note/css-solution
+title: CSS 解决方案
+---
 - css in js：解决传统 CSS 的一些问题，如全局命名空间的冲突、依赖管理、复用样式等，并在组件化开发的背景下提供更好的封装和模块化。
 	- 设计思路：局部作用域、组件驱动、动态样式、依赖追踪、服务器渲染
 	- 框架举例：[styled-component](https://styled-components.com/)

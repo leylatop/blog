@@ -1,3 +1,7 @@
+---
+slug: /note/picture-in-picture-mode-documentpictureinpicture
+title: 画中画模式 documentPictureInPicture
+---
 https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651621742&idx=1&sn=46c0a939f76be131285ab374a6caf3da&chksm=80225eafb755d7b995bbdf538bf26ed530b66aec729ba4be47937e52c4f91d91edb71631e5d4#rd
 
 画中画模式

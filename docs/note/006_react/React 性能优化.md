@@ -1,3 +1,7 @@
+---
+slug: /note/react-performance-optimization
+title: React 性能优化
+---
 性能优化一般省略的是更新阶段的步骤，即不需要刷新的时候，不刷新。即如果父组件传过来的props没有更新就不再进行本组件的更新流程。
 
 ## 类组件

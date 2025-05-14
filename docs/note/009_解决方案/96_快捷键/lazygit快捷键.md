@@ -1,3 +1,7 @@
+---
+slug: /note/lazygit-shortcut-keys
+title: lazygit快捷键
+---
 - 移动：
 	- h：往上移动一个区域
 	- l：往下移动一个区域

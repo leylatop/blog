@@ -1,3 +1,7 @@
+---
+slug: /note/es6-symbol
+title: ES6-symbol
+---
 Symbol 是es6新增的一种数据类型。
 
 #### 创建

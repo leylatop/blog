@@ -1,3 +1,7 @@
+---
+slug: /note/react-router-different-versions-v5-v6-v7-comparison
+title: react-router 不同版本（v5、v6、v7）对比
+---
 
 v5
 switch

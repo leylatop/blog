@@ -1,3 +1,7 @@
+---
+slug: /note/es6-optional-chaining-and-nullish-coalescing
+title: ES6-可选链&空值合并
+---
 - 可选链运算符`?.`
 	- 特点：允许尝试访问可能不存在的对象的属性值，不必验证属性是否存在
 ```javascript

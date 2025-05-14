@@ -1,3 +1,7 @@
+---
+slug: /note/ssl-and-ssl-certificate
+title: ssl及ssl证书
+---
 ## ssl协议
 ssl（Secure Sockets Layer）：安全套接字层
 - 一种**安全协议**

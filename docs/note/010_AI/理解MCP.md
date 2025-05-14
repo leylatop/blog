@@ -1,3 +1,7 @@
+---
+slug: /note/understand-mcp
+title: 理解MCP
+---
 ![](http://images.leyla.top/note/20250306100217089.png)
 
 

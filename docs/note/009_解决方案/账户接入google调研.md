@@ -1,3 +1,7 @@
+---
+slug: /note/account-integration-google-research
+title: 账户接入google调研
+---
 ```
 https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?client_id=402150438060-mvb4nhmp3o8rh83452qqlqq8bch09bnt.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Faccounts.wondershare.com%2Fapi%2Fv3%2Fsocial%2Fcallback%2Fgoogle&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&state=706d7061f4e246a79ff986c4a71c0c8b&service=lso&o2v=1&ddm=1&flowName=GeneralOAuthFlow
 ```

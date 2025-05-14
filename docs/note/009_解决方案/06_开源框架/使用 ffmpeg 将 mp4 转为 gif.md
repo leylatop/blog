@@ -1,3 +1,7 @@
+---
+slug: /note/use-ffmpeg-to-convert-mp4-to-gif
+title: 使用 ffmpeg 将 mp4 转为 gif
+---
 - 转为gif
 ```bash
 ffmpeg -i  ~/Desktop/吸顶3.mp4 -f gif output.gif

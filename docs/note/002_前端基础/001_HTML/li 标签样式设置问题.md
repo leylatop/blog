@@ -1,3 +1,7 @@
+---
+slug: /note/li-element-style-setting-problem
+title: li 标签样式设置问题
+---
 今天在写li标签的样式时发现设置的list-style 无论如何也不生效，事情背景是代码全局设置了 list-style 为none，而我需要显示 list 样式，所以我手动给li标签重写了 list-style: disc，重写之后还是不生效，我又给 ul设置了 list-style: disc ，依然没生效；
 
 一顿google，最终在css 大佬 张鑫旭博客下找到了原因，我给li标签设置了display: flex，但想要样式生效的前提是 li标签必须为 display: list-item;

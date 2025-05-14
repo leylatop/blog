@@ -1,3 +1,7 @@
+---
+slug: /note/bom-and-dom-relationship
+title: BOM和DOM的关系
+---
 包含关系，DOM 是 BOM 的成员之一
 名词解释：
 - BOM（brower object model）：浏览器对象模型

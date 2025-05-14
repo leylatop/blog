@@ -1,3 +1,7 @@
+---
+slug: /note/system-design-design-url-short-link-tool
+title: 系统设计：设计URL短链接工具
+---
 URL 短链是一种将长 URL 转换为短 URL 的服务，通常用于在微博、微信等社交网络中分享链接。本文介绍了 URL 短链的原理、实现方式和常见问题。
 
 ## 1. URL 短链的原理

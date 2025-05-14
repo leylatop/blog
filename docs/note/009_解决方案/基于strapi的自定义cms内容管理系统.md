@@ -1,3 +1,7 @@
+---
+slug: /note/strapi-custom-cms-content-management-system
+title: 基于strapi的自定义cms内容管理系统
+---
 ## 组件
 数据组件，关键字为 `COMPONENTSTART`，请求接口，获取数据
 ```

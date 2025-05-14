@@ -1,3 +1,7 @@
+---
+slug: /note/stream-server-side-rendering-stream-ssr
+title: 流式服务端渲染-流式ssr
+---
 - 服务端渲染
 	- next.js - react.server
 - 流式数据传输

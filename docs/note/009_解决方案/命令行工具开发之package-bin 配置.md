@@ -1,3 +1,7 @@
+---
+slug: /note/command-line-tool-development-package-bin-configuration
+title: 命令行工具开发之package-bin 配置
+---
 
 ```json
 "bin": {

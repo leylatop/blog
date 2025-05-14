@@ -1,3 +1,7 @@
+---
+slug: /note/es6-function-new-features
+title: ES6-函数新特性
+---
 #### 参数默认值
 
 ```javascript

@@ -1,3 +1,7 @@
+---
+slug: /note/npm-package.json-determine-if-a-dependency-version-is-locked-in-package.json
+title: npm package.json判断依赖版本是否被锁死的方法
+---
 在package.json文件中，如果某个依赖被锁死了，它的版本号会以精确的形式出现在dependencies或devDependencies字段中，例如：
 
 ```

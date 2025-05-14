@@ -1,3 +1,7 @@
+---
+slug: /note/ssi-server-side-inclusion-technology
+title: SSI服务端包含技术
+---
 # SSI服务端包含技术
 关键字：
 包含文件
