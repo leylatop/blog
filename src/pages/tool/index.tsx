@@ -9,11 +9,11 @@ export default function Tool() {
       <div className={clsx("container", styles.customContainer)}>
         <h1>工具集合</h1>
         <div>
-          <a href="/tool/ai-generate-px-area.html">ai-generate-px-area.html</a><br />
-          <a href="/tool/mp4转gif.html">mp4转gif.html</a><br />
-          <a href="/tool/公证收费计算器.html">公证收费计算器.html</a><br />
-          <a href="/tool/进制转换器.html">进制转换器.html</a><br />
-          <a href="/tool/英语单词听力练习.html">英语单词听力练习.html</a>
+          {/* <a href="/tool/ai-generate-px-area.html">ai-generate-px-area.html</a><br /> */}
+          {/* <a href="/tool/mp4转gif.html">mp4转gif.html</a><br /> */}
+          <a href="/tool/notary-fee-calculator.html">河南省公证员收费计算器</a><br />
+          <a href="/tool/number-system-conversion.html">进制转换器</a><br />
+          <a href="/tool/english-word-listening-practice.html">英语单词听力练习</a>
         </div>
       </div>
     </Layout>
