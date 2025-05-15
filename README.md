@@ -18,4 +18,9 @@ Leyla的个人博客
 
 - Docusaurus
 - TailwindCSS
-- Framer motion & magicui 
+- React
+- TypeScript
+- Node.js
+- Next.js
+- Vite
+- VitePress
