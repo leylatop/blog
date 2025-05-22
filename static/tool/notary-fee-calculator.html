@@ -1,305 +1,338 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN" class="h-full bg-gray-50">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>河南省公证员收费计算器</title>
+  <meta name="keywords" content="河南省公证员收费计算器, 河南省公证员收费, 公证员收费计算器, 公证员收费, 公证员收费计算, 公证员收费计算器">
+  <meta name="description" content="河南省公证员收费计算器，计算公证员收费">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+    /* 去掉所有输入框的默认聚焦样式 */
+    input:focus {
+      outline: none;
+    }
+    /* 去掉 Safari 上的默认聚焦样式 */
+    input:focus-visible {
+      outline: none;
+    }
+  </style>
 </head>
-<style>
-  * {
-    padding: 0;
-    margin: 0;
-  }
 
-  body {
-    width: 100%;
-    height: 100%;
-    margin-top: 50px;
-  }
+<body class="h-full">
+  <div class="min-h-full">
+    <!-- 顶部导航栏 -->
+    <nav class="bg-blue-600">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center">
+            <div class="text-white text-xl font-bold">河南省公证员收费计算器</div>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-  h1 {
-    text-align: center;
-  }
-  .section-part {
-    margin: 40px auto;
-    width: 90%;
-    padding: 10px;
-    box-sizing: border-box;
-  }
+    <main>
+      <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+        <!-- 使用说明 -->
+        <div class="mb-8 bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl">
+          <div class="px-4 py-6 sm:p-8">
+            <h2 class="text-base font-semibold leading-7 text-gray-900">使用说明</h2>
+            <div class="mt-4 text-sm text-gray-600">
+              <ol class="list-decimal pl-5 space-y-2">
+                <li>找到对应的收费标准类型</li>
+                <li>在"业务金额"输入框中输入当次业务金额</li>
+                <li>点击"计算"按钮或按回车键获取应收金额</li>
+                <li>如需重新计算，可以点击"清空"按钮重置输入</li>
+              </ol>
+            </div>
+          </div>
+        </div>
 
-  .section-part-1 {
-    border: solid red 1px;
-  }
+        <!-- 计算器部分 -->
+        <div class="space-y-8">
+          <!-- 标准一 -->
+          <div class="bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl overflow-hidden">
+            <div class="px-4 py-6 sm:p-8">
+              <div class="border-b border-gray-200 pb-4 mb-6">
+                <h2 class="text-base font-semibold leading-7 text-blue-600">标准一 —— 合同协议收费标准</h2>
+                <div class="mt-2 text-sm text-gray-600 space-y-1">
+                  <div>收费规则：</div>
+                  <div>• 0-50万部分（0.15%）</div>
+                  <div>• 50万-500万部分（0.1%）</div>
+                  <div>• 500万-5000万部分（0.05%）</div>
+                  <div>• 5000万-10000万部分（0.01%）</div>
+                  <div>• 10000万以上部分（0.005%）</div>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
+                  <div class="sm:col-span-3">
+                    <label class="block text-sm font-medium leading-6 text-gray-900">业务金额</label>
+                    <div class="mt-2">
+                      <input type="number" id="b1-input" class="block w-full rounded-md border-0 py-1.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" placeholder="请输入业务金额">
+                    </div>
+                  </div>
+                  
+                  <div class="sm:col-span-3">
+                    <label class="block text-sm font-medium leading-6 text-gray-900">应收金额</label>
+                    <div class="mt-2">
+                      <div id="b1-total" class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6 bg-gray-50 min-h-[36px] cursor-not-allowed select-none"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="flex gap-4">
+                  <button id="b1-confirm-btn" class="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">计算</button>
+                  <button id="b1-clear-btn" class="rounded-md bg-white px-4 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">清空</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-  .section-part-2 {
-    border: solid green 1px;
-  }
+          <!-- 标准二 -->
+          <div class="bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl overflow-hidden">
+            <div class="px-4 py-6 sm:p-8">
+              <div class="border-b border-gray-200 pb-4 mb-6">
+                <h2 class="text-base font-semibold leading-7 text-blue-600">标准二 —— 财产继承/赠与收费标准</h2>
+                <div class="mt-2 text-sm text-gray-600 space-y-1">
+                  <div>收费规则：</div>
+                  <div>• 0-20万部分（0.5%）</div>
+                  <div>• 20万-50万部分（0.4%）</div>
+                  <div>• 50万-200万部分（0.3%）</div>
+                  <div>• 200万-500万部分（0.2%）</div>
+                  <div>• 500万-1000万部分（0.1%）</div>
+                  <div>• 1000万以上部分（0.05%）</div>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
+                  <div class="sm:col-span-3">
+                    <label class="block text-sm font-medium leading-6 text-gray-900">业务金额</label>
+                    <div class="mt-2">
+                      <input type="number" id="b2-input" class="block w-full rounded-md border-0 py-1.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" placeholder="请输入业务金额">
+                    </div>
+                  </div>
+                  
+                  <div class="sm:col-span-3">
+                    <label class="block text-sm font-medium leading-6 text-gray-900">应收金额</label>
+                    <div class="mt-2">
+                      <div id="b2-total" class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6 bg-gray-50 min-h-[36px] cursor-not-allowed select-none"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="flex gap-4">
+                  <button id="b2-confirm-btn" class="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">计算</button>
+                  <button id="b2-clear-btn" class="rounded-md bg-white px-4 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">清空</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-  .section-part-3 {
-    border: solid blue 1px;
-  }
+          <!-- 标准三 -->
+          <div class="bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl overflow-hidden">
+            <div class="px-4 py-6 sm:p-8">
+              <div class="border-b border-gray-200 pb-4 mb-6">
+                <h2 class="text-base font-semibold leading-7 text-blue-600">标准三 —— 万6.5收费标准</h2>
+                <div class="mt-2 text-sm text-gray-600">
+                  <div>收费规则：每万元收取6.5元</div>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
+                  <div class="sm:col-span-3">
+                    <label class="block text-sm font-medium leading-6 text-gray-900">业务金额</label>
+                    <div class="mt-2">
+                      <input type="number" id="b3-input" class="block w-full rounded-md border-0 py-1.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" placeholder="请输入业务金额">
+                    </div>
+                  </div>
+                  
+                  <div class="sm:col-span-3">
+                    <label class="block text-sm font-medium leading-6 text-gray-900">应收金额</label>
+                    <div class="mt-2">
+                      <div id="b3-total" class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6 bg-gray-50 min-h-[36px] cursor-not-allowed select-none"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="flex gap-4">
+                  <button id="b3-confirm-btn" class="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">计算</button>
+                  <button id="b3-clear-btn" class="rounded-md bg-white px-4 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">清空</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- 打赏和联系方式 -->
+        <div class="mt-8 bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl">
+          <div class="px-4 py-6 sm:p-8">
+            <div class="text-center">
+              <h2 class="text-base font-semibold leading-7 text-gray-900">请我喝杯咖啡</h2>
+              <p class="mt-2 text-sm text-gray-600">您的打赏是我持续更新的动力 ☕️</p>
+              
+              <div class="mt-4 flex justify-center">
+                <div class="relative group">
+                  <img src="http://images.leyla.top/note/wechat-payment-code.jpg" alt="微信收款码" class="w-48 h-48 object-cover rounded-lg shadow-md">
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-opacity duration-300 rounded-lg"></div>
+                </div>
+              </div>
 
-  .title {
-    color: red;
-    margin-bottom: 8px;
-  }
+              <div class="mt-6 flex justify-center space-x-4">
+                <a href="leyla_qiao@163.com" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-red-600">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                  联系我
+                </a>
+              </div>
 
-  .business-money, .receivable-money {
-    display: flex;
-    align-items: center;
-  }
-  .money-desc {
-    margin-right: 10px;
-  }
+              <p class="mt-4 text-xs text-gray-500">
+                感谢您的支持！如有问题或建议，欢迎随时联系我
+              </p>
+            </div>
+          </div>
+        </div>
 
-  .input, .total {
-    flex: 1;
-    display: block;
-    margin: 20px auto;
-    height: 50px;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  .total {
-    border: solid 1px #333;
-    display: flex;
-    align-items: center;
-  }
+        <!-- 页脚版权信息 -->
+        <div class="mt-8 text-center text-xs text-gray-500">
+          <p>Copyright © <span id="copyright-year"></span> Leyla All Rights Reserved</p>
+        </div>
+        <script>
+          // 设置版权年份
+          document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        </script>
+      </div>
+    </main>
+  </div>
 
-  .desc-method {
-    list-style: none;
-    color: gray;
-  }
-
-  .btn-group {
-    display: flex;
-    align-items: center;
-    margin-left: 70px;
-  }
-  .confirm-btn, .clear-btn {
-    height: 36px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-  }
-
-  .clear-btn {
-    margin-left: 20px;
-  }
+  <script>
+    // 当前数字是否大于num1，小于等于num2
+    Number.prototype.isInclude = function (num1, num2) {
+      console.log(this);
+      console.log(num1 < this && this <= num2);
+      return num1 < this && this <= num2
+    }
   
-
-  @media (min-width: 750px) {
-    .section-part {
-      width: 60%;
-      padding: 20px;
-    }
-
-    .input, .total {
-      height: 66px;
-    }
-  }
-</style>
-
-<body>
-  <h1>河南省公证员收费计算器</h1>
-  <section class="section-part section-part-1">
-    <h2 class="title">标准一 ——合同协议收费标准</h2>
-    <div class="desc">
-      <div>规则描述：</div>
-      <div>1. 0-50w部分（0.15%）</div>
-      <div>2. 50w-500w部分（0.1%）</div>
-      <div>3. 500w-5000w 部分（0.05%）</div>
-      <div>4. 5000w-10000w部分（0.01%）</div>
-      <div>5. 10000w以上部分(0.005%)</div>
-    </div>
-    <div class="business-money">
-      <div class="money-desc">业务金额</div>
-      <input class="input" id="b1-input" type="text" value="" placeholder="请输入业务金额后 敲Enter键">
-    </div>
-    <div class="receivable-money">
-      <div class="money-desc">应收金额</div>
-      <div class="total" id="b1-total"></div>
-    </div>
-    <div class="btn-group">
-      <button class="confirm-btn" id="b1-confirm-btn">重新计算</button>
-      <button class="clear-btn" id="b1-clear-btn">一键清空</button>
-    </div>
-  </section>
-
-  <section class="section-part section-part-2">
-    <h2 class="title">标准二 ——财产继承/赠与收费标准</h2>
-    <div class="desc">
-      <div>规则描述：</div>
-      <div>1. 0-20w部分（0.5%）</div>
-      <div>2. 20w-50w部分（0.4%）</div>
-      <div>3. 50w-200w 部分（0.3%）</div>
-      <div>4. 200w-500w部分（0.2%）</div>
-      <div>5. 500w-1000w部分（0.1%）</div>
-      <div>6. 1000w以上部分(0.05%)</div>
-    </div>
-    <div class="business-money">
-      <div class="money-desc">业务金额</div>
-      <input class="input" id="b2-input" type="text" value="" placeholder="请输入业务金额后 敲Enter键">
-    </div>
-    <div class="receivable-money">
-      <div class="money-desc">应收金额</div>
-      <div class="total" id="b2-total"></div>
-    </div>
-    <div class="btn-group">
-      <button class="confirm-btn" id="b2-confirm-btn">重新计算</button>
-      <button class="clear-btn" id="b2-clear-btn">一键清空</button>
-    </div>
-  </section>
-
-  <section class="section-part section-part-3">
-    <h2 class="title">标准三 ——万6.5收费标准</h2>
-    <div class="desc">
-      <div>规则描述：</div>
-      <div>一万元收6.5元</div>
-    </div>
-    <div class="business-money">
-      <div class="money-desc">业务金额</div>
-      <input class="input" id="b3-input" type="text" value="" placeholder="请输入业务金额后 敲Enter键">
-    </div>
-    <div class="receivable-money">
-      <div class="money-desc">应收金额</div>
-      <div class="total" id="b3-total"></div>
-    </div>
-    <div class="btn-group">
-      <button class="confirm-btn" id="b3-confirm-btn">重新计算</button>
-      <button class="clear-btn" id="b3-clear-btn">一键清空</button>
-    </div>
-  </section>
-  
-  <section class="section-part">
-    <ul class="desc-method">
-      <ul>使用方法描述：</ul>
-      <li>1. 找到对应收费标准；</li>
-      <li>2. 在“业务金额” 输入当次业务金额；</li>
-      <li>3. 敲回车/Enter键获取 “应收金额”；</li>
-      <li>4. 点击计算/清空可以重新计算or清空金额；</li>
-    </ul>
-  </section>
-  
-</body>
-<script>
-  // 当前数字是否大于num1，小于等于num2
-  Number.prototype.isInclude = function (num1, num2) {
-    console.log(this);
-    console.log(num1 < this && this <= num2);
-    return num1 < this && this <= num2
-  }
-
-  function getComma(a) {
-    if (isNaN(parseFloat(a))) {
-      //另千分符金额框为空
-      return '请输入正确格式的数字'
-    } else { //是数字，将数字保留两位小数赋给真实金额框
-      var a = new Number(a); //转换为数字类型
-      var b = a.toFixed(2); //保留两位小数
-      var c = b.replace(/(\d)(?=(\d{3})+(\.|$))/g, '$1,'); //使用正则替换，每隔三个数加一',' 
-      return c
-    }
-  }
-
-  const data = {
-    /**
-     * 1. 0-50w部分（0.15%）
-     * 2. 50w-500w部分（0.1%）
-     * 3. 500w-5000w 部分（0.05%）
-     * 4. 5000w-10000w部分（0.01%）
-     * 5. 10000w以上部分(0.005%)
-     */
-    'type1': [
-      { id: 0, startValue: 0, endValue: 500000, rate: 0.15 },
-      { id: 1, endValue: 5000000, rate: 0.1},
-      { id: 2, endValue: 50000000, rate: 0.05},
-      { id: 3, endValue: 100000000, rate: 0.01},
-      { id: 4, rate: 0.005}
-    ],
-    /**
-    * 1. 0-20w部分（0.5%）
-    * 2. 20w-50w部分（0.4%）
-    * 3. 50w-200w 部分（0.3%）
-    * 4. 200w-500w部分（0.2%）
-    * 5. 500w-1000w部分（0.1%）
-    * 6. 1000w以上部分(0.05%)
-    */ 
-    'type2': [
-      { id: 0, startValue: 0, endValue: 200000, rate: 0.5 },
-      { id: 1, endValue: 500000, rate: 0.4},
-      { id: 2, endValue: 2000000, rate: 0.3},
-      { id: 3, endValue: 5000000, rate: 0.2},
-      { id: 4, endValue: 10000000, rate: 0.1},
-      { id: 5, rate: 0.05}
-    ],
-    // 万 6.5
-    'type3': [
-      { id: 0, rate: 6.5 }
-    ]
-  }
-
-  function calculate(type, number) {
-    if (number <= 0) {
-      return 0;
-    }
-    if(type === 'type3') {
-      return number / 10000 * data[type][0]['rate']
-    }
-    const list = data[type]
-    let money
-    for (let l of list) {
-      let { startValue, endValue, id, rate } = l
-      if(startValue !== 0 && !startValue) {
-        startValue = list[id - 1]['endValue']
-      }
-      if(!endValue) {
-        endValue = Infinity
-      }
-      if(number.isInclude(startValue, endValue)) {
-        money = (number - startValue) * rate / 100 + calculate(type, startValue)
-        break
+    function getComma(a) {
+      if (isNaN(parseFloat(a))) {
+        //另千分符金额框为空
+        return '请输入正确格式的数字'
+      } else { //是数字，将数字保留两位小数赋给真实金额框
+        var a = new Number(a); //转换为数字类型
+        var b = a.toFixed(2); //保留两位小数
+        var c = b.replace(/(\d)(?=(\d{3})+(\.|$))/g, '$1,'); //使用正则替换，每隔三个数加一',' 
+        return c
       }
     }
-    return money
-  }
-
-  function onChange (type, originId, targetId) {
-    const number = Number(document.getElementById(originId).value)
-    const total = calculate(type, number)
-    document.getElementById(targetId).innerHTML = getComma(total)
-  }
-
-  function onClear(originId, targetId) {
-    document.getElementById(originId).value = ''
-    document.getElementById(targetId).innerHTML = ''
-  }
-
-  function onClick(type, originId, targetId) {
-    onChange(type, originId, targetId)
-  }
-  const eleKey = [
-    { id: 0, type: 'type1', originId: 'b1-input', targetId: 'b1-total', confirmId: 'b1-confirm-btn', clearId: 'b1-clear-btn' },
-    { id: 1, type: 'type2', originId: 'b2-input', targetId: 'b2-total', confirmId: 'b2-confirm-btn', clearId: 'b2-clear-btn' },
-    { id: 2, type: 'type3', originId: 'b3-input', targetId: 'b3-total', confirmId: 'b3-confirm-btn', clearId: 'b3-clear-btn' },
-  ]
-  for(let key of eleKey) {
-    const { type, originId, targetId, confirmId, clearId } = key
-    document.getElementById(originId).onchange = function () {
+  
+    const data = {
+      /**
+       * 1. 0-50w部分（0.15%）
+       * 2. 50w-500w部分（0.1%）
+       * 3. 500w-5000w 部分（0.05%）
+       * 4. 5000w-10000w部分（0.01%）
+       * 5. 10000w以上部分(0.005%)
+       */
+      'type1': [
+        { id: 0, startValue: 0, endValue: 500000, rate: 0.15 },
+        { id: 1, endValue: 5000000, rate: 0.1},
+        { id: 2, endValue: 50000000, rate: 0.05},
+        { id: 3, endValue: 100000000, rate: 0.01},
+        { id: 4, rate: 0.005}
+      ],
+      /**
+      * 1. 0-20w部分（0.5%）
+      * 2. 20w-50w部分（0.4%）
+      * 3. 50w-200w 部分（0.3%）
+      * 4. 200w-500w部分（0.2%）
+      * 5. 500w-1000w部分（0.1%）
+      * 6. 1000w以上部分(0.05%)
+      */ 
+      'type2': [
+        { id: 0, startValue: 0, endValue: 200000, rate: 0.5 },
+        { id: 1, endValue: 500000, rate: 0.4},
+        { id: 2, endValue: 2000000, rate: 0.3},
+        { id: 3, endValue: 5000000, rate: 0.2},
+        { id: 4, endValue: 10000000, rate: 0.1},
+        { id: 5, rate: 0.05}
+      ],
+      // 万 6.5
+      'type3': [
+        { id: 0, rate: 6.5 }
+      ]
+    }
+  
+    function calculate(type, number) {
+      if (number <= 0) {
+        return 0;
+      }
+      if(type === 'type3') {
+        return number / 10000 * data[type][0]['rate']
+      }
+      const list = data[type]
+      let money
+      for (let l of list) {
+        let { startValue, endValue, id, rate } = l
+        if(startValue !== 0 && !startValue) {
+          startValue = list[id - 1]['endValue']
+        }
+        if(!endValue) {
+          endValue = Infinity
+        }
+        if(number.isInclude(startValue, endValue)) {
+          money = (number - startValue) * rate / 100 + calculate(type, startValue)
+          break
+        }
+      }
+      return money
+    }
+  
+    function onChange (type, originId, targetId) {
+      const number = Number(document.getElementById(originId).value)
+      const total = calculate(type, number)
+      document.getElementById(targetId).innerHTML = getComma(total)
+    }
+  
+    function onClear(originId, targetId) {
+      document.getElementById(originId).value = ''
+      document.getElementById(targetId).innerHTML = ''
+    }
+  
+    function onClick(type, originId, targetId) {
       onChange(type, originId, targetId)
     }
-    document.getElementById(confirmId).onclick = function () {
-      onClick(type, originId, targetId)
+    const eleKey = [
+      { id: 0, type: 'type1', originId: 'b1-input', targetId: 'b1-total', confirmId: 'b1-confirm-btn', clearId: 'b1-clear-btn' },
+      { id: 1, type: 'type2', originId: 'b2-input', targetId: 'b2-total', confirmId: 'b2-confirm-btn', clearId: 'b2-clear-btn' },
+      { id: 2, type: 'type3', originId: 'b3-input', targetId: 'b3-total', confirmId: 'b3-confirm-btn', clearId: 'b3-clear-btn' },
+    ]
+    for(let key of eleKey) {
+      const { type, originId, targetId, confirmId, clearId } = key
+      document.getElementById(originId).onchange = function () {
+        onChange(type, originId, targetId)
+      }
+      document.getElementById(confirmId).onclick = function () {
+        onClick(type, originId, targetId)
+      }
+      document.getElementById(clearId).onclick = function () {
+        onClear(originId, targetId)
+      }
     }
-    document.getElementById(clearId).onclick = function () {
-      onClear(originId, targetId)
-    }
-  }
-</script>
+  </script>
+</body>
 
 </html>

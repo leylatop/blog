@@ -256,16 +256,17 @@
 
         <!-- 页脚版权信息 -->
         <div class="mt-8 text-center text-xs text-gray-500">
-          <p>Copyright © <span id="copyright-year"></span> All Rights Reserved</p>
+          <p>Copyright © <span id="copyright-year"></span> Leyla All Rights Reserved</p>
         </div>
+        <script>
+          // 设置版权年份
+          document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        </script>
       </div>
     </main>
   </div>
 
   <script>
-    // 设置版权年份
-    document.getElementById('copyright-year').textContent = new Date().getFullYear();
-    
     const calculateButton = document.getElementById('calculate-button');
     const addButton = document.getElementById('add-button');
     const gridTableBody = document.getElementById('grid-table-body');

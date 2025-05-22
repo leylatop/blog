@@ -12,6 +12,7 @@ export default function Tool() {
           {/* <a href="/tool/ai-generate-px-area.html">ai-generate-px-area.html</a><br /> */}
           {/* <a href="/tool/mp4转gif.html">mp4转gif.html</a><br /> */}
           <a href="/tool/notary-fee-calculator.html">河南省公证员收费计算器</a><br />
+          <a href="/tool/grid-trade.html">网格交易买入数量计算器</a><br />
           <a href="/tool/number-system-conversion.html">进制转换器</a><br />
           <a href="/tool/english-word-listening-practice.html">英语单词听力练习</a>
         </div>
