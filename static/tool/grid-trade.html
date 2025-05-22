@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网格交易买入数量计算器</title>
+  <style>
+    table {
+      width: 100%;
+    }
+    table th, table td {
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>网格交易买入数量计算器</h1>
+    <div>
+      <h2>0. 输入证券代码</h2>
+      <label for="stock-code">请输入证券代码</label>
+      <input type="text" id="stock-code" value="600519">
+    </div>
+    <hr>
+    <div id="grid-form">
+      <h2>1. 设置初始档位的买入价格和数量</h2>
+        <label for="grid-size">初始档位</label>
+        <input type="number" id="grid-size" value="1" disabled>
+        <label for="grid-buy-price">买入价格</label>
+        <input type="number" id="grid-buy-price" value="1">
+        <label for="grid-buy-total">买入总金额</label>
+        <input type="number" id="grid-buy-total">
+        <label for="grid-buy-amount">买入数量</label>
+        <input type="number" id="grid-buy-amount">
+        <button type="button" id="calculate-button">计算初始档位</button>
+      <hr>
+      <h2>2. 添加其他档位的买入价格</h2>
+      <label for="other-grid-size">档位</label>
+      <input id="other-grid-size" min="0" max="1" placeholder="请输入 0-1 之间的数字">
+      <label for="other-grid-buy-price">买入价格</label>
+      <input id="other-grid-buy-price" placeholder="该档位买入价格">
+      <button type="button" id="add-button">添加档位</button>
+    </div>
+    <hr>
+    <br>
+    <br>
+    <h2>档位买入数量</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>档位</th>
+          <th>买入价格</th>
+          <th>买入总金额</th>
+          <th style="color: red;">买入数量</th>
+        </tr>
+      </thead>
+      <tbody id="grid-table-body"></tbody>
+    </table>
+  </div>
+  <script>
+    const calculateButton = document.getElementById('calculate-button');
+    const addButton = document.getElementById('add-button');
+    const gridTableBody = document.getElementById('grid-table-body');
+    
+    const gearPositionList = [];
+    function addGearPosition(id, buyPrice) {
+      if(gearPositionList.find(item => Number(item.id) === Number(id))) {
+        return;
+      }
+      gearPositionList.push({
+        id,
+        buyPrice,
+      });
+    }
+
+    function calculate() {
+      gearPositionList.forEach(({id, buyPrice}) => {
+        if(document.getElementById(`gear-position-${id}`)) {
+          return;
+        }
+        const gridBuyTotal = document.getElementById('grid-buy-total');
+        const buyTotal = gridBuyTotal.value * (1 - id + 1);
+        let buyAmount = buyTotal / buyPrice;
+        // 买入数量取整
+        buyAmount = Math.floor(buyAmount / 100) * 100;
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td id="gear-position-${id}">${id}</td>
+          <td>${buyPrice}</td>
+          <td>${buyTotal}</td>
+          <td>${buyAmount}</td>
+        `;
+        gridTableBody.appendChild(tr);
+      });
+    }
+    
+    calculateButton.addEventListener('click', () => {
+      const gridSize = document.getElementById('grid-size');
+      const gridBuyPrice = document.getElementById('grid-buy-price');
+      const gridBuyAmount = document.getElementById('grid-buy-amount');
+      const gridBuyTotal = document.getElementById('grid-buy-total');
+      if(gridBuyAmount.value === '' && gridBuyTotal.value === '') {
+        alert('请输入买入数量或买入总金额');
+        return;
+      }
+      if(gridBuyAmount.value === '') {
+        gridBuyAmount.value = Math.round(gridBuyTotal.value / gridBuyPrice.value / 100) * 100;
+        gridBuyTotal.value = gridBuyPrice.value * gridBuyAmount.value;
+      }
+
+      if(gridBuyTotal.value === '') {
+        gridBuyTotal.value = gridBuyPrice.value * gridBuyAmount.value;
+      }
+      const firstBuyTotal = gridBuyPrice.value * gridBuyAmount.value;
+      addGearPosition(1, gridBuyPrice.value);
+      calculate();
+    });
+
+    addButton.addEventListener('click', () => {
+      const otherGridSize = document.getElementById('other-grid-size');
+      const otherGridBuyPrice = document.getElementById('other-grid-buy-price');
+      addGearPosition(otherGridSize.value, otherGridBuyPrice.value);
+      calculate();
+    });
+  </script>
+</body>
+</html>
