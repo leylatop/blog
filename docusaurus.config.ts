@@ -186,10 +186,10 @@ const config: Config = {
         // sitemap: {
         //   priority: 0.5,
         // },
-        // gtag: {
-        //   trackingID: 'G-S4SD5NXWXF',
-        //   anonymizeIP: true,
-        // },
+        gtag: {
+          trackingID: 'G-KCPB0V29QG',
+          anonymizeIP: true,
+        },
         debug: process.env.NODE_ENV === 'development',
       } satisfies Preset.Options,
     ],
