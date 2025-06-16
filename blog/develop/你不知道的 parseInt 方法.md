@@ -9,6 +9,8 @@ keywords: [前端, javascript, parseInt]
 ## 解释：
 parseInt方法，解析字符串为数字。可以将字符串转换为整数。parseInt方法的语法为parseInt(string, radix)
 
+<!-- truncate -->
+
 ## 参数
 parseInt方法接受两个参数，第一个参数是要转换的字符串，第二个参数是转换时的基数。
 第一个参数：理论上来说，接收任意类型的参数，但是只会解析字符串，如果参数不是字符串，会**先强制类型转换为字符串后**，再解析。
