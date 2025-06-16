@@ -1,6 +1,10 @@
 ---
-slug: /note/parseint-method
-title: 你不知道的 parseInt 方法
+slug: you-dont-know-parseInt-detail
+title: 你不知道的 parseInt 方法细节
+date: 2025-06-16
+authors: leyla
+tags: [前端, javascript, parseInt]
+keywords: [前端, javascript, parseInt]
 ---
 ## 解释：
 parseInt方法，解析字符串为数字。可以将字符串转换为整数。parseInt方法的语法为parseInt(string, radix)
