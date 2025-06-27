@@ -47,128 +47,197 @@
           <div class="flex items-center">
             <div class="text-white text-xl font-bold">网格交易计算器</div>
           </div>
+          <div class="flex items-center">
+            <button type="button" id="help-button" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded-md">
+              <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              使用说明
+            </button>
+          </div>
         </div>
       </div>
     </nav>
 
     <main>
       <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-        <!-- 使用说明 -->
-        <div class="mb-8 bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl">
+
+
+        <!-- 步骤1: 初始档位设置 -->
+        <div class="bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl mb-6">
           <div class="px-4 py-6 sm:p-8">
-            <h2 class="text-base font-semibold leading-7 text-gray-900">使用说明</h2>
-            <div class="mt-4 text-sm text-gray-600">
-              <ol class="list-decimal pl-5 space-y-2">
-                <li><span class="font-medium text-gray-900">设置初始档位</span>：输入第一档的买入价格，并填写买入总金额或买入数量（二选一）</li>
-                <li><span class="font-medium text-gray-900">计算初始档位</span>：点击"计算初始档位"按钮，系统会自动计算并显示第一档的具体买入信息</li>
-                <li><span class="font-medium text-gray-900">添加其他档位</span>：在0-1之间设置档位（比如0.8表示在初始资金80%的位置），并输入该档位的买入价格</li>
-                <li><span class="font-medium text-gray-900">查看结果</span>：所有档位的买入数量将在下方表格中显示，买入数量会自动取整到100的倍数</li>
-              </ol>
+            <div class="flex items-center mb-6">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center w-8 h-8 bg-red-600 text-white rounded-full text-sm font-semibold">1</div>
+              </div>
+              <div class="ml-4">
+                <h2 class="text-lg font-semibold leading-7 text-gray-900">设置初始档位</h2>
+                <p class="text-sm text-gray-600">输入第一档的买入价格和买入金额/数量</p>
+              </div>
+            </div>
+            
+            <div class="space-y-6">
+              <!-- 第一行：档位和买入价格 -->
+              <div class="grid grid-cols-1 gap-x-6 sm:grid-cols-6">
+                <div class="sm:col-span-2">
+                  <label class="block text-sm font-medium leading-6 text-gray-900">档位</label>
+                  <div class="mt-2">
+                    <input type="number" id="grid-size" value="1" disabled class="block w-full rounded-md border-0 py-1.5 pl-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6 bg-gray-100">
+                  </div>
+                </div>
+
+                <div class="sm:col-span-2">
+                  <label class="block text-sm font-medium leading-6 text-gray-900">买入价格（元）<span class="text-red-500">*</span></label>
+                  <div class="mt-2">
+                    <input type="number" id="grid-buy-price" value="1" class="block w-full rounded-md border-0 py-1.5 pl-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6">
+                  </div>
+                </div>
+              </div>
+
+              <!-- 买入方式选择 -->
+              <div>
+                <label class="block text-sm font-medium leading-6 text-gray-900">买入方式</label>
+                <div class="mt-2 space-x-6 flex">
+                  <div class="flex items-center">
+                    <input id="input-by-total" name="input-mode" type="radio" value="total" checked class="h-4 w-4 border-gray-300 text-red-600 focus:ring-red-600">
+                    <label for="input-by-total" class="ml-3 block text-sm font-medium leading-6 text-gray-900">按总金额</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="input-by-amount" name="input-mode" type="radio" value="amount" class="h-4 w-4 border-gray-300 text-red-600 focus:ring-red-600">
+                    <label for="input-by-amount" class="ml-3 block text-sm font-medium leading-6 text-gray-900">按数量</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 动态输入框区域 -->
+              <div class="grid grid-cols-1 gap-x-6 sm:grid-cols-6">
+                <!-- 按总金额输入 -->
+                <div id="total-input-container" class="sm:col-span-2">
+                  <label class="block text-sm font-medium leading-6 text-gray-900">买入总金额（元）<span class="text-red-500">*</span></label>
+                  <div class="mt-2">
+                    <input type="number" id="grid-buy-total" class="block w-full rounded-md border-0 py-1.5 pl-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6" placeholder="请输入买入总金额">
+                  </div>
+                </div>
+
+                <!-- 按数量输入 -->
+                <div id="amount-input-container" class="sm:col-span-2 hidden">
+                  <label class="block text-sm font-medium leading-6 text-gray-900">买入数量（股）<span class="text-red-500">*</span></label>
+                  <div class="mt-2">
+                    <input type="number" id="grid-buy-amount" class="block w-full rounded-md border-0 py-1.5 pl-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6" placeholder="请输入买入数量">
+                  </div>
+                </div>
+
+                <div class="sm:col-span-2 flex items-end">
+                  <button type="button" id="calculate-button" class="rounded-md bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">
+                    下一步
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 主要功能区 -->
-        <div class="bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2">
+        <!-- 步骤2: 添加其他档位 -->
+        <div id="step2-container" class="bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl mb-6 opacity-50">
           <div class="px-4 py-6 sm:p-8">
-            <!-- 证券代码输入 -->
-            <!-- <div class="mb-8">
-              <h2 class="text-base font-semibold leading-7 text-gray-900">证券代码</h2>
-              <div class="mt-2">
-                <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-red-600 sm:max-w-md">
-                  <input type="text" id="stock-code" value="" class="block flex-1 border-0 bg-transparent py-1.5 pl-4 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="请输入证券代码">
-                </div>
+            <div class="flex items-center mb-6">
+              <div class="flex-shrink-0">
+                <div id="step2-number" class="flex items-center justify-center w-8 h-8 bg-gray-400 text-white rounded-full text-sm font-semibold">2</div>
               </div>
-            </div> -->
-
-            <!-- 初始档位设置 -->
-            <div class="mb-8">
-              <h2 class="text-base font-semibold leading-7 text-gray-900">初始档位设置</h2>
-              <div class="mt-2 space-y-4">
-                <!-- 第一行：档位和买入价格 -->
-                <div class="grid grid-cols-1 gap-x-6 sm:grid-cols-6">
-                  <div class="sm:col-span-2">
-                    <label class="block text-sm font-medium leading-6 text-gray-900">档位</label>
-                    <div class="mt-2">
-                      <input type="number" id="grid-size" value="1" disabled class="block w-full rounded-md border-0 py-1.5 pl-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6 bg-gray-100">
-                    </div>
-                  </div>
-
-                  <div class="sm:col-span-2">
-                    <label class="block text-sm font-medium leading-6 text-gray-900">买入价格</label>
-                    <div class="mt-2">
-                      <input type="number" id="grid-buy-price" value="1" class="block w-full rounded-md border-0 py-1.5 pl-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6">
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 第二行：买入总金额和买入数量 -->
-                <div class="grid grid-cols-1 gap-x-6 sm:grid-cols-6">
-                  <div class="sm:col-span-2">
-                    <label class="block text-sm font-medium leading-6 text-gray-900">买入总金额</label>
-                    <div class="mt-2">
-                      <input type="number" id="grid-buy-total" class="block w-full rounded-md border-0 py-1.5 pl-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6">
-                    </div>
-                  </div>
-
-                  <div class="sm:col-span-2">
-                    <label class="block text-sm font-medium leading-6 text-gray-900">买入数量</label>
-                    <div class="mt-2">
-                      <input type="number" id="grid-buy-amount" class="block w-full rounded-md border-0 py-1.5 pl-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6">
-                    </div>
-                  </div>
-
-                  <div class="sm:col-span-2 flex items-end">
-                    <button type="button" id="calculate-button" class="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">
-                      计算初始档位
-                    </button>
-                  </div>
-                </div>
+              <div class="ml-4">
+                <h2 class="text-lg font-semibold leading-7 text-gray-900">添加其他档位</h2>
+                <p class="text-sm text-gray-600">添加更多档位来完善网格策略</p>
               </div>
             </div>
-
-            <!-- 添加其他档位 -->
-            <div class="mb-8">
-              <h2 class="text-base font-semibold leading-7 text-gray-900">添加其他档位</h2>
-              <div class="mt-2 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
+            
+            <div id="step2-content" class="space-y-6">
+              <div class="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
                 <div class="sm:col-span-2">
                   <label class="block text-sm font-medium leading-6 text-gray-900">档位 (0-1)</label>
                   <div class="mt-2">
-                    <input type="number" id="other-grid-size" min="0" max="1" step="0.1" class="block w-full rounded-md border-0 py-1.5 pl-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6" placeholder="请输入 0-1 之间的数字">
+                    <input type="number" id="other-grid-size" min="0" max="1" step="0.1" disabled class="block w-full rounded-md border-0 py-1.5 pl-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6" placeholder="请输入 0-1 之间的数字">
                   </div>
                 </div>
 
                 <div class="sm:col-span-2">
                   <label class="block text-sm font-medium leading-6 text-gray-900">买入价格</label>
                   <div class="mt-2">
-                    <input type="number" id="other-grid-buy-price" class="block w-full rounded-md border-0 py-1.5 pl-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6" placeholder="该档位买入价格">
+                    <input type="number" id="other-grid-buy-price" disabled class="block w-full rounded-md border-0 py-1.5 pl-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6" placeholder="该档位买入价格">
                   </div>
                 </div>
 
                 <div class="sm:col-span-2 flex items-end">
-                  <button type="button" id="add-button" class="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">
-                    添加档位
+                  <button type="button" id="add-button" disabled class="rounded-md bg-gray-400 px-4 py-2 text-sm font-semibold text-white shadow-sm cursor-not-allowed">
+                    添加
                   </button>
                 </div>
 
-                <div class="sm:col-span-4">
+                <div class="sm:col-span-6">
                   <div class="relative flex items-start">
                     <div class="flex h-6 items-center">
-                      <input id="same-total" type="checkbox" checked class="h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-red-600">
+                      <input id="same-total" type="checkbox" checked disabled class="h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-red-600">
                     </div>
                     <div class="ml-3 text-sm leading-6">
-                      <label for="same-total" class="font-medium text-gray-900">与初始档位买入总金额一致</label>
-                      <p class="text-gray-500">选中时每个档位的买入总金额相同，否则按比例递减</p>
+                      <div class="flex items-center">
+                        <label for="same-total" class="font-medium text-gray-900"><span class="text-red-600">买入总金额</span>与初始档位相同</label>
+                        <div class="relative ml-2">
+                          <svg class="w-4 h-4 text-gray-400 hover:text-gray-600 cursor-help tooltip-trigger" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                          </svg>
+                                                      <div class="tooltip absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 text-sm text-white bg-gray-900 rounded-lg opacity-0 invisible transition-all duration-200 pointer-events-none w-80 z-10 shadow-lg">
+                              <div class="space-y-3">
+                                <p class="font-medium">
+                                  选中时每个档位的<span class="text-yellow-300 font-semibold">买入总金额</span>相同，否则按档位递增或递减
+                                </p>
+                                
+                                <div class="border-t border-gray-700 pt-3">
+                                  <p class="text-yellow-300 font-medium mb-2">📐 计算公式：</p>
+                                  <div class="bg-gray-800 px-3 py-2 rounded text-xs font-mono">
+                                    其他档位买入总金额 = 初始总金额 × (2 - 档位)
+                                  </div>
+                                </div>
+
+                                <div class="border-t border-gray-700 pt-3">
+                                  <p class="text-green-300 font-medium mb-2">💡 举例说明：</p>
+                                  <div class="space-y-2 text-xs">
+                                    <div class="bg-gray-800 px-3 py-2 rounded">
+                                      <div class="text-gray-300">初始档位总金额：<span class="text-white font-semibold">1000元</span></div>
+                                    </div>
+                                    <div class="grid grid-cols-1 gap-1 text-gray-300">
+                                      <div>档位 0.9 → 1000 × (2-0.9) = <span class="text-green-300 font-semibold">1100元</span></div>
+                                      <div>档位 0.8 → 1000 × (2-0.8) = <span class="text-green-300 font-semibold">1200元</span></div>
+                                      <div>档位 0.7 → 1000 × (2-0.7) = <span class="text-green-300 font-semibold">1300元</span></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-6 border-r-6 border-t-6 border-transparent border-t-gray-900"></div>
+                            </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
-            <!-- 档位买入数量表格 -->
-            <div>
-              <h2 class="text-base font-semibold leading-7 text-gray-900">档位买入数量</h2>
-              <div class="mt-4 flow-root">
+        <!-- 步骤3: 查看结果 -->
+        <div id="step3-container" class="bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl opacity-50">
+          <div class="px-4 py-6 sm:p-8">
+            <div class="flex items-center mb-6">
+              <div class="flex-shrink-0">
+                <div id="step3-number" class="flex items-center justify-center w-8 h-8 bg-gray-400 text-white rounded-full text-sm font-semibold">3</div>
+              </div>
+              <div class="ml-4">
+                <h2 class="text-lg font-semibold leading-7 text-gray-900">网格交易策略</h2>
+                <p class="text-sm text-gray-600">所有档位的详细买入信息</p>
+              </div>
+            </div>
+            
+            <div id="step3-content">
+              <div class="flow-root">
                 <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                   <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
                     <table class="min-w-full divide-y divide-gray-300">
@@ -178,6 +247,7 @@
                           <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">买入价格</th>
                           <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">买入总金额</th>
                           <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-red-600">买入数量</th>
+                          <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">操作</th>
                         </tr>
                       </thead>
                       <tbody id="grid-table-body" class="divide-y divide-gray-200"></tbody>
@@ -200,7 +270,6 @@
                     <h3 class="text-sm font-medium text-red-800">风险提示</h3>
                     <div class="mt-2 text-sm text-red-700">
                       <ul class="list-disc pl-5 space-y-1">
-                        <li>网格交易策略不能保证盈利，可能存在亏损风险</li>
                         <li>建议在使用该策略前，充分了解网格交易的原理和风险</li>
                         <li>请根据自身风险承受能力合理设置网格参数</li>
                         <li>市场剧烈波动时可能带来较大风险</li>
@@ -233,7 +302,7 @@
               
               <div class="mt-4 flex justify-center">
                 <div class="relative group">
-                  <img src="http://images.leyla.top/note/wechat-payment-code.jpg" alt="微信收款码" class="w-48 h-48 object-cover rounded-lg shadow-md">
+                  <img src="./assets/wechat-payment-code.jpg" alt="微信收款码" class="w-48 h-48 object-cover rounded-lg shadow-md">
                   <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-opacity duration-300 rounded-lg"></div>
                 </div>
               </div>
@@ -266,6 +335,42 @@
     </main>
   </div>
 
+  <!-- 使用说明弹窗 -->
+  <div id="help-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden z-50">
+    <div class="relative top-20 mx-auto p-5 border w-11/12 md:w-3/4 lg:w-1/2 shadow-lg rounded-md bg-white">
+      <div class="mt-3">
+        <div class="flex items-center justify-between pb-3">
+          <h3 class="text-lg font-bold text-gray-900">使用说明</h3>
+          <button id="close-modal" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="mt-4 text-sm text-gray-600">
+          <ol class="list-decimal pl-5 space-y-3">
+            <li><span class="font-medium text-gray-900">设置初始档位</span>：输入第一档的买入价格，并填写买入总金额或买入数量（二选一）</li>
+            <li><span class="font-medium text-gray-900">计算初始档位</span>：点击"计算初始档位"按钮，系统会自动计算并显示第一档的具体买入信息</li>
+            <li><span class="font-medium text-gray-900">添加其他档位</span>：在0-1之间设置档位（比如0.8表示在初始资金80%的位置），并输入该档位的买入价格</li>
+            <li><span class="font-medium text-gray-900">查看结果</span>：所有档位的买入数量将在下方表格中显示，买入数量会自动取整到100的倍数</li>
+          </ol>
+          <div class="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
+            <p class="text-sm text-yellow-800">
+              <span class="font-medium">注意：</span>买入数量会自动取整到100的倍数，买入总金额会自动计算
+            </p>
+          </div>
+        </div>
+        
+        <div class="mt-6 flex justify-end">
+          <button id="close-modal-btn" class="px-4 py-2 bg-red-600 text-white text-sm font-medium rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500">
+            我知道了
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     const calculateButton = document.getElementById('calculate-button');
     const addButton = document.getElementById('add-button');
@@ -273,8 +378,13 @@
     const sameTotal = document.getElementById('same-total');
     
     const gearPositionList = [];
+    let editingGearId = null; // 记录正在编辑的档位ID
+    
     function addGearPosition(id, buyPrice) {
-      if(gearPositionList.find(item => Number(item.id) === Number(id))) {
+      const existingIndex = gearPositionList.findIndex(item => Number(item.id) === Number(id));
+      if(existingIndex !== -1) {
+        // 如果档位已存在，更新它
+        gearPositionList[existingIndex] = { id, buyPrice };
         return;
       }
       gearPositionList.push({
@@ -282,27 +392,54 @@
         buyPrice,
       });
     }
+    
+    function removeGearPosition(id) {
+      const index = gearPositionList.findIndex(item => Number(item.id) === Number(id));
+      if(index !== -1) {
+        gearPositionList.splice(index, 1);
+      }
+    }
 
     function calculate() {
+      // 清空表格
+      gridTableBody.innerHTML = '';
+      
       gearPositionList.forEach(({id, buyPrice}) => {
-        if(document.getElementById(`gear-position-${id}`)) {
-          return;
-        }
         const gridBuyTotal = document.getElementById('grid-buy-total');
         // 根据选项决定买入总金额的计算方式
         const buyTotal = sameTotal.checked 
           ? Number(gridBuyTotal.value)
-          : Number(gridBuyTotal.value) * (1 - id + 1);
+          : Number(gridBuyTotal.value) * (1 - id) + Number(gridBuyTotal.value);
         let buyAmount = buyTotal / buyPrice;
         // 买入数量取整
         buyAmount = Math.floor(buyAmount / 100) * 100;
 
         const tr = document.createElement('tr');
+        tr.setAttribute('data-gear-id', id);
         tr.innerHTML = `
           <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0" id="gear-position-${id}">${id}</td>
           <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">${buyPrice}</td>
           <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">${buyTotal}</td>
           <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-red-600">${buyAmount}</td>
+          <td class="whitespace-nowrap px-3 py-4 text-sm font-medium">
+            ${id == 1 ? 
+              '<span class="text-gray-400 text-xs flex items-center"><svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>初始档位</span>' : 
+              `<div class="flex space-x-2">
+                <button onclick="editGearPosition('${id}')" class="text-blue-600 hover:text-blue-800 text-xs font-medium transition-colors duration-200">
+                  <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                  </svg>
+                  更新
+                </button>
+                <button onclick="deleteGearPosition('${id}')" class="text-red-600 hover:text-red-800 text-xs font-medium transition-colors duration-200">
+                  <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                  </svg>
+                  删除
+                </button>
+              </div>`
+            }
+          </td>
         `;
         gridTableBody.appendChild(tr);
       });
@@ -312,25 +449,39 @@
       const gridBuyPrice = document.getElementById('grid-buy-price');
       const gridBuyAmount = document.getElementById('grid-buy-amount');
       const gridBuyTotal = document.getElementById('grid-buy-total');
+      
       if(gridBuyPrice.value === '') {
         alert('请输入买入价格');
         return;
       }
-      if(gridBuyAmount.value === '' && gridBuyTotal.value === '') {
-        alert('请输入买入数量或买入总金额');
-        return;
-      }
-      if(gridBuyAmount.value === '') {
+
+      // 根据选择的输入模式进行验证和计算
+      if (inputByTotal.checked) {
+        // 按总金额模式
+        if(gridBuyTotal.value === '') {
+          alert('请输入买入总金额');
+          return;
+        }
+        // 根据总金额计算数量（取整到100的倍数）
         gridBuyAmount.value = Math.round(gridBuyTotal.value / gridBuyPrice.value / 100) * 100;
+        // 重新计算实际总金额
+        gridBuyTotal.value = gridBuyPrice.value * gridBuyAmount.value;
+      } else {
+        // 按数量模式
+        if(gridBuyAmount.value === '') {
+          alert('请输入买入数量');
+          return;
+        }
+        // 根据数量计算总金额
         gridBuyTotal.value = gridBuyPrice.value * gridBuyAmount.value;
       }
 
-      if(gridBuyTotal.value === '') {
-        gridBuyTotal.value = gridBuyPrice.value * gridBuyAmount.value;
-      }
-      const firstBuyTotal = gridBuyPrice.value * gridBuyAmount.value;
       addGearPosition(1, gridBuyPrice.value);
       calculate();
+      
+      // 激活步骤2和步骤3
+      activateStep2();
+      activateStep3();
     });
 
     addButton.addEventListener('click', () => {
@@ -344,12 +495,187 @@
         alert('档位必须在 0-1 之间');
         return;
       }
+      
+      // 检查档位是否已存在（编辑模式下排除正在编辑的档位）
+      const existingGear = gearPositionList.find(item => Number(item.id) === Number(otherGridSize.value));
+      if (existingGear && (!editingGearId || Number(editingGearId) !== Number(otherGridSize.value))) {
+        alert(`档位 ${otherGridSize.value} 已存在，请选择其他档位或直接编辑现有档位`);
+        return;
+      }
+      
       addGearPosition(otherGridSize.value, otherGridBuyPrice.value);
       calculate();
+      
+      // 如果是编辑模式，重置状态
+      if (editingGearId) {
+        editingGearId = null;
+        addButton.textContent = '添加';
+        addButton.classList.remove('bg-green-600', 'hover:bg-green-700');
+        addButton.classList.add('bg-red-600', 'hover:bg-red-500');
+      }
+      
       // 清空输入框
       otherGridSize.value = '';
       otherGridBuyPrice.value = '';
     });
-  </script>
-</body>
+
+    // 买入方式切换控制
+    const inputByTotal = document.getElementById('input-by-total');
+    const inputByAmount = document.getElementById('input-by-amount');
+    const totalInputContainer = document.getElementById('total-input-container');
+    const amountInputContainer = document.getElementById('amount-input-container');
+    const gridBuyTotal = document.getElementById('grid-buy-total');
+    const gridBuyAmount = document.getElementById('grid-buy-amount');
+
+    // 切换输入模式
+    function switchInputMode() {
+      if (inputByTotal.checked) {
+        totalInputContainer.classList.remove('hidden');
+        amountInputContainer.classList.add('hidden');
+        gridBuyAmount.value = '';  // 清空另一个输入框的值
+      } else {
+        totalInputContainer.classList.add('hidden');
+        amountInputContainer.classList.remove('hidden');
+        gridBuyTotal.value = '';  // 清空另一个输入框的值
+      }
+    }
+
+    inputByTotal.addEventListener('change', switchInputMode);
+    inputByAmount.addEventListener('change', switchInputMode);
+
+    // 步骤控制函数
+    function activateStep2() {
+      const step2Container = document.getElementById('step2-container');
+      const step2Number = document.getElementById('step2-number');
+      const otherGridSize = document.getElementById('other-grid-size');
+      const otherGridBuyPrice = document.getElementById('other-grid-buy-price');
+      const addButton = document.getElementById('add-button');
+      const sameTotal = document.getElementById('same-total');
+
+      // 移除禁用样式
+      step2Container.classList.remove('opacity-50');
+      step2Number.classList.remove('bg-gray-400');
+      step2Number.classList.add('bg-red-600');
+
+      // 启用输入框和按钮
+      otherGridSize.disabled = false;
+      otherGridBuyPrice.disabled = false;
+      addButton.disabled = false;
+      sameTotal.disabled = false;
+
+      // 更新按钮样式
+      addButton.classList.remove('bg-gray-400', 'cursor-not-allowed');
+      addButton.classList.add('bg-red-600', 'hover:bg-red-500', 'focus-visible:outline', 'focus-visible:outline-2', 'focus-visible:outline-offset-2', 'focus-visible:outline-red-600');
+    }
+
+    function activateStep3() {
+      const step3Container = document.getElementById('step3-container');
+      const step3Number = document.getElementById('step3-number');
+
+      // 移除禁用样式
+      step3Container.classList.remove('opacity-50');
+      step3Number.classList.remove('bg-gray-400');
+      step3Number.classList.add('bg-red-600');
+    }
+
+    // 弹窗控制
+    const helpButton = document.getElementById('help-button');
+    const helpModal = document.getElementById('help-modal');
+    const closeModal = document.getElementById('close-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+
+    // 显示弹窗
+    helpButton.addEventListener('click', () => {
+      helpModal.classList.remove('hidden');
+    });
+
+    // 关闭弹窗
+    function closeHelpModal() {
+      helpModal.classList.add('hidden');
+    }
+
+    closeModal.addEventListener('click', closeHelpModal);
+    closeModalBtn.addEventListener('click', closeHelpModal);
+
+    // 点击背景关闭弹窗
+    helpModal.addEventListener('click', (e) => {
+      if (e.target === helpModal) {
+        closeHelpModal();
+      }
+    });
+
+    // ESC键关闭弹窗
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !helpModal.classList.contains('hidden')) {
+        closeHelpModal();
+      }
+    });
+
+    // Tooltip 控制
+    const tooltipTriggers = document.querySelectorAll('.tooltip-trigger');
+    tooltipTriggers.forEach(trigger => {
+      const tooltip = trigger.nextElementSibling;
+      
+      trigger.addEventListener('mouseenter', () => {
+        tooltip.classList.remove('opacity-0', 'invisible');
+        tooltip.classList.add('opacity-100', 'visible');
+      });
+      
+      trigger.addEventListener('mouseleave', () => {
+        tooltip.classList.remove('opacity-100', 'visible');
+        tooltip.classList.add('opacity-0', 'invisible');
+      });
+         });
+
+    // 全局函数：编辑档位
+    window.editGearPosition = function(id) {
+      const gear = gearPositionList.find(item => Number(item.id) === Number(id));
+      if (!gear) return;
+      
+      const otherGridSize = document.getElementById('other-grid-size');
+      const otherGridBuyPrice = document.getElementById('other-grid-buy-price');
+      const addButton = document.getElementById('add-button');
+      
+      // 填充数据到输入框
+      otherGridSize.value = id;
+      otherGridBuyPrice.value = gear.buyPrice;
+      
+      // 设置编辑状态
+      editingGearId = id;
+      addButton.textContent = '更新';
+      addButton.classList.remove('bg-red-600', 'hover:bg-red-500');
+      addButton.classList.add('bg-green-600', 'hover:bg-green-700');
+      
+      // 滚动到编辑区域
+      document.getElementById('step2-container').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    };
+
+    // 全局函数：删除档位
+    window.deleteGearPosition = function(id) {
+      if (Number(id) === 1) {
+        alert('初始档位不能删除');
+        return;
+      }
+      
+      if (confirm(`确定要删除档位 ${id} 吗？\n\n删除后该档位的买入策略将从网格中移除。`)) {
+        removeGearPosition(id);
+        calculate();
+        
+        // 如果正在编辑这个档位，重置编辑状态
+        if (editingGearId === id) {
+          editingGearId = null;
+          const addButton = document.getElementById('add-button');
+          const otherGridSize = document.getElementById('other-grid-size');
+          const otherGridBuyPrice = document.getElementById('other-grid-buy-price');
+          
+          addButton.textContent = '添加';
+          addButton.classList.remove('bg-green-600', 'hover:bg-green-700');
+          addButton.classList.add('bg-red-600', 'hover:bg-red-500');
+          otherGridSize.value = '';
+          otherGridBuyPrice.value = '';
+        }
+      }
+    };
+    </script>
+  </body>
 </html>
