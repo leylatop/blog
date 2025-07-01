@@ -3,8 +3,8 @@ slug: you-dont-know-parseInt-detail
 title: 你不知道的 parseInt 方法
 date: 2025-06-16
 authors: leyla
-tags: [前端, javascript, parseInt]
-keywords: [前端, javascript, parseInt]
+tags: [前端, javascript, 你不知道的 js, parseInt]
+keywords: [前端, javascript, 你不知道的 js, parseInt]
 ---
 ## 解释：
 parseInt方法，解析字符串为数字。可以将字符串转换为整数。parseInt方法的语法为parseInt(string, radix)
