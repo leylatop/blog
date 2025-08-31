@@ -14,3 +14,10 @@ title: vs code 快捷键
 - option + 鼠标点击：将鼠标插入至多个不同行/不同列的位置
 - ctrl + l：复制行号 [来自Copy Relative Path and Line Numbers插件](https://marketplace.visualstudio.com/items?itemName=ezforo.copy-relative-path-and-line-numbers)
 - 
+
+
+
+
+
+补充：
+https://github.com/crper/Visual-Studio-Code-CNKEYMAP
