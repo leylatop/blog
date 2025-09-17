@@ -10,6 +10,7 @@ keywords: [前端, javascript, 你不知道的 js, 拆箱操作]
 ## 解释：
 拆箱操作，即对象转换为基本类型。可以将对象转换为字符串、数字或布尔值。拆箱操作的语法为 `unboxing(object)`。
 
+<!-- truncate -->
 ## 对象转为字符串
 ```js
 const obj = {
