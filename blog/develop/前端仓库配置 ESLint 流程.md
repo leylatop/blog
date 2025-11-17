@@ -11,6 +11,7 @@ keywords: [前端, ESLint, 流程]
 ## eslint-flow 仓库
 [leylatop/eslint-flow](https://github.com/leylatop/eslint-flow)
 
+<!-- truncate -->
 ## 设计配置与技术实现
 
 以下操作基于代码仓库实现。
