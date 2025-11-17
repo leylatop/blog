@@ -1,3 +1,11 @@
+---
+slug: /note/eslint-flow
+title: 前端仓库配置 ESLint 流程
+date: 2025-11-17
+authors: leyla
+tags: [前端, ESLint, 流程]
+keywords: [前端, ESLint, 流程]
+---
 
 
 ## eslint-flow 仓库
